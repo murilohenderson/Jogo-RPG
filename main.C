@@ -11,14 +11,12 @@ void textoIntroducao(void);
 void finalBom(void);
 
 int main () {
-    printf("Oi, testando\n");
     pontoBom = 2;
     pontoRuim = 1;
     pontoNeutro = 2;
 
-    resultado(); 
-    receberResposta();
 
+    textoIntroducao();
     return 0;
 }
     
@@ -53,10 +51,21 @@ void receberResposta(void) {
 }
 
 
-void textoIntroducao() {
+void textoIntroducao(void) {
+    const char *historia =
+    "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
+    "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
+    "Ao longe, um letreiro: 'Tessituras de Kali'.\n"
+    "Diante do portão de ébano, ela o empurrou e entrou. Lá dentro, o sol se apagou e a noite estrelada surgiu.\n"
+    "Espelhos refletiam mais que sua imagem; refletiam algo oculto.\n"
+    "De repente, uma voz sussurrou:\n"
+    "'Irena! Quanto tempo, minha pequena coruja...'\n"
+    "Logo outra, fria como gelo, completou:\n"
+    "'Ou talvez o tempo nunca tenha passado...'\n";
 
-
+    printf("%s\n", historia);
 }
+
 
 void finalBom() {
       printf("..........");
