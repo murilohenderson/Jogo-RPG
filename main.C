@@ -20,16 +20,18 @@ printf("Oi, testando\n");
     resultado(); 
 
 return 0;
-}
 
 
-void resultado() {
-    if (pontoBom > pontoRuim && pontoBom > pontoNeutro || pontoBom == pontoNeutro) {
-       printf("Final bom");
-} else if (pontoNeutro > pontoBom && pontoNeutro > pontoRuim || pontoBom == pontoRuim) {
-        printf("Final neutro");    
-} else if (pontoRuim > pontoNeutro && pontoRuim > pontoBom || pontoRuim == pontoNeutro) {
-        printf("Final ruim");
+    void resultado() {
+        if ((pontoBom > pontoRuim && pontoBom > pontoNeutro) || (pontoBom == pontoNeutro)) {
+            printf("Final bom");
+        } 
+        else if ((pontoNeutro > pontoBom && pontoNeutro > pontoRuim) || (pontoNeutro == pontoRuim)) {
+            printf("Final neutro");    
+        } 
+        else if ((pontoRuim > pontoNeutro && pontoRuim > pontoBom) || (pontoRuim == pontoNeutro)) {
+            printf("Final ruim");
+        }
     }
 }
 
