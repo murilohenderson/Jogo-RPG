@@ -5,40 +5,40 @@ int pontoBom = 0;
 int pontoNeutro = 0;
 int pontoRuim = 0;
 
-void resultado();
-void receberResposta();
-void textoIntroducao();
-void finalBom();
+void resultado(void);
+void receberResposta(void);
+void textoIntroducao(void);
+void finalBom(void);
 
 int main () {
-
-printf("Oi, testando\n");
+    printf("Oi, testando\n");
     pontoBom = 2;
     pontoRuim = 1;
     pontoNeutro = 2;
 
     resultado(); 
+    receberResposta();
 
-return 0;
-
-
-    void resultado() {
-        if ((pontoBom > pontoRuim && pontoBom > pontoNeutro) || (pontoBom == pontoNeutro)) {
-            printf("Final bom");
-        } 
-        else if ((pontoNeutro > pontoBom && pontoNeutro > pontoRuim) || (pontoNeutro == pontoRuim)) {
-            printf("Final neutro");    
-        } 
-        else if ((pontoRuim > pontoNeutro && pontoRuim > pontoBom) || (pontoRuim == pontoNeutro)) {
-            printf("Final ruim");
-        }
+    return 0;
+}
+    
+void resultado() {
+    if ((pontoBom > pontoRuim && pontoBom > pontoNeutro) || (pontoBom == pontoNeutro)) {
+        printf("Final bom");
+    } 
+    else if ((pontoNeutro > pontoBom && pontoNeutro > pontoRuim) || (pontoNeutro == pontoRuim)) {
+        printf("Final neutro");    
+    } 
+    else if ((pontoRuim > pontoNeutro && pontoRuim > pontoBom) || (pontoRuim == pontoNeutro)) {
+        printf("Final ruim");
     }
 }
 
 void receberResposta(void) {
-      int opcao;
+    int opcao;
+    
 	do{
-	    printf("opcao escolhida: ");
+	    printf("\nOpcao escolhida: ");
 	    scanf("%d", &opcao);
 	    
 	}while(opcao != 1 && opcao != 2 && opcao != 3);
