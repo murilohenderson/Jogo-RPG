@@ -9,6 +9,7 @@ void resultado(void);
 void receberResposta(void);
 void textoIntroducao(void);
 void primeiraConversa(void);
+void decisaoBaralho(void);
 void finalBom(void);
 void finalNeutro(void);
 void finalRuim(void);
@@ -26,6 +27,13 @@ int main () {
         scanf("%d", &resposta);
     } while (resposta != 1);
     primeiraConversa();
+    do {
+        resposta = 0;
+        printf("Digite 1 para prosseguir\n");
+        scanf("%d", &resposta);
+    } while (resposta != 1);
+    decisaoBaralho();
+    receberResposta();
     return 0;
 }
     
@@ -45,10 +53,10 @@ void receberResposta(void) {
     int opcao;
     
 	do{
-	    printf("\nOpcao escolhida: ");
-	    scanf("%d", &opcao);
+	    printf("Digite a opcao escolhida: ");
+	    scanf(" %d", &opcao);
 	    
-	}while(opcao != 1 && opcao != 2 && opcao != 3);
+	} while(opcao != 1 && opcao != 2 && opcao != 3);
 	
 	if(opcao == 1){
 	   printf("funcionando 1");
@@ -93,6 +101,20 @@ void primeiraConversa(void) {
     "'Agora, a escolha é sua...'\n";
 
     printf("%s\n", historia);
+}
+
+void decisaoBaralho(void) {
+    const char *historia =
+    "Sobre a mesa repousa o baralho amarrado por fita vermelha. As duas feiticeiras aguardam em silêncio, enquanto os gatos observam cada movimento.\n\n"
+    "Liora sussurra: 'A forma como abrir as cartas é também a forma como abrirá o seu destino.'\n\n"
+    "Soraya ri e bate palmas: 'Então, pequena, escolha o caminho!'\n\n"
+    "1 - Três Caminhos: o método simples, três cartas em linha mostrando passado, presente e futuro.\n"
+    "2 - A Porta de Três Chaves: o triângulo de três cartas revelando bloqueio, impulso e algo inesperado que mudará o rumo.\n"
+    "3 - O Espelho em Três Partes: a cruz de três cartas refletindo desejo, medo e o caminho possível.\n"
+    "Qual será a sua escolha?\n";
+
+    printf("%s\n", historia);
+    receberResposta();
 }
 
 void finalBom() {
