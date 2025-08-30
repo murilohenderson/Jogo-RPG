@@ -13,7 +13,7 @@ void finalBom();
 int main () {
 
 printf("Oi, testando\n");
- pontoBom = 2;
+    pontoBom = 2;
     pontoRuim = 1;
     pontoNeutro = 2;
 
@@ -35,9 +35,21 @@ return 0;
     }
 }
 
-void receberResposta() {
-
-
+void receberResposta(void) {
+      int opcao;
+	do{
+	    printf("opcao escolhida: ");
+	    scanf("%d", &opcao);
+	    
+	}while(opcao != 1 && opcao != 2 && opcao != 3);
+	
+	if(opcao == 1){
+	   printf("funcionando 1");
+	}else if(opcao == 2){
+	    printf("funcionando 2");
+	}else if(opcao == 3){
+	    printf("funcionando 3");
+	}
 }
 
 
