@@ -389,7 +389,7 @@ void decisao1_1_1_2(void) {
     "O salão se encheu de uma luz clara, mas precisa, que parecia cortar a névoa da dúvida.\n\n"
 
     "Nos espelhos, Irena viu cenas do passado que antes pareciam confusas: decisões que tomara, momentos de hesitação, perdas que acreditava irreversíveis.\n"
-    "Mas agora podia enxergar padrões, relações escondidas, caminhos que não tinha percebido. Cada detalhe se alinhava como peças de um quebra-cabeça.\n\n"
+    "Mas agora podia enxergar padrões, relações escondidas, caminhos que não tinha percebido. Cada detalhe se alinhava como peças de um quebra-cabeça.\n\n";
 
     const char *historia1 =
     "Soraya falou com um tom suave, quase reverente:\n"
@@ -402,7 +402,7 @@ void decisao1_1_1_2(void) {
     "Irena sentiu o peso e a liberdade ao mesmo tempo. O passado não podia ser mudado, mas agora podia ser compreendido.\n"
     "Cada erro, cada hesitação, cada medo ganhou um novo sentido: ensinamentos que fortaleciam sua percepção.\n\n"
 
-    "Ela fechou os olhos e respirou profundamente. Como o Falcão, sentiu-se elevada acima das preocupações imediatas, enxergando além da tempestade, das sombras e da luz que a cegava.\n\n"
+    "Ela fechou os olhos e respirou profundamente. Como o Falcão, sentiu-se elevada acima das preocupações imediatas, enxergando além da tempestade, das sombras e da luz que a cegava.\n\n";
 
     const char *historia3 =
     "Quando abriu os olhos, o salão parecia mais silencioso, mais amplo. A tensão que antes a prendia havia se transformado em clareza.\n"
