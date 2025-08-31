@@ -11,6 +11,18 @@ void resultado(void);
 void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
+void decisao1(void);
+void decisao1_1(void);
+void decisao1_2(void);
+void decisao1_3(void);
+void decisao1_1_1(void);
+void decisao1_1_2(void);
+void decisao1_1_3(void);
+void decisao1_1_1_1(void);
+void decisao1_1_1_2(void);
+void decisao1_1_1_3(void);
+
+
 void finalBom(void);
 void finalNeutro(void);
 void finalRuim(void);
@@ -133,78 +145,73 @@ void decisaoBaralho(void) {
     
     printf("%s\n", historia);
 
-    int escolha = receberResposta(2); // chama a função genérica
+    int escolha = receberResposta(2); 
 
     switch (escolha) {
         case 1:
-            decisao1_1();
+            decisao1();
             pontoBom++;  
             break;
         case 2:
         
             pontoNeutro++;
             break;
-        case 3:
-            pontoRuim++;
-            break;
     }
+}
 
 // =======================================================================================================================
 // CAMINHO 1_1_1_1
 // =======================================================================================================================
 
-}
+// =======================================================================================================================
+// CAMINHO 1
+// =======================================================================================================================
+
 void decisao1(void) {
+    const char *historia =
+    "\nIrena fechou os olhos por um instante. O coração pulsava rápido, como se ecoasse dentro do salão fechado.\n"
+    "Quando ergueu a voz, não havia tremor: 'Quero os Tres Caminhos.'\n\n"
+
+    "Soraya deu um salto, batendo palmas como uma criança que acaba de ganhar um presente:\n"
+    "'Sabia! Passado, presente e futuro. Simples, direto, mas perigoso...'\n\n"
+
+    "Liora, ao contrário, não sorriu. Com lentidão quase cruel, passou a unha sobre a fita vermelha que prendia as cartas.\n"
+    "O laço se desfez sozinho, deslizando como uma serpente morta, e o baralho respirou.\n"
+    "Cartas deslizaram pela mesa como se fossem vivas, espalhando um frio que apagou até o som da chuva lá fora.\n\n";
+
     const char *historia1 =
-    "\nIrena respirou fundo. O peso da decisão caiu sobre ela.\n"
-    "'Quero os Tres Caminhos', disse firme, embora em voz baixa.\n\n"
-
-    "Soraya bateu palmas, sorrindo como uma crianca: 'Sabia! Passado, presente e futuro: simples e belo!'\n"
-    "Liora nao sorriu. Com um gesto lento, desfez a fita vermelha do baralho.\n"
-    "As cartas deslizaram pela mesa como se respirassem. O silencio da sala era absoluto.\n\n"
-
-    "Primeira carta: O Passado. Era A Arvore.\n"
-    "Raizes profundas sustentavam o tronco, mas os galhos pareciam se contorcer em dor.\n"
-    "Liora murmurou: 'Tuas origens sao fortes, mas tambem feridas. Sempre acreditou que precisava se defender... ate mesmo daqueles que a amavam.'\n"
-    "A lembranca dos pais atingiu Irena: discussoes, olhares frios, silencias que pesavam mais que palavras.\n\n"
-
-    "Soraya quebrou o clima com riso leve: 'Ate dentro de casa, coruja, voce mostrava as garras.'\n\n";
+    "A primeira carta foi virada: O Passado. Era A Árvore.\n"
+    "Raízes fundas, mas retorcidas, sufocadas em sua própria densidade. Liora murmurou:\n"
+    "'Tuas origens são fortes, mas também feridas. Sempre acreditou que precisava se defender... "
+    "até mesmo daqueles que a amavam.'\n\n";
 
     const char *historia2 =
-    "Segunda carta: O Presente. As Encruzilhadas.\n"
-    "Uma estrada que se dividia em varias. Todas levavam a destinos ocultos.\n"
-    "'Aqui voce esta', disse Liora. 'Cada escolha exige um preco. O medo de decidir e o que a paralisa.'\n"
-    "Irena engoliu seco, sentindo a verdade no peito.\n\n";
+    "A segunda carta foi aberta: O Presente. As Encruzilhadas.\n"
+    "Um emaranhado de estradas que se perdiam no horizonte. Todas pareciam levar a algum lugar, mas nenhuma mostrava a chegada.\n"
+    "Liora ergueu os olhos, frios:\n"
+    "'Aqui você está. Diante de escolhas que exigem preço. "
+    "O medo de errar a mantém parada. O silêncio não é proteção, é corrente.'\n\n";
 
     const char *historia3 =
-    "Terceira carta: O Futuro. A Serpente.\n"
-    "Suas escamas brilhavam como ouro e veneno.\n"
-    "Liora falou em voz grave: 'A Serpente traz perigo, mas tambem renascimento. Quem recusa a mudanca e devorado. Quem aceita, encontra nova forca.'\n\n";
+    "Por fim, a terceira carta caiu sobre a mesa: O Futuro. A Serpente.\n"
+    "Dourada e sinuosa, reluzia como promessa e ameaça ao mesmo tempo.\n"
+    "Liora falou grave:\n"
+    "'Quem recusa a mudança é devorado. Quem aceita, renasce com nova força.'\n\n";
 
     const char *historia4 =
-    "As chamas das lamparinas vacilaram. Soraya inclinou-se, olhos faiscando:\n"
-    "'Entao, pequena coruja... vai ficar presa as raizes que doem? Vai parar nas encruzilhadas? Ou tera coragem de encarar a Serpente?'\n\n"
 
-    "Irena tocou as cartas. Nelas viu fragmentos de si: a filha orgulhosa, a mulher silenciosa, a feiticeira que precisava mudar.\n"
-    "Soraya sorriu: 'O destino pode ser tecido de novo! Um fio puxado e todo bordado se transforma.'\n"
-    "Liora a interrompeu: 'Mas cuidado. Se ignorar o passado, o novo destino pode nascer doente.'\n\n"
+    "Soraya se inclinou sobre a mesa, os olhos faiscando com uma alegria estranha:\n"
+    "'Então, pequena coruja... vai ficar enraizada no passado? Vai se perder nas estradas? "
+    "Ou terá coragem de encarar a Serpente?'\n\n"
 
-    "O silencio voltou. Os olhos de ambas ardiam sobre Irena, e ate os gatos a observavam.\n"
-    "A jovem ergueu o rosto, decidida: 'Se o destino e um tecido, quero segurar a agulha desta vez. Quero ver como meu destino pode ficar dependendo de como eu agir.'\n\n"
+    "Liora não esperou resposta. Suas mãos rápidas como sombras abriram três novas cartas diante de Irena.\n"
+    "As figuras brilharam, como se respirassem:\n\n"
+    "1 - O Sol (vitória e clareza, mas nenhuma mentira pode sobreviver sob sua luz).\n"
+    "2 - A Estrela (esperança, guia suave que aponta, mas nunca força).\n"
+    "3 - O Caixão (fim e renascimento, transformação inevitável).\n";
 
-    "Liora embaralhou novamente, suas maos rapidas como sombras. Tres cartas foram colocadas viradas sobre a mesa.\n"
-    "'Tres portas, tres caminhos. Escolha o fio que deseja puxar.'\n";
-
-    const char *historia5 =
-    "\nDiante de Irena, tres cartas brilham sobre a mesa.\n"
-    "Liora e Soraya aguardam em silencio, observando cada gesto.\n\n"
-    "1 - A Carta do Sol – Soraya sorri: 'Este e o caminho da vitoria e da clareza. "
-    "Uma estrada de conquistas, onde nada pode esconder-se da luz.'\n\n"
-    "2 - A Carta da Estrela – Liora fala suavemente: 'Aqui esta o caminho do conselho e da esperanca. "
-    "Uma estrela que guia sem pressa, apenas mostra como seguir em frente.'\n\n"
-    "3 - A Carta do Caixao – A voz ecoa: 'E aqui esta o caminho da transformacao. "
-    "O fim de um ciclo e o nascimento de outro. Um caminho que exige coragem diante dos proprios medos.'\n";
-
+    printf("%s\n", historia);
+    continuar();
     printf("%s\n", historia1);
     continuar();
     printf("%s\n", historia2);
@@ -212,28 +219,159 @@ void decisao1(void) {
     printf("%s\n", historia3);
     continuar();
     printf("%s\n", historia4);
-    continuar();
-    printf("%s\n", historia5);
 
-    int escolha = receberResposta(3); 
+    int escolha = receberResposta(3);
 
     switch (escolha) {
         case 1:
-            printf("\nVoce escolheu o Caixao: um ciclo termina, outro comeca. "
-                            "Mudanca profunda te aguarda.\n");
             decisao1_1();
-            pontoBom++;  
+            pontoRuim++;
             break;
         case 2:
-            printf("\nVoce escolheu a Estrela: o caminho da esperanca e da guia calma.\n");
+            decisao1_2();
             pontoNeutro++;
             break;
         case 3:
-            printf("\nVoce escolheu o Sol: a estrada da vitoria e da luz!\n");
-            pontoRuim++;
+            decisao1_3();
+            pontoBom++;
             break;
     }
 }
+
+// =======================================================================================================================
+// CAMINHO 1_1
+// =======================================================================================================================
+
+void decisao1_1(void) {
+    const char *historia =
+    "\nIrena sentiu a garganta apertada, mas ergueu a mão sobre a primeira carta.\n"
+    "— Quero o Sol, disse firme, e sua voz ecoou como se a sala inteira tivesse ouvido.\n\n"
+
+    "No mesmo instante, as lamparinas explodiram em clarões dourados. A sombra recuou, e a sala mostrou cada detalhe:\n"
+    "os espelhos quebrados, os gatos atentos, a poeira que brilhava suspensa no ar.\n\n";
+
+    const char *historia1 =
+    "Soraya bateu palmas e riu alto:\n"
+    "'Clareza! A estrada de quem não teme a verdade! Mas cuidado, coruja: a luz não perdoa. "
+    "Ela mostra até aquilo que você preferiria esconder de si mesma.'\n\n"
+
+    "Liora, porém, permaneceu imóvel, apenas encarando-a com olhos de ferro:\n"
+    "'Se for realmente a luz que deseja, terá de atravessar cada chama até o fim. "
+    "Não peça piedade às revelações.'\n\n"
+
+    "Novas cartas foram abertas sobre a mesa, cintilando na claridade intensa:\n\n"
+    "1 - A Lua (ilusões expostas pela luz do Sol).\n"
+    "2 - A Torre (a queda que antecede qualquer reconstrução).\n"
+    "3 - O Mundo (plenitude e encerramento de um ciclo).\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            decisao1_1_1();
+            pontoRuim++;
+            break;
+        case 2:
+            decisao1_1_2();
+            pontoNeutro++;
+            break;
+        case 3:
+            decisao1_1_3();
+            pontoBom++;
+            break;
+    }
+}
+
+// =======================================================================================================================
+// CAMINHO 1_1_1
+// =======================================================================================================================
+
+void decisao1_1_1(void) {
+    const char *historia =
+    "\nO coração de Irena batia como um tambor de guerra.\n"
+    "Ela apontou para a primeira carta: — Quero a Lua.\n\n"
+
+    "Soraya arqueou as sobrancelhas, surpresa:\n"
+    "'A Lua, mesmo diante do Sol? Ah, pequena coruja, você sempre escolhe o mais tortuoso...'\n\n"
+
+    "Liora virou a carta com um gesto seco. O brilho prateado inundou a mesa.\n"
+    "E, pela primeira vez, Irena sentiu a própria respiração falhar.\n\n";
+
+    const char *historia1 =
+    "Reflexos começaram a surgir nos espelhos: cenas que não estavam ali, mas que pertenciam a ela.\n"
+    "A discussão com os pais, a solidão nos corredores da casa, os segredos que fingia não carregar.\n"
+    "Tudo surgia distorcido, como se o Sol mostrasse os contornos, mas fosse a Lua quem revelava o que se escondia.\n\n"
+
+    "Soraya sussurrou:\n"
+    "'Nem toda luz traz paz. Às vezes, a claridade só serve para mostrar o quão profundas são as sombras.'\n\n"
+
+    "Liora inclinou-se e disse, firme:\n"
+    "'Três ecos ainda podem guiar sua decisão. Três reflexos que não podem mais ser negados.'\n\n"
+
+    "Ela virou três cartas diante dela, cada uma pulsando como um coração vivo:\n\n"
+    "1 - O Espelho Partido (a verdade cruel, despedaçada, que não pode ser colada sem sangue).\n"
+    "2 - O Falcão (a visão distante, que enxerga além da dor imediata).\n"
+    "3 - A Sombra (aceitar que dentro dela sempre haverá algo obscuro).\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            decisao1_1_1_1();
+            pontoRuim++;
+            break;
+        case 2:
+            decisao1_1_1_2();
+            pontoNeutro++;
+            break;
+        case 3:
+            decisao1_1_1_3();
+            pontoBom++;
+            break;
+    }
+}
+
+// =======================================================================================================================
+// CAMINHO 1_1_1_1 (FINAL DESTA RAMIFICACAO)
+// =======================================================================================================================
+
+void decisao1_1_1_1(void) {
+    const char *historia =
+    "\nA carta revelada foi O Espelho Partido.\n"
+    "Na mesa, a imagem se multiplicou em dezenas de fragmentos de vidro, cada um refletindo um pedaço de Irena.\n\n"
+
+    "Ela viu a criança que nunca foi compreendida, a jovem que se fechou para não sofrer, a mulher que carrega fardos que nunca pediu.\n"
+    "Todos os rostos eram dela, mas nenhum era inteiro. E, ao olhar, ela entendeu: jamais voltaria a ser completa.\n\n"
+
+    "Soraya baixou a voz, quase com pena:\n"
+    "'Algumas verdades não foram feitas para serem costuradas. São cortes que permanecem abertos.'\n\n"
+
+    "Liora, no entanto, manteve-se firme:\n"
+    "'Seja fragmentada, mas não fraca. O destino não exige perfeição, exige coragem.'\n\n";
+
+    const char *historia1 =
+    "Os cacos brilhavam, e Irena estendeu a mão. Cada vez que tocava um, sangue escorria por entre os dedos.\n"
+    "Mas ela não recuou. Segurou cada pedaço, sentindo dor e força ao mesmo tempo.\n\n"
+
+    "No fim, o baralho se desfez em cinzas. A sala voltou à escuridão.\n"
+    "E Irena, mesmo ferida, permanecia em pé — feita de fragmentos, mas consciente de cada um deles.\n\n"
+
+    "Seu destino, a partir dali, seria caminhar carregando as verdades cortantes que a luz e a lua revelaram.\n"
+    "E não havia retorno.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+}
+
 
 
 // =======================================================================================================================
