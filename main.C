@@ -375,12 +375,103 @@ void decisao1_1_1_1(void) {
 
 
 // =======================================================================================================================
-// CAMINHO 1_1_1_2
+// CAMINHO 1_1_1_2 (FINAL DESTA RAMIFICAÇÃO)
 // =======================================================================================================================
 
+void decisao1_1_1_2(void) {
+    const char *historia =
+    "\nIrena respirou fundo e escolheu a segunda carta: — Quero o Falcão.\n\n"
+
+    "Soraya inclinou-se para frente, intrigada, e sorriu com certo orgulho:\n"
+    "'Ah, a visão distante, a capacidade de enxergar além do imediato. Inteligente, pequena coruja.'\n\n"
+
+    "Liora permaneceu imóvel, encarando Irena com seus olhos frios e profundos. Com um gesto lento, virou a carta.\n"
+    "O salão se encheu de uma luz clara, mas precisa, que parecia cortar a névoa da dúvida.\n\n"
+
+    "Nos espelhos, Irena viu cenas do passado que antes pareciam confusas: decisões que tomara, momentos de hesitação, perdas que acreditava irreversíveis.\n"
+    "Mas agora podia enxergar padrões, relações escondidas, caminhos que não tinha percebido. Cada detalhe se alinhava como peças de um quebra-cabeça.\n\n"
+
+    const char *historia1 =
+    "Soraya falou com um tom suave, quase reverente:\n"
+    "'O Falcão vê o que muitos não percebem. Mas visão sem ação é apenas observação. É preciso coragem para transformar a clareza em caminho.'\n\n"
+
+    "Liora acrescentou:\n"
+    "'Você não precisa carregar tudo sozinha, mas precisa entender que cada escolha ecoa mais longe do que imagina. O futuro é um espaço onde suas asas podem levá-la, se souber como bater.'\n\n";
+
+    const char *historia2 =
+    "Irena sentiu o peso e a liberdade ao mesmo tempo. O passado não podia ser mudado, mas agora podia ser compreendido.\n"
+    "Cada erro, cada hesitação, cada medo ganhou um novo sentido: ensinamentos que fortaleciam sua percepção.\n\n"
+
+    "Ela fechou os olhos e respirou profundamente. Como o Falcão, sentiu-se elevada acima das preocupações imediatas, enxergando além da tempestade, das sombras e da luz que a cegava.\n\n"
+
+    const char *historia3 =
+    "Quando abriu os olhos, o salão parecia mais silencioso, mais amplo. A tensão que antes a prendia havia se transformado em clareza.\n"
+    "Soraya e Liora observavam em silêncio, reconhecendo o crescimento que se manifestava diante delas.\n\n"
+
+    "O baralho desapareceu em uma nuvem de luz e fumaça, deixando apenas Irena em pé, consciente do peso de suas escolhas, mas com a força de quem enxerga além.\n\n"
+
+    "Seu destino não seria fácil, mas agora possuía visão para navegar pelos labirintos da vida. E, pela primeira vez, sentiu que podia voar sozinha.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+}
+
+
 // =======================================================================================================================
-// CAMINHO 1_1_1_3
+// CAMINHO 1_1_1_3 (FINAL DESTA RAMIFICAÇÃO)
 // =======================================================================================================================
+void decisao1_1_1_3(void) {
+    const char *historia =
+    "\nIrena respirou fundo e escolheu a terceira carta: — Quero a Sombra.\n\n"
+
+    "Soraya arregalou os olhos, rindo com uma excitação sombria:\n"
+    "'Ah, a pequena coruja abraçando a escuridão dentro de si. Corajosa, muito corajosa...'\n\n"
+
+    "Liora, porém, manteve a compostura e virou a carta lentamente. Uma aura profunda se espalhou pela mesa.\n"
+    "O brilho não era nem dourado nem prateado, mas uma mistura que parecia engolir a luz ao redor.\n\n";
+
+    const char *historia1 =
+    "Imagens surgiram nos espelhos: Irena enfrentando seus medos mais íntimos, os erros que temia repetir, os caminhos que evitava percorrer.\n"
+    "Cada reflexo sussurrava memórias esquecidas, momentos em que hesitou, traições silenciosas, escolhas que escondera até de si mesma.\n\n"
+
+    "Soraya falou com um tom de respeito:\n"
+    "'Quem encara a própria sombra nunca é derrotada. Cada cicatriz se torna força, cada medo se torna guia.'\n\n"
+
+    "Irena sentiu um frio atravessar sua espinha. Cada passo que dera até ali parecia pequeno diante do que estava por vir.\n"
+    "Mas, pela primeira vez, não sentiu medo. Sentiu clareza. Um fio tênue de controle sobre o caos que sempre a rodeara.\n\n"
+
+    "Liora acrescentou, com um pequeno sorriso:\n"
+    "'Aceitar a Sombra não é fraqueza. É reconhecer que o que está escondido dentro de nós pode se tornar nossa maior fonte de poder.'\n\n";
+
+    const char *historia2 =
+    "Ao seu redor, o salão mudou. As paredes tornaram-se líquidas, refletindo memórias e sonhos, medos e desejos. \n"
+    "Cada reflexo era uma lição, cada sombra, um convite para crescer.\n\n"
+
+    "Irena fechou os olhos e respirou profundamente. Sentiu a presença de tudo que a moldara: a dor, o arrependimento, os momentos de alegria escondidos.\n"
+    "Ela percebeu que a escuridão não precisava ser temida; precisava ser compreendida e integrada.\n\n"
+
+    "Soraya finalmente se inclinou sobre a mesa, seus olhos brilhando com aprovação silenciosa:\n"
+    "'Agora, pequena coruja, você entende: a verdadeira força não vem da luz que ilumina o caminho, mas da sombra que nos guia quando ninguém mais vê.'\n\n"
+
+    "Liora colocou a mão sobre a mesa, e a aura da carta começou a se dissipar, deixando para trás um silêncio profundo, mas acolhedor.\n"
+    "Irena abriu os olhos, sentindo-se inteira, mas diferente. Mais forte, mais consciente, e pronta para o que viesse.\n\n"
+
+    "O baralho se desfez em fumaça delicada, e os gatos que antes a observavam desapareceram na penumbra.\n"
+    "Ela deu um passo para fora da mesa, carregando não apenas o peso das suas escolhas, mas a certeza de que podia enfrentar qualquer sombra que surgisse em seu caminho.\n\n"
+
+    "E, pela primeira vez, sorriu para si mesma, sem medo.\n\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+}
 
 // =======================================================================================================================
 // CAMINHO 1_1_2_1
