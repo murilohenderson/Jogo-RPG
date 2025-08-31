@@ -4,6 +4,7 @@
 int pontoBom = 0;
 int pontoNeutro = 0;
 int pontoRuim = 0;
+int resposta = 0;
 
 void resultado(void);
 void receberResposta(void);
@@ -15,23 +16,13 @@ void finalNeutro(void);
 void finalRuim(void);
 
 int main () {
-    int resposta = 0;
     pontoBom = 2;
     pontoRuim = 1;
     pontoNeutro = 2;
-
-
+    
     textoIntroducao();
-    do {
-        printf("Digite 1 para prosseguir\n");
-        scanf("%d", &resposta);
-    } while (resposta != 1);
     primeiraConversa();
-    do {
-        resposta = 0;
-        printf("Digite 1 para prosseguir\n");
-        scanf("%d", &resposta);
-    } while (resposta != 1);
+    
     decisaoBaralho();
     receberResposta();
     return 0;
@@ -50,13 +41,13 @@ void resultado() {
 }
 
 void receberResposta(void) {
-    int opcao;
+    int opcao = 0;
     
 	do{
 	    printf("Digite a opcao escolhida: ");
-	    scanf(" %d", &opcao);
+	    scanf("%d", &opcao);
 	    
-	} while(opcao != 1 && opcao != 2 && opcao != 3);
+	}while(opcao != 1 && opcao != 2 && opcao != 3);
 	
 	if(opcao == 1){
 	   printf("funcionando 1");
@@ -78,13 +69,19 @@ void textoIntroducao(void) {
     "De repente, uma voz sussurrou:\n\n"
     "'Irena! Quanto tempo, minha pequena coruja...'\n\n"
     "Logo outra, fria como gelo, completou:\n\n"
-    "'Ou talvez o tempo nunca tenha passado...'\n\n";
+    "'Ou talvez o tempo nunca tenha passado...'\n";
 
     printf("%s\n", historia);
 }
 void primeiraConversa(void) {
+    do {
+        printf("=================================================================================\n");
+        printf("Digite 1 para prosseguir: ");
+        scanf("%d", &resposta);
+    } while (resposta != 1);
+
     const char *historia =
-    "As portas se fecharam atrás de Irena.\n" 
+    "\nAs portas se fecharam atrás de Irena.\n" 
     "O silêncio caiu, quebrado apenas pela chuva e pelo miado distante de um gato.\n"
     "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n" 
     "'E não é que a coruja voltou ao ninho?', disse, sua voz ecoando na penumbra.\n\n"
@@ -104,14 +101,22 @@ void primeiraConversa(void) {
 }
 
 void decisaoBaralho(void) {
+    do {
+        resposta = 0;
+        printf("=================================================================================\n");
+        printf("Digite 1 para prosseguir: ");
+        scanf("%d", &resposta);
+    } while (resposta != 1);
+    
     const char *historia =
-    "Sobre a mesa repousa o baralho amarrado por fita vermelha. As duas feiticeiras aguardam em silêncio, enquanto os gatos observam cada movimento.\n\n"
+    "\nSobre a mesa repousa o baralho amarrado por fita vermelha. As duas feiticeiras aguardam em silêncio, enquanto os gatos observam cada movimento.\n\n"
     "Liora sussurra: 'A forma como abrir as cartas é também a forma como abrirá o seu destino.'\n\n"
     "Soraya ri e bate palmas: 'Então, pequena, escolha o caminho!'\n\n"
+    "Qual será a sua escolha?\n"
     "1 - Três Caminhos: o método simples, três cartas em linha mostrando passado, presente e futuro.\n"
     "2 - A Porta de Três Chaves: o triângulo de três cartas revelando bloqueio, impulso e algo inesperado que mudará o rumo.\n"
-    "3 - O Espelho em Três Partes: a cruz de três cartas refletindo desejo, medo e o caminho possível.\n"
-    "Qual será a sua escolha?\n";
+    "3 - O Espelho em Três Partes: a cruz de três cartas refletindo desejo, medo e o caminho possível.\n";
+    
 
     printf("%s\n", historia);
     receberResposta();
