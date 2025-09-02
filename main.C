@@ -275,7 +275,7 @@ void decisao1_1(void) {
             break;
         case 2:
             pontoNeutro++;
-            //decisao1_1_2();
+            decisao1_1_2();
             break;
         case 3:
             pontoBom++;
@@ -580,6 +580,79 @@ void decisao1_1_1_3(void) {
 // =======================================================================================================================
 // CAMINHO 1_1_2_1
 // =======================================================================================================================
+
+// =======================================================================================================================
+// CAMINHO 1_1_2 — 
+// =======================================================================================================================
+// Justificativa de pontos:
+// =======================================================================================================================
+
+
+
+void decisao1_1_2_1(void) {
+    const char *historia =
+    "\nO salão estava mergulhado em uma penumbra quente, iluminado apenas pelo brilho tremeluzente das velas sobre a mesa redonda. "
+    "Um cheiro de incenso flutuava pelo ar, misturando-se à fragrância de livros antigos e pergaminhos desgastados. "
+    "Irena respirou fundo e tocou a carta da Torre, sentindo uma vibração que parecia atravessar os ossos.\n\n"
+
+    "— Escolho a Torre. — sua voz saiu mais baixa do que imaginava, mas firme.\n\n"
+
+    "Soraya franziu a testa, os olhos escuros iluminados por reflexos de fogo.\n"
+    "'Ah... ousas olhar para a queda. Nem todos resistem ao desmoronar do que julgavam sólido. "
+    "Vejo teus medos mais antigos, Irena: a solidão que sentiste quando tua mãe partiu, os silêncios pesados em casa, os dias em que pensaste que ninguém te entendia. "
+    "Cada pedra da Torre que escolheres tocar refletirá essas memórias.'\n\n"
+
+    "Liora inclinou-se, seu manto esvoaçando levemente. "
+    "Com voz serena, mas firme, disse:\n"
+    "'Não apenas o medo ou a dor — vejo também teus momentos de coragem que tu mesma ignoraste. "
+    "O tempo em que enfrentaste o escárnio na escola, quando teu coração se partiu pela primeira vez e, ainda assim, continuaste em frente. "
+    "Cada rachadura desta Torre está ligada a algo que guardaste em segredo.'\n";
+
+    const char *historia1 =
+    "\nO salão tremeu como se respondesse à tua escolha. As velas oscilaram e as sombras dançaram pelas paredes, "
+    "transformando o ambiente em um labirinto de lembranças e reflexões. "
+    "Cartas caíram da mesa, espalhando imagens de momentos passados: o abraço que nunca deste ao teu irmão antes de partir, "
+    "a amizade rompida sem explicação, e os dias em que mentiste a ti mesma para sobreviver.\n\n"
+
+    "Soraya falou, com uma mistura de pesar e compaixão:\n"
+    "'Cada pedra que cai revela a fragilidade de tudo o que não foi construído com verdade. "
+    "O abandono, a dor e o silêncio que carregaste... todos estão aqui, esperando que os enfrentes.'\n";
+
+    const char *historia2 =
+    "\nIrena sentiu cada lembrança como uma carga física. O calor do salão parecia pesar sobre seus ombros, "
+    "cada sombra alongada lembrando-a dos erros, das perdas e das decisões que não teve coragem de tomar. "
+    "O barulho distante de vidros quebrando misturava-se ao eco de palavras não ditas, "
+    "transformando o espaço em uma câmara de julgamento pessoal.\n\n"
+
+    "Liora sussurrou, firme, mas com uma nota de ternura:\n"
+    "'A queda não é apenas destruição, é revelação. Cada dor que ignoraste, cada oportunidade que deixaste escapar, "
+    "tudo aparece diante de ti. Mas observe: a verdadeira força não está em evitar a queda, e sim em perceber o que ela ensina.'\n";
+
+    const char *historia3 =
+    "\nUm estrondo final ressoou pelo salão. A Torre da mesa se despedaçou, espalhando cartas e lembranças como chuva sobre o chão de madeira. "
+    "Irena caiu de joelhos, lágrimas misturando-se à respiração ofegante. "
+    "No entanto, entre o medo e a dor, algo acendeu-se: uma centelha de resistência, de compreensão e aceitação. "
+    "O passado, por mais pesado que fosse, não a definia — apenas a instruía.\n\n"
+
+    "Soraya inclinou-se, sorrindo com uma mistura de respeito e melancolia:\n"
+    "'Nem toda queda destrói. Mas cada queda te mostra o preço de teus passos e, se prestares atenção, te dá o mapa de como caminhar daqui para frente.'\n"
+
+    "Liora acrescentou, a voz ecoando suavemente pelo salão:\n"
+    "'Agora, Irena, sabes que enfrentar teus medos não é opção — é necessidade. "
+    "Cada fragmento de tua história se reflete nesta Torre. Aprende com ela, e nenhum abismo será grande demais para ti.'\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+
+    pontoRuim++;
+}
+
+
 
 // =======================================================================================================================
 // CAMINHO 1_1_2_2
