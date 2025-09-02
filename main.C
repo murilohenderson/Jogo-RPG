@@ -73,12 +73,6 @@ void continuar(void) {
     } while (resposta != 1);
 }
 
-
-
-
-
-
-
 void finalBom(void) {
     printf("\n========== FINAL BOM ==========\n");
     printf("O destino de Irena se revelou cheio de esperança e luz.\n");
@@ -150,11 +144,9 @@ void decisaoBaralho(void) {
     switch (escolha) {
         case 1:
             decisao1();
-            pontoBom++;  
             break;
         case 2:
-        
-            pontoNeutro++;
+            decisao2();
             break;
     }
 }
