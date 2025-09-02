@@ -168,45 +168,45 @@ void decisaoBaralho(void) {
 void decisao1(void) {
     const char *historia =
     "\nIrena fechou os olhos por um instante. O coração pulsava rápido, como se ecoasse dentro do salão fechado.\n"
-    "Quando ergueu a voz, não havia tremor: 'Quero os Tres Caminhos.'\n\n"
+    "Quando ergueu a voz, não havia tremor: 'Quero os Três Caminhos.'\n\n"
 
-    "Soraya deu um salto, batendo palmas como uma criança que acaba de ganhar um presente:\n"
-    "'Sabia! Passado, presente e futuro. Simples, direto, mas perigoso...'\n\n"
+    "Soraya bateu palmas, quase dançando:\n"
+    "'Ah! A coruja ousa enxergar por inteiro. Passado, presente e futuro... Mas cuidado: quem olha para tudo, "
+    "não pode mais fingir que não sabe.'\n\n"
 
-    "Liora, ao contrário, não sorriu. Com lentidão quase cruel, passou a unha sobre a fita vermelha que prendia as cartas.\n"
-    "O laço se desfez sozinho, deslizando como uma serpente morta, e o baralho respirou.\n"
-    "Cartas deslizaram pela mesa como se fossem vivas, espalhando um frio que apagou até o som da chuva lá fora.\n";
+    "Liora apenas deslizou a unha sobre a fita vermelha. O laço se desfez sozinho, e o baralho respirou, espalhando frio pelo salão.\n";
 
     const char *historia1 =
     "\nA primeira carta foi virada: O Passado. Era A Árvore.\n"
-    "Raízes fundas, mas retorcidas, sufocadas em sua própria densidade. Liora murmurou:\n"
-    "'Tuas origens são fortes, mas também feridas. Sempre acreditou que precisava se defender... "
-    "até mesmo daqueles que a amavam.'\n";
+    "Raízes fundas, mas retorcidas, sufocadas em sua própria densidade.\n\n"
+    "Liora falou baixo, mas firme:\n"
+    "'Tua infância foi um tronco forte, mas marcado de cortes. "
+    "Buscava abrigo nos ramos, mas encontrou peso demais. "
+    "Até hoje, carrega cicatrizes que não são só tuas, mas herdadas.'\n";
 
     const char *historia2 =
     "\nA segunda carta foi aberta: O Presente. As Encruzilhadas.\n"
-    "Um emaranhado de estradas que se perdiam no horizonte. Todas pareciam levar a algum lugar, mas nenhuma mostrava a chegada.\n"
-    "Liora ergueu os olhos, frios:\n"
-    "'Aqui você está. Diante de escolhas que exigem preço. "
-    "O medo de errar a mantém parada. O silêncio não é proteção, é corrente.'\n";
+    "Um emaranhado de estradas que se perdiam no horizonte. Nenhuma mostrava a chegada.\n\n"
+    "Soraya inclinou-se, séria pela primeira vez:\n"
+    "'Eis onde estás, coruja. Cada silêncio é uma escolha, cada recusa também. "
+    "Teu medo de errar a mantém imóvel — mas ficar parada já é escolher perder.'\n";
 
     const char *historia3 =
-    "\nPor fim, a terceira carta caiu sobre a mesa: O Futuro. A Serpente.\n"
-    "Dourada e sinuosa, reluzia como promessa e ameaça ao mesmo tempo.\n"
-    "Liora falou grave:\n"
-    "'Quem recusa a mudança é devorado. Quem aceita, renasce com nova força.'\n";
+    "\nPor fim, a terceira carta caiu: O Futuro. A Serpente.\n"
+    "Dourada e sinuosa, reluzia como promessa e ameaça.\n\n"
+    "Liora ergueu os olhos fixos:\n"
+    "'A mudança te espera, queira ou não. Se resistires, será engolida. "
+    "Se aceitares, nascerás de novo — mas jamais a mesma.'\n";
 
     const char *historia4 =
+    "\nSoraya sorriu, como quem saboreia um segredo:\n"
+    "'Então, pequena coruja... vais ficar presa nas raízes? Perdida nas estradas? "
+    "Ou terás coragem de encarar a Serpente?'\n\n"
 
-    "\nSoraya se inclinou sobre a mesa, os olhos faiscando com uma alegria estranha:\n"
-    "'Então, pequena coruja... vai ficar enraizada no passado? Vai se perder nas estradas? "
-    "Ou terá coragem de encarar a Serpente?'\n\n"
-
-    "Liora não esperou resposta. Suas mãos rápidas como sombras abriram três novas cartas diante de Irena.\n"
-    "As figuras brilharam, como se respirassem:\n\n"
-    "1 - O Sol (vitória e clareza, mas nenhuma mentira pode sobreviver sob sua luz).\n"
-    "2 - A Estrela (esperança, guia suave que aponta, mas nunca força).\n"
-    "3 - O Caixão (fim e renascimento, transformação inevitável).\n";
+    "E três novas cartas surgiram diante dela, respirando como se estivessem vivas:\n\n"
+    "1 - O Sol (clareza absoluta, mas toda máscara cai sob sua luz).\n"
+    "2 - A Estrela (esperança e guia, mas nunca força o caminho).\n"
+    "3 - O Caixão (fim inevitável, mas também o nascimento de algo novo).\n";
 
     printf("%s\n", historia);
     continuar();
@@ -323,92 +323,84 @@ void decisao1_1_1(void) {
 
     switch (escolha) {
         case 1:
-            pontoRuim++;
+            pontoNeutro++;
             decisao1_1_1_1();
             break;
         case 2:
-            pontoNeutro++;
+            pontoBom++;
             decisao1_1_1_2();
             break;
         case 3:
-            pontoBom++;
+            pontoRuim++;
             decisao1_1_1_3();
             break;
     }
 }
 
 // =======================================================================================================================
-// CAMINHO 1_1_1_1 (FINAL DESTA RAMIFICACAO)
+// CAMINHO 1_1_1_1 — O ESPELHO PARTIDO
+// =======================================================================================================================
+// Justificativa de pontos:
+// O Espelho Partido obriga Irena a encarar diretamente seus traumas e preconceitos sofridos.
+// É doloroso e cruel, mas revela verdades profundas que ela evitava.
+// Aqui, a escolha não é boa nem má, é um mergulho necessário, mas que a deixa fragilizada.
+// Por isso, conta como ponto NEUTRO.
 // =======================================================================================================================
 
 void decisao1_1_1_1(void) {
     const char *historia =
-    "\nA carta revelada foi O Espelho Partido.\n"
-    "Na mesa, a imagem se multiplicou em dezenas de fragmentos de vidro, cada um refletindo um pedaço de Irena.\n\n"
+    "\nIrena estendeu a mão, hesitante, e tocou a primeira carta.\n"
+    "— Quero o Espelho Partido.\n\n"
 
-    "Ela viu a criança que nunca foi compreendida, a jovem que se fechou para não sofrer, a mulher que carrega fardos que nunca pediu.\n"
-    "Todos os rostos eram dela, mas nenhum era inteiro. E, ao olhar, ela entendeu: jamais voltaria a ser completa.\n\n"
+    "Soraya arqueou as sobrancelhas, soltando um riso amargo:\n"
+    "'Ah... escolheste a lâmina que corta a própria carne. Não há mentira que sobreviva diante de um reflexo estilhaçado.'\n\n"
 
-    "Soraya baixou a voz, quase com pena:\n"
-    "'Algumas verdades não foram feitas para serem costuradas. São cortes que permanecem abertos.'\n\n"
-
-    "Liora, no entanto, manteve-se firme:\n"
-    "'Seja fragmentada, mas não fraca. O destino não exige perfeição, exige coragem.'\n";
+    "Liora virou a carta com lentidão, e o estalo seco ecoou pelo salão. "
+    "De súbito, os espelhos da sala se quebraram sozinhos, fragmentando-se em mil pedaços, "
+    "e em cada um deles um pedaço da vida de Irena refletia, distorcido, sangrando luz.\n";
 
     const char *historia1 =
-    "\nOs cacos brilhavam, e Irena estendeu a mão. Cada vez que tocava um, sangue escorria por entre os dedos.\n"
-    "Mas ela não recuou. Segurou cada pedaço, sentindo dor e força ao mesmo tempo.\n\n"
+    "\nNo primeiro fragmento, Irena era criança, implorando para brincar com os colegas. "
+    "Eles riam, chamando-a de 'estranha', 'negra amaldiçoada'. "
+    "Jogavam pedras perto de seus pés, como se ela fosse um animal a ser afastado. "
+    "E quando, chorando, buscava conforto nos professores, recebia apenas silêncio cúmplice.\n\n"
 
-    "No fim, o baralho se desfez em cinzas. A sala voltou à escuridão.\n"
-    "E Irena, mesmo ferida, permanecia em pé — feita de fragmentos, mas consciente de cada um deles.\n\n"
-
-    "Seu destino, a partir dali, seria caminhar carregando as verdades cortantes que a luz e a lua revelaram.\n"
-    "E não havia retorno.\n";
-
-    printf("%s\n", historia);
-    continuar();
-    printf("%s\n", historia1);
-}
-
-
-
-// =======================================================================================================================
-// CAMINHO 1_1_1_2 (FINAL DESTA RAMIFICAÇÃO)
-// =======================================================================================================================
-
-void decisao1_1_1_2(void) {
-    const char *historia =
-    "\nIrena respirou fundo e escolheu a segunda carta: — Quero o Falcão.\n\n"
-
-    "Soraya inclinou-se para frente, intrigada, e sorriu com certo orgulho:\n"
-    "'Ah, a visão distante, a capacidade de enxergar além do imediato. Inteligente, pequena coruja.'\n\n"
-
-    "Liora permaneceu imóvel, encarando Irena com seus olhos frios e profundos. Com um gesto lento, virou a carta.\n"
-    "O salão se encheu de uma luz clara, mas precisa, que parecia cortar a névoa da dúvida.\n\n"
-
-    "Nos espelhos, Irena viu cenas do passado que antes pareciam confusas: decisões que tomara, momentos de hesitação, perdas que acreditava irreversíveis.\n"
-    "Mas agora podia enxergar padrões, relações escondidas, caminhos que não tinha percebido. Cada detalhe se alinhava como peças de um quebra-cabeça.\n";
-
-    const char *historia1 =
-    "\nSoraya falou com um tom suave, quase reverente:\n"
-    "'O Falcão vê o que muitos não percebem. Mas visão sem ação é apenas observação. É preciso coragem para transformar a clareza em caminho.'\n\n"
-
-    "Liora acrescentou:\n"
-    "'Você não precisa carregar tudo sozinha, mas precisa entender que cada escolha ecoa mais longe do que imagina. O futuro é um espaço onde suas asas podem levá-la, se souber como bater.'\n";
+    "Soraya murmurou, sombria:\n"
+    "'A escola foi tua primeira arena de guerra. Não contra espadas, mas contra olhares que ferem. "
+    "Eles nunca te viram como criança. Te viram como ameaça.'\n";
 
     const char *historia2 =
-    "\nIrena sentiu o peso e a liberdade ao mesmo tempo. O passado não podia ser mudado, mas agora podia ser compreendido.\n"
-    "Cada erro, cada hesitação, cada medo ganhou um novo sentido: ensinamentos que fortaleciam sua percepção.\n\n"
+    "\nOutro estilhaço mostrava Irena mais velha, discutindo com os pais. "
+    "O pai cuspia palavras de ferro: 'Não sujará nosso nome com feitiçarias!' "
+    "A mãe chorava, mas sua súplica era tão cruel quanto a fúria: 'Seja normal, só isso, seja normal!' "
+    "Irena gritava de volta, mas no fundo desejava apenas ser aceita, inteira, sem precisar pedir perdão por existir.\n\n"
 
-    "Ela fechou os olhos e respirou profundamente. Como o Falcão, sentiu-se elevada acima das preocupações imediatas, enxergando além da tempestade, das sombras e da luz que a cegava.\n";
+    "Liora falou baixo, mas firme:\n"
+    "'Eles não enxergaram tua dor, porque a confundiram com rebeldia. "
+    "Queriam que fosses um reflexo deles, mas teu espelho nunca coube em suas molduras.'\n";
 
     const char *historia3 =
-    "\nQuando abriu os olhos, o salão parecia mais silencioso, mais amplo. A tensão que antes a prendia havia se transformado em clareza.\n"
-    "Soraya e Liora observavam em silêncio, reconhecendo o crescimento que se manifestava diante delas.\n\n"
+    "\nE o maior fragmento — o mais cruel — mostrava Irena sozinha em seu quarto, "
+    "abraçando os próprios joelhos. "
+    "As lágrimas secas manchavam sua pele, e no silêncio ela repetia em pensamento: "
+    "'Talvez realmente haja algo errado comigo... talvez seja eu o problema.'\n\n"
 
-    "O baralho desapareceu em uma nuvem de luz e fumaça, deixando apenas Irena em pé, consciente do peso de suas escolhas, mas com a força de quem enxerga além.\n\n"
+    "Soraya aproximou-se, sua voz tão suave quanto venenosa:\n"
+    "'O Espelho Partido não mente. Ele mostra como foste ensinada a carregar culpas que nunca foram tuas. "
+    "Mas a verdade, pequena coruja, é que quebraram o vidro para que jamais visses tua força inteira.'\n";
 
-    "Seu destino não seria fácil, mas agora possuía visão para navegar pelos labirintos da vida. E, pela primeira vez, sentiu que podia voar sozinha.\n";
+    const char *historia4 =
+    "\nOs pedaços começaram a flutuar, unindo-se ao redor de Irena como uma coroa de lâminas. "
+    "Ela sentiu dor, mas também clareza: cada corte revelava que o sangue era prova de vida. "
+    "Não havia mais como negar — o passado a ferira, mas também a moldara.\n\n"
+
+    "Liora declarou, com solenidade:\n"
+    "'Olha bem, Irena. Não há volta ao espelho intacto. "
+    "Ou aceitas teus fragmentos, ou permanecerás para sempre tentando colar uma mentira.'\n\n"
+
+    "O baralho tremeu, e os cacos se desfizeram em poeira cintilante. "
+    "Irena ficou de pé, sangrando em alma, mas com os olhos abertos de quem, pela primeira vez, "
+    "não tem mais medo de se encarar.\n";
 
     printf("%s\n", historia);
     continuar();
@@ -417,59 +409,173 @@ void decisao1_1_1_2(void) {
     printf("%s\n", historia2);
     continuar();
     printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
 }
 
 
+
+
 // =======================================================================================================================
-// CAMINHO 1_1_1_3 (FINAL DESTA RAMIFICAÇÃO)
+// CAMINHO 1_1_1_2 — O FALCÃO
 // =======================================================================================================================
-void decisao1_1_1_3(void) {
+// Justificativa de pontos:
+// O Falcão representa clareza e visão. Irena compreende seu passado e enxerga padrões que antes
+// pareciam confusos. Essa escolha dá a ela maturidade e poder de decisão.
+// É um avanço positivo, que a fortalece e lhe dá ferramentas para seguir em frente.
+// Por isso, conta como ponto BOM.
+// =======================================================================================================================
+
+void decisao1_1_1_2(void) {
     const char *historia =
-    "\nIrena respirou fundo e escolheu a terceira carta: — Quero a Sombra.\n\n"
+    "\nIrena respirou fundo. Sua mão tremeu levemente ao tocar a carta, mas não hesitou:\n"
+    "— Quero o Falcão.\n\n"
 
-    "Soraya arregalou os olhos, rindo com uma excitação sombria:\n"
-    "'Ah, a pequena coruja abraçando a escuridão dentro de si. Corajosa, muito corajosa...'\n\n"
+    "Soraya inclinou-se para frente, os olhos faiscando de orgulho:\n"
+    "'Ah... então escolhes a visão. A coragem de olhar de cima, onde tudo se revela sem véus. "
+    "Poucos suportam esse voo, pequena coruja. O Falcão não perdoa ilusões.'\n\n"
 
-    "Liora, porém, manteve a compostura e virou a carta lentamente. Uma aura profunda se espalhou pela mesa.\n"
-    "O brilho não era nem dourado nem prateado, mas uma mistura que parecia engolir a luz ao redor.\n";
+    "Liora, com a frieza de quem enxerga além do presente, virou a carta. "
+    "No instante em que o símbolo alado surgiu, o salão se iluminou com uma claridade cortante, "
+    "precisa como lâmina. Não era o calor do Sol nem o engano da Lua — era a luz da percepção nua.\n";
 
     const char *historia1 =
-    "\nImagens surgiram nos espelhos: Irena enfrentando seus medos mais íntimos, os erros que temia repetir, os caminhos que evitava percorrer.\n"
-    "Cada reflexo sussurrava memórias esquecidas, momentos em que hesitou, traições silenciosas, escolhas que escondera até de si mesma.\n\n"
+    "\nOs espelhos ao redor começaram a vibrar. Neles, Irena viu-se criança, "
+    "num corredor de escola. Os risos dos colegas não eram partilha, mas flechas afiadas. "
+    "Chamavam-na de 'sombria', riam de sua pele, e sussurravam que ela tinha o 'toque das bruxas'.\n\n"
 
-    "Soraya falou com um tom de respeito:\n"
-    "'Quem encara a própria sombra nunca é derrotada. Cada cicatriz se torna força, cada medo se torna guia.'\n\n"
-
-    "Irena sentiu um frio atravessar sua espinha. Cada passo que dera até ali parecia pequeno diante do que estava por vir.\n"
-    "Mas, pela primeira vez, não sentiu medo. Sentiu clareza. Um fio tênue de controle sobre o caos que sempre a rodeara.\n\n"
-
-    "Liora acrescentou, com um pequeno sorriso:\n"
-    "'Aceitar a Sombra não é fraqueza. É reconhecer que o que está escondido dentro de nós pode se tornar nossa maior fonte de poder.'\n";
+    "Soraya falou num tom quase triste:\n"
+    "'Eras deixada de lado não porque eras fraca, mas porque tua luz assustava os que viviam na sombra. "
+    "Eles não suportavam tua diferença — tua cor, tua magia, tua coragem em existir. "
+    "O Falcão mostra: não era culpa tua, mas o medo deles que te isolava.'\n";
 
     const char *historia2 =
-    "\nAo seu redor, o salão mudou. As paredes tornaram-se líquidas, refletindo memórias e sonhos, medos e desejos. \n"
-    "Cada reflexo era uma lição, cada sombra, um convite para crescer.\n\n"
+    "\nAs imagens mudaram. Irena viu-se em casa, gritando contra os próprios pais. "
+    "Eles exigiam silêncio sobre sua feitiçaria, pediam que escondesse o que era. "
+    "Ela lembrava das palavras afiadas da mãe: 'Se continuar assim, só atrairá desgraça.' "
+    "E da voz dura do pai: 'Nenhuma filha minha será uma aberração.'\n\n"
 
-    "Irena fechou os olhos e respirou profundamente. Sentiu a presença de tudo que a moldara: a dor, o arrependimento, os momentos de alegria escondidos.\n"
-    "Ela percebeu que a escuridão não precisava ser temida; precisava ser compreendida e integrada.\n\n"
+    "Liora ergueu o dedo, fria como aço:\n"
+    "'Carregaste a culpa até deles, quando eram eles que temiam o que não compreendiam. "
+    "Teu poder não é maldição, é herança. O Falcão diz: eles tentaram quebrar tuas asas, "
+    "mas esquecem que o voo sempre será teu.'\n";
 
-    "Soraya finalmente se inclinou sobre a mesa, seus olhos brilhando com aprovação silenciosa:\n"
-    "'Agora, pequena coruja, você entende: a verdadeira força não vem da luz que ilumina o caminho, mas da sombra que nos guia quando ninguém mais vê.'\n\n"
+    const char *historia3 =
+    "\nO peito de Irena ardeu. O que antes eram memórias dolorosas agora se alinhavam diante dela. "
+    "A exclusão, as humilhações, a solidão... nada disso a definia. "
+    "O Falcão lhe mostrava que cada ferida era também uma marca de sobrevivência. "
+    "E que sobrevivência também é poder.\n\n"
 
-    "Liora colocou a mão sobre a mesa, e a aura da carta começou a se dissipar, deixando para trás um silêncio profundo, mas acolhedor.\n"
-    "Irena abriu os olhos, sentindo-se inteira, mas diferente. Mais forte, mais consciente, e pronta para o que viesse.\n\n"
+    "Soraya se inclinou, voz suave mas firme:\n"
+    "'O Falcão vê longe, pequena coruja. Ele não te mostra um caminho sem dor, mas um futuro onde a dor "
+    "se torna teu combustível. Agora, precisas decidir: ficarás apenas observando o horizonte, "
+    "ou abrirás as asas para cruzá-lo?'\n";
 
-    "O baralho se desfez em fumaça delicada, e os gatos que antes a observavam desapareceram na penumbra.\n"
-    "Ela deu um passo para fora da mesa, carregando não apenas o peso das suas escolhas, mas a certeza de que podia enfrentar qualquer sombra que surgisse em seu caminho.\n\n"
+    const char *historia4 =
+    "\nIrena fechou os olhos. Sentiu-se erguida acima da tempestade, "
+    "mais alta que os corredores escuros, mais forte que as vozes que a feriam. "
+    "Percebeu que a tempestade não era o fim — era a travessia.\n\n"
 
-    "E, pela primeira vez, sorriu para si mesma, sem medo.\n";
+    "Quando abriu os olhos, o salão parecia vasto e silencioso. "
+    "Soraya sorria, e Liora, pela primeira vez, a observava sem dureza, quase com respeito. "
+    "O baralho se dissolveu em luz e fumaça, como se tivesse cumprido seu papel.\n\n"
+
+    "Irena estava de pé, ereta, consciente do peso das suas cicatrizes — "
+    "mas também da liberdade que vinha com a clareza. "
+    "Já não era apenas a coruja que buscava abrigo: era também o Falcão, "
+    "com asas prontas para desafiar o céu.\n";
 
     printf("%s\n", historia);
     continuar();
     printf("%s\n", historia1);
     continuar();
     printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
 }
+
+
+
+// =======================================================================================================================
+// CAMINHO 1_1_1_3 — A SOMBRA
+// =======================================================================================================================
+// Justificativa de pontos:
+// A Sombra simboliza a raiva e a dor reprimida de Irena. Aceitar a Sombra é aceitar sua parte
+// obscura como fonte de força. Isso dá poder, mas também abre espaço para que ela se torne
+// dependente da raiva se não souber equilibrar.
+// É um caminho de risco: não é puramente positivo, mas também não é passivo como o Espelho.
+// Por isso, conta como ponto RUIM (pois há perigo de ser consumida pela própria escuridão).
+// =======================================================================================================================
+
+void decisao1_1_1_3(void) {
+    const char *historia =
+    "\nIrena respirou fundo, mas seus olhos não vacilaram. "
+    "Ela pousou o dedo na terceira carta.\n"
+    "— Quero a Sombra.\n\n"
+
+    "Soraya arqueou os lábios num sorriso quase perverso:\n"
+    "'Corajosa... ou insensata. Poucos têm ânimo para dançar com o que escondem dentro de si.'\n\n"
+
+    "Liora virou a carta. O salão mergulhou em escuridão total, tão densa que até a respiração parecia engolida. "
+    "De repente, atrás dela, surgiu uma silhueta idêntica à sua — Irena, feita de sombras puras, com olhos de brasa.\n";
+
+    const char *historia1 =
+    "\nA sombra falou com sua voz, mas mais grave, mais sincera:\n"
+    "'Sou eu quem guarda tua raiva pelos insultos na escola. "
+    "Sou eu quem não esquece a risada deles, o desprezo em cada olhar. "
+    "Enquanto tu te encolhias, eu crescia, alimentada pelo ódio que nunca disseste em voz alta.'\n\n"
+
+    "Soraya comentou, quase encantada:\n"
+    "'Vês? O que rejeitas nunca morre. Apenas espera, paciente, até que o chame.'\n";
+
+    const char *historia2 =
+    "\nA sombra avançou um passo. A voz ecoou mais forte:\n"
+    "'Fui eu quem respondeu aos teus pais, quando eles te chamaram de aberração. "
+    "Quando tua mãe pediu que fosses invisível, eu gritei dentro de ti: "
+    "‘Não vou pedir desculpa por existir!’ "
+    "Tu calaste por medo de perdê-los, mas eu nunca calei.'\n\n"
+
+    "Liora cruzou os braços, séria:\n"
+    "'A Sombra não é inimiga. É a parte de ti que lutou quando já não tinhas forças. "
+    "Negá-la é negar tua própria sobrevivência.'\n";
+
+    const char *historia3 =
+    "\nIrena caiu de joelhos, os olhos fixos na sua versão de trevas. "
+    "O coração batia acelerado, não de medo, mas de reconhecimento. "
+    "A sombra se ajoelhou diante dela, tocando sua mão.\n\n"
+
+    "'Eu sou tua raiva. Tua dor. Tua resistência. "
+    "Se me rejeitares, sempre estarei contra ti. "
+    "Mas se me aceitares, serei tua arma — e tua liberdade.'\n";
+
+    const char *historia4 =
+    "\nO silêncio caiu. Irena fechou os olhos e inspirou fundo. "
+    "Não havia mais como fugir: dentro dela sempre existiria escuridão, "
+    "mas não como inimiga — como parte do seu poder.\n\n"
+
+    "Soraya sorriu com satisfação:\n"
+    "'Ela aceitou. Não para ser devorada, mas para ser inteira.'\n\n"
+
+    "Liora completou, num tom quase reverente:\n"
+    "'A luz que não conhece sombra é cega. Agora, Irena, tu és visão e noite, asa e garras. "
+    "Completa em tua imperfeição.'\n\n"
+
+    "O salão se iluminou lentamente. A sombra fundiu-se a ela, desaparecendo sem desaparecer. "
+    "O baralho sumiu, restando apenas Irena — não mais dividida, mas inteira.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+}
+
 
 // =======================================================================================================================
 // CAMINHO 1_1_2_1
