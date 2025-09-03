@@ -11,16 +11,25 @@ void resultado(void);
 void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
+
 void decisao1(void);
 void decisao1_1(void);
+void decisao1_1_2(void);
+
 void decisao1_2(void);
 void decisao1_3(void);
+
+
+void decisao1_1_2_1(void); 
+void decisao1_1_2_2(void); 
+void decisao1_1_2_3(void); 
 void decisao1_1_1(void);
 void decisao1_1_2(void);
 void decisao1_1_3(void);
 void decisao1_1_1_1(void);
 void decisao1_1_1_2(void);
 void decisao1_1_1_3(void);
+
 
 
 void finalBom(void);
@@ -587,70 +596,277 @@ void decisao1_1_1_3(void) {
 // Justificativa de pontos:
 // =======================================================================================================================
 
-
-
-void decisao1_1_2_1(void) {
+void decisao1_1_2(void) {
     const char *historia =
-    "\nO salão estava mergulhado em uma penumbra quente, iluminado apenas pelo brilho tremeluzente das velas sobre a mesa redonda. "
-    "Um cheiro de incenso flutuava pelo ar, misturando-se à fragrância de livros antigos e pergaminhos desgastados. "
-    "Irena respirou fundo e tocou a carta da Torre, sentindo uma vibração que parecia atravessar os ossos.\n\n"
+    "\nO estalo da Torre ecoa como ossos antigos partindo. O teto se abre em fendas, e por elas cai um pó dourado, "
+    "nem cinza, nem luz — uma matéria entre mundos. O ar torna-se denso, quase líquido, e cada respiração "
+    "parece mergulho.\n\n"
 
-    "— Escolho a Torre. — sua voz saiu mais baixa do que imaginava, mas firme.\n\n"
+    "Liora ergue o queixo; seus olhos brilham como se guardassem memórias que não pertencem apenas a ela. "
+    "'Quando algo rui, não é apenas pedra', diz, firme. 'É também a versão de ti que aceitava viver dentro dela.'\n\n"
 
-    "Soraya franziu a testa, os olhos escuros iluminados por reflexos de fogo.\n"
-    "'Ah... ousas olhar para a queda. Nem todos resistem ao desmoronar do que julgavam sólido. "
-    "Vejo teus medos mais antigos, Irena: a solidão que sentiste quando tua mãe partiu, os silêncios pesados em casa, os dias em que pensaste que ninguém te entendia. "
-    "Cada pedra da Torre que escolheres tocar refletirá essas memórias.'\n\n"
-
-    "Liora inclinou-se, seu manto esvoaçando levemente. "
-    "Com voz serena, mas firme, disse:\n"
-    "'Não apenas o medo ou a dor — vejo também teus momentos de coragem que tu mesma ignoraste. "
-    "O tempo em que enfrentaste o escárnio na escola, quando teu coração se partiu pela primeira vez e, ainda assim, continuaste em frente. "
-    "Cada rachadura desta Torre está ligada a algo que guardaste em segredo.'\n";
+    "O silêncio seguinte não é vazio — é ventre. E é nele que Soraya desenha um círculo no ar. O pó suspenso "
+    "obedece, reunindo-se, e dele surgem três cartas, lentas, como se despertassem de um sono profundo. "
+    "As bordas ainda carregam o mofo do esquecimento.\n\n";
 
     const char *historia1 =
-    "\nO salão tremeu como se respondesse à tua escolha. As velas oscilaram e as sombras dançaram pelas paredes, "
-    "transformando o ambiente em um labirinto de lembranças e reflexões. "
-    "Cartas caíram da mesa, espalhando imagens de momentos passados: o abraço que nunca deste ao teu irmão antes de partir, "
-    "a amizade rompida sem explicação, e os dias em que mentiste a ti mesma para sobreviver.\n\n"
+    "Soraya fala baixo, mas a voz se espalha como canto em caverna:\n"
+    "'Na queda, escolhe-se não o caminho, mas a forma de reerguer-se. "
+    "Cada carta é um gesto teu sobre as ruínas.'\n\n"
 
-    "Soraya falou, com uma mistura de pesar e compaixão:\n"
-    "'Cada pedra que cai revela a fragilidade de tudo o que não foi construído com verdade. "
-    "O abandono, a dor e o silêncio que carregaste... todos estão aqui, esperando que os enfrentes.'\n";
-
-    const char *historia2 =
-    "\nIrena sentiu cada lembrança como uma carga física. O calor do salão parecia pesar sobre seus ombros, "
-    "cada sombra alongada lembrando-a dos erros, das perdas e das decisões que não teve coragem de tomar. "
-    "O barulho distante de vidros quebrando misturava-se ao eco de palavras não ditas, "
-    "transformando o espaço em uma câmara de julgamento pessoal.\n\n"
-
-    "Liora sussurrou, firme, mas com uma nota de ternura:\n"
-    "'A queda não é apenas destruição, é revelação. Cada dor que ignoraste, cada oportunidade que deixaste escapar, "
-    "tudo aparece diante de ti. Mas observe: a verdadeira força não está em evitar a queda, e sim em perceber o que ela ensina.'\n";
-
-    const char *historia3 =
-    "\nUm estrondo final ressoou pelo salão. A Torre da mesa se despedaçou, espalhando cartas e lembranças como chuva sobre o chão de madeira. "
-    "Irena caiu de joelhos, lágrimas misturando-se à respiração ofegante. "
-    "No entanto, entre o medo e a dor, algo acendeu-se: uma centelha de resistência, de compreensão e aceitação. "
-    "O passado, por mais pesado que fosse, não a definia — apenas a instruía.\n\n"
-
-    "Soraya inclinou-se, sorrindo com uma mistura de respeito e melancolia:\n"
-    "'Nem toda queda destrói. Mas cada queda te mostra o preço de teus passos e, se prestares atenção, te dá o mapa de como caminhar daqui para frente.'\n"
-
-    "Liora acrescentou, a voz ecoando suavemente pelo salão:\n"
-    "'Agora, Irena, sabes que enfrentar teus medos não é opção — é necessidade. "
-    "Cada fragmento de tua história se reflete nesta Torre. Aprende com ela, e nenhum abismo será grande demais para ti.'\n";
+    "As três cartas se inclinam na sua direção, oferecendo-se:\n\n"
+    "1 - O LIVRO   — Guardião dos segredos. A palavra que organiza o que parecia caos.\n"
+    "2 - A FOICE   — O corte consciente. A coragem de ferir o que ainda insiste em te prender.\n"
+    "3 - O JARDIM  — O chão coletivo. Onde tua dor encontra eco, e tua voz se multiplica.\n";
 
     printf("%s\n", historia);
     continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoNeutro++;
+            decisao1_1_2_1();
+            break;
+        case 2:
+            pontoRuim++;
+            decisao1_1_2_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_1_2_3();
+            break;
+    }
+}
+
+// =======================================================================================================================
+// CAMINHO 1_1_2_1 — O LIVRO
+// =======================================================================================================================
+// Justificativa de pontos:
+// O Livro simboliza a memória e o testemunho. Ao escolhê-lo, Irena aceita olhar para si mesma
+// e para as vozes que a antecedem, compreendendo que cada ruína pede registro e significado.
+// É um caminho de sabedoria e reconstrução, mas não há triunfo, apenas consciência.
+// Conta como ponto NEUTRO, pois traz entendimento e estabilidade, sem cair na escuridão,
+// mas também sem a euforia da renovação plena.
+// =======================================================================================================================
+
+void decisao1_1_2_1(void) {
+    const char *historia1 =
+    "\nO Livro repousa diante de ti, mas não é objeto, é fenda. Sua capa pulsa como se tivesse "
+    "um coração próprio, e ao tocá-la, a pele reconhece o frio de um rio subterrâneo. "
+    "O pó dourado que pairava no ar agora se curva para ele, sugado para as páginas em branco, "
+    "como se a matéria do esquecimento tivesse sede de escrita.\n\n"
+
+    "Soraya não interfere; observa com a paciência de quem sabe que cada gesto já foi ensaiado "
+    "em eras que não se contam. Liora, ao contrário, dá um passo, a respiração trêmula, e murmura: "
+    "'Toda ruína pede testemunho. E tu aceitaste escrevê-lo.'\n\n";
+
+    const char *historia2 =
+    "Ao abrir o Livro, as páginas não contêm letras, mas espelhos quebrados. Cada fragmento "
+    "te devolve uma versão tua: o que calou, o que gritou, o que partiu. "
+    "Nenhuma imagem é inteira, mas todas se reconhecem como pedaços de ti mesmo. "
+    "E quanto mais olhas, menos medo tens — como se a própria fragmentação fosse "
+    "um alfabeto capaz de sustentar teu corpo.\n\n"
+
+    "O ar pesa. As fendas da Torre crescem, deixando entrar não apenas luz, mas memórias "
+    "que não são tuas: vozes de ancestrais, de estranhos, de crianças ainda não nascidas. "
+    "Todas pedem lugar no Livro, e o branco das páginas se torna território sagrado para recebê-las.\n\n";
+
+    const char *historia3 =
+    "A escrita começa sozinha. Não é tua mão que move a pena invisível, mas o próprio pulso do mundo. "
+    "Frases se constroem em silêncio, como rios abrindo leitos no escuro: narram a queda da Torre, "
+    "a coragem diante da ruína, e o instante em que escolheste olhar para dentro. "
+    "Cada linha não apenas recorda — recria. "
+    "E ao ler o que acaba de ser inscrito, descobres que tua vida não foi perda, "
+    "mas preparação.\n\n"
+
+    "Liora toca teu ombro. Seus olhos agora não são dela, mas multidão. 'O Livro não te deu respostas', "
+    "ela sussurra. 'Ele te devolveu a pergunta correta.'\n\n";
+
+    const char *historia4 =
+    "As cartas dissolvem-se, retornando ao pó, e a Torre inteira começa a se desmanchar. "
+    "Mas não é desabamento, é liberação. As pedras voltam a ser terra, as vigas retornam ao bosque, "
+    "e até o ar parece soltar o peso que carregava. "
+    "No centro desse colapso, permaneces de pé, sustentado pelo Livro que, agora fechado, "
+    "se dissolve em teu peito como uma cicatriz luminosa.\n\n"
+
+    "Soraya estende a mão, mas não para guiar: para saudar. 'A ruína cumpriu seu papel. "
+    "O resto... já é caminho teu.'\n\n";
+
+    const char *historia5 =
+    "Quando enfim o silêncio retorna, ele não é ventre nem vazio: é horizonte. "
+    "As últimas pedras da Torre se desfazem em poeira dourada que o vento leva para longe, "
+    "como sementes lançadas em terra nova. "
+    "E compreendes que a queda não foi fim, mas tradução: "
+    "a Torre precisou ruir para que tu mesmo pudesses ser arquitetura viva.\n\n"
+
+    "Não há aplauso, não há triunfo, apenas a certeza serena de que escolheste testemunhar, "
+    "e por isso teu nome agora é escrito não em pedra, mas no fluxo eterno da memória.\n\n";
+
     printf("%s\n", historia1);
     continuar();
     printf("%s\n", historia2);
     continuar();
     printf("%s\n", historia3);
-
-    pontoRuim++;
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
 }
+
+// =======================================================================================================================
+// CAMINHO 1_1_2_2 — A FOICE
+// =======================================================================================================================
+// Justificativa de pontos:
+// A Foice representa o corte necessário, a decisão de abandonar vínculos, memórias e pesos
+// que ainda aprisionam. É um gesto de coragem, mas também de dor: o vazio que resta pode ser
+// insuportável e não há promessa de florescimento imediato.
+// É um caminho de risco e perda, onde o renascimento ainda é incerto.
+// Por isso, conta como ponto RUIM, pois apesar da libertação, a aridez domina o resultado.
+// =======================================================================================================================
+
+void decisao1_1_2_2(void) {
+    const char *historia1 =
+    "\nA Foice surge diante de ti, não forjada em ferro, mas em ausência. "
+    "Seu fio brilha como se fosse feito da própria linha que divide o ser do não-ser. "
+    "Ao segurá-la, não sentes peso, mas vertigem — como se o mundo inteiro pudesse ser fatiado "
+    "por um só movimento de tua mão.\n\n"
+
+    "Soraya fecha os olhos, e sua voz desce grave: 'Nada floresce sem corte. "
+    "Tudo que respira, respira porque outra coisa cedeu lugar.'\n\n"
+
+    "Liora te encara, inquieta, como quem observa alguém prestes a arrancar um espinho do próprio peito.\n\n";
+
+    const char *historia2 =
+    "Ergues a Foice, e o ar ao redor se parte em duas metades: o que foi, e o que nunca mais poderá ser. "
+    "A Torre estala mais fundo, como se tivesse aguardado apenas este gesto para finalmente despencar. "
+    "Cada pedra que cai leva consigo um nome, uma memória, uma crença que insistia em te prender.\n\n"
+
+    "O corte não é só externo. Dentro de ti, antigas vozes se calam, vínculos se soltam, "
+    "e o espaço aberto pela perda é quase insuportável. "
+    "Mas é esse mesmo espaço que agora respira.\n\n";
+
+    const char *historia3 =
+    "As paredes da Torre começam a se dissolver em cinzas. "
+    "Lá onde antes havia muralhas, abrem-se campos vastos, mas desolados. "
+    "Não há cântico, não há testemunho — apenas o som seco do que se despede sem retorno.\n\n"
+
+    "Liora se aproxima, lágrimas sem cor descendo pelo rosto. "
+    "'Cortar dói porque a raiz acredita que ainda pode viver', ela sussurra. "
+    "'Mas às vezes é no silêncio do vazio que o corpo aprende outro ritmo.'\n\n";
+
+    const char *historia4 =
+    "A Foice vibra em tua mão uma última vez, antes de se partir em fragmentos de sombra, "
+    "absorvidos pelo chão. Restas apenas tu, de pé, cercado pelas ruínas transformadas em pó. "
+    "Soraya abre os olhos e te saúda com reverência: 'Tu aceitaste ser o carrasco do que te acorrentava. "
+    "E ao fazê-lo, deste passagem ao que virá.'\n\n"
+
+    "Mas a passagem não é reconfortante — é crua. Nenhum mapa se revela, nenhuma promessa te consola. "
+    "O corte apenas abre, sem dizer o que nascerá dali.\n\n";
+
+    const char *historia5 =
+    "No horizonte, nada floresce ainda. O vento sopra seco, levando embora o pó das ruínas "
+    "como se fosse sal em campo estéril. Mas, em meio ao vazio, teu peito pulsa leve: "
+    "não mais arrastado pelo peso de correntes invisíveis. "
+    "O corte não trouxe paz — trouxe espaço. E o espaço, cedo ou tarde, sempre será ocupado.\n\n"
+
+    "Caminhas adiante, sem certezas. Apenas com a lembrança da lâmina que ousaste erguer. "
+    "E isso, mais que vitória, é renascimento.\n\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+// =======================================================================================================================
+// CAMINHO 1_1_2_3 — O JARDIM
+// =======================================================================================================================
+// Justificativa de pontos:
+// O Jardim simboliza a regeneração coletiva. A dor de Irena não se resolve sozinha, mas se
+// multiplica em encontro, canto e partilha. Onde havia ruína, surge vida; onde havia solidão,
+// brota comunidade. O peso da queda se transforma em adubo para novos horizontes.
+// É um caminho de esperança e expansão, onde a cura se enraíza na coletividade.
+// Por isso, conta como ponto BOM, pois traduz a ruína em florescimento e pertencimento.
+// =======================================================================================================================
+
+void decisao1_1_2_3(void) {
+    const char *historia1 =
+    "\nO Jardim se abre diante de ti, mas não como um objeto — é um sopro que se espalha. "
+    "Das cartas brotam raízes luminosas que correm pelo chão da Torre em ruína, "
+    "fendendo as pedras como se fossem apenas terra fértil adormecida. "
+    "O pó dourado se transforma em sementes que caem, silenciosas, "
+    "mas cada uma delas pulsa como estrela caída.\n\n"
+
+    "Soraya sorri pela primeira vez. 'Nem toda ruína precisa ser silêncio. "
+    "Algumas aprendem a cantar na boca da terra.'\n\n";
+
+    const char *historia2 =
+    "Lentamente, as paredes partidas da Torre são cobertas de verde. "
+    "Musgos, flores e vinhas surgem como se tivessem esperado séculos para germinar. "
+    "Do chão rachado brotam fontes de água clara, e o ar, antes pesado, "
+    "se enche do perfume fresco de terra molhada. "
+    "Onde havia pedras, agora há passagens; onde havia sombra, agora brilham cores.\n\n"
+
+    "Liora ajoelha-se diante do primeiro broto que rompe o solo e murmura: "
+    "'O comum é o verdadeiro milagre. Nada floresce sozinho.'\n\n";
+
+    const char *historia3 =
+    "E não floresces só. Das raízes que se espalham surgem figuras: "
+    "homens, mulheres, crianças, ancestrais e desconhecidos. "
+    "Todos caminham para dentro do Jardim como se sempre tivessem estado ali, "
+    "mas aguardassem tua escolha para atravessar o limiar. "
+    "Cada rosto traz cicatrizes, mas também sorrisos. "
+    "E ao se reunirem, o espaço se enche de vozes, "
+    "não em tumulto, mas em harmonia.\n\n"
+
+    "Soraya ergue a mão e declara: 'O Jardim não te pertence. "
+    "Mas se tu o cultivares, ele sempre te acolherá.'\n\n";
+
+    const char *historia4 =
+    "As cartas se desfazem em pétalas, e o vento as leva por entre as árvores recém-nascidas. "
+    "Não há mais Torre — há clareira. E nela, um círculo se forma em tua volta, "
+    "feito de todos que chegaram. "
+    "Cantam sem língua, mas compreendes cada verso: é cântico de cura, "
+    "de lembrança, de futuro. "
+    "Teu peito se abre, e a dor antiga encontra eco nos outros corpos, "
+    "até que já não é peso, mas semente compartilhada.\n\n"
+
+    "Liora segura tua mão. Seus olhos brilham suaves, "
+    "como de quem aprendeu que toda lágrima pode ser rega.\n\n";
+
+    const char *historia5 =
+    "O Jardim cresce além da clareira, ocupando horizontes. "
+    "Flores nascem nas pedras, rios se bifurcam em canções, "
+    "e até o céu parece se inclinar para participar da colheita. "
+    "A ruína da Torre não desapareceu — mas se tornou adubo. "
+    "Ali onde o peso antigo desabou, a vida encontrou brecha.\n\n"
+
+    "E compreendes, enfim, que a queda não foi fim, "
+    "mas convite: teu destino não era resistir sozinho, "
+    "mas aprender a florescer junto. "
+    "E assim, entre vozes, raízes e luz, teu nome não se perde — "
+    "ele se multiplica.\n\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+
 
 
 
