@@ -731,7 +731,7 @@ void decisao1_1_2_2(void) {
     const char *historia1 =
     "\nA Foice surge diante de ti, não forjada em ferro, mas em ausência. "
     "Seu fio brilha como se fosse feito da própria linha que divide o ser do não-ser. "
-    "Ao segurá-la, não sentes peso, mas vertigem — como se o mundo inteiro pudesse ser fatiado "
+    "Ao segurá-la, não sentes peso, mas vertigem, como se o mundo inteiro pudesse ser fatiado "
     "por um só movimento de tua mão.\n\n"
 
     "Soraya fecha os olhos, e sua voz desce grave: 'Nada floresce sem corte. "
@@ -866,29 +866,342 @@ void decisao1_1_2_3(void) {
     printf("%s\n", historia5);
 }
 
+void decisao1_1_3(void) {
+    const char *historia =
+    "\nO chão da Torre range como se guardasse fendas antigas, "
+    "mas não cede. O pó dourado que antes caía agora se recolhe, "
+    "como maré que retorna às profundezas. "
+    "O silêncio não é queda nem ventre — é espera.\n\n"
+
+    "Soraya fixa os olhos em ti, e há um peso no olhar, "
+    "não de julgamento, mas de convocação. "
+    "'A ruína não é única. Ela sempre guarda outra face, "
+    "oculta até que tenhas coragem de perguntar.'\n\n"
+
+    "Liora aproxima-se e pousa a mão sobre a pedra rachada. "
+    "Do toque, nasce um som baixo, como um coração que pulsa nas entranhas da Torre. "
+    "Dali se erguem não cartas, mas fragmentos de espelhos suspensos, "
+    "cada um tremendo como se refletisse não apenas imagens, mas escolhas ainda não feitas.\n\n";
+
+    const char *historia1 =
+    "As superfícies partidas se reorganizam, girando diante de ti "
+    "até assumirem forma clara: três símbolos distintos, gravados em luz e sombra.\n\n"
+
+    "Soraya fala, e sua voz é lâmina e colo ao mesmo tempo:\n"
+    "'Cada espelho é mais que reflexo. É modo de ver, "
+    "e, portanto, modo de existir. Escolhe não o que desejas enxergar, "
+    "mas o que estás disposto a carregar quando o reflexo se quebrar.'\n\n"
+
+    "Os três fragmentos brilham, oferecendo-se:\n\n"
+    "1 - A SERPENTE — O ciclo que devora e renova. Sabedoria do veneno que cura e mata.\n"
+    "2 - A PONTE    — O risco do atravessamento. Caminhar sobre o frágil para alcançar o invisível.\n"
+    "3 - O RELÓGIO  — O compasso do inevitável. O tempo como prisão e como libertação.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_1_3_1();
+            break;
+        case 2:
+            pontoBom++;
+            decisao1_1_3_2();
+            break;
+        case 3:
+            pontoNeutro++;
+            decisao1_1_3_3();
+            break;
+    }
+}
+
+// =======================================================================================================================
+// CAMINHO 1_1_3_1 — A SERPENTE
+// =======================================================================================================================
+// Justificativa de pontos:
+// A Serpente simboliza o ciclo eterno de morte e renascimento, mas também o risco
+// de ficar preso em sua própria espiral. O veneno pode curar, mas também matar.
+// É um caminho de dor e de poder oculto, onde a transformação exige sacrifício
+// profundo e nem sempre libertador.
+// Conta como ponto RUIM, pois a lição é árdua e marcada pelo risco de perdição.
+// =======================================================================================================================
+
+void decisao1_1_3_1(void) {
+    const char *historia1 =
+    "\nA Serpente se ergue do espelho rachado, não em carne, mas em símbolo. "
+    "Seu corpo é feito de linhas que se devoram, formando círculos sem começo ou fim. "
+    "Ao abrir os olhos para ti, não há ódio, apenas reconhecimento — "
+    "como se já tivesse te visto nascer e morrer inúmeras vezes.\n\n"
+
+    "Soraya sussurra, quase em reverência: 'O ciclo nunca erra. "
+    "Mas ele também nunca perdoa.'\n\n"
+
+    "Liora dá um passo atrás, como quem teme, mas não foge. "
+    "'A serpente traz a cura no mesmo dente que pode matar. "
+    "Tudo depende do quanto suportas engolir de ti mesmo.'\n\n";
+
+    const char *historia2 =
+    "O ar ao redor da Torre torna-se viscoso, impregnado por um odor de terra molhada e ferro. "
+    "A serpente desliza pelo chão rachado, e cada movimento seu desenha símbolos que queimam a pedra, "
+    "como se o próprio chão estivesse sendo escrito por ela.\n\n"
+
+    "De repente, sem aviso, ela se lança contra ti. "
+    "Não há tempo de recuar — suas presas atravessam tua pele e despejam fogo líquido em tuas veias. "
+    "A dor não é dor comum: é como se cada célula fosse forçada a lembrar de todas as vidas que já viveu. "
+    "Morrer, nascer, perder, amar, trair, salvar — tudo pulsa ao mesmo tempo dentro de ti.\n\n"
+
+    "O corpo inteiro treme, dividido entre rejeitar e aceitar. "
+    "E nesse limite, percebes que o veneno não veio para destruir, mas para expor o que ainda negavas.\n\n";
+
+    const char *historia3 =
+    "As paredes da Torre se dissolvem em espirais. "
+    "Não há mais chão nem teto, apenas um labirinto circular onde cada curva devolve a ti uma versão distorcida de si mesmo. "
+    "Em uma curva, vês tua infância abandonada; em outra, teu corpo envelhecido; em outra, a face que jamais serás. "
+    "A serpente te guia, mas não fala — apenas desliza adiante, como se cada volta do caminho fosse um lembrete: "
+    "nada escapa do ciclo.\n\n"
+
+    "Soraya surge na beira de uma curva e fala: 'O que hoje é veneno, amanhã é remédio. "
+    "Mas só se aceitares o intervalo entre os dois.'\n\n"
+
+    "Liora aparece na curva seguinte, lágrimas nos olhos: 'E se não aceitares, viverás mil vezes o mesmo erro, "
+    "chamando de destino aquilo que é apenas repetição.'\n\n";
+
+    const char *historia4 =
+    "Chegas ao centro do labirinto, e lá a serpente repousa sobre si mesma, formando o círculo perfeito. "
+    "Compreendes, num lampejo, que ela não é inimiga nem aliada: é espelho. "
+    "Seu veneno nada mais fez do que acelerar a revelação — "
+    "o ciclo que sempre esteve dentro de ti, exigindo ruptura ou submissão.\n\n"
+
+    "Ela abre a boca uma última vez, oferecendo o próprio rabo. "
+    "É convite e ameaça. Se aceitares, a roda se fecha: "
+    "morrerás para renascer, mas jamais escaparás do giro. "
+    "Se recusares, carregarás para sempre o gosto do veneno, "
+    "com a lembrança do ciclo gravada em teu sangue.\n\n"
+
+    "A escolha não é dita, apenas sentida — e tua respiração, "
+    "já marcada pela serpente, sela o pacto.\n\n";
+
+    const char *historia5 =
+    "Quando o labirinto enfim se desfaz, a Torre não está mais ali. "
+    "Há apenas um campo vasto, árido, onde a poeira dança como miragem. "
+    "Teu corpo ainda carrega o calor do veneno, e sabes que nunca mais serás o mesmo. "
+    "O ciclo está inscrito em ti, tatuado em tua carne como sombra luminosa.\n\n"
+
+    "Soraya te observa em silêncio, como quem reconhece alguém que atravessou um limite sem retorno. "
+    "Liora, com olhar pesaroso, apenas diz: 'A serpente não te libertou. "
+    "Ela apenas te mostrou que a prisão também pode ser infinita.'\n\n"
+
+    "E assim, carregando em si o veneno que é também fogo, "
+    "segues adiante. Cada passo ecoa como lembrança de que tua vida "
+    "não será reta, mas curva. "
+    "E na curva, sempre, a serpente te aguarda.\n\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
 
 
 
-
 // =======================================================================================================================
-// CAMINHO 1_1_2_2
+// CAMINHO 1_1_3_2 — A PONTE
 // =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 1_1_2_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 1_1_3_1
+// Justificativa de pontos:
+// A Ponte representa o risco necessário do atravessamento. Não há certeza de
+// firmeza sob os pés, mas há horizonte além da travessia. É um gesto de coragem
+// e de esperança: abrir-se ao desconhecido para encontrar novos caminhos.
+// Conta como ponto BOM, pois traduz a queda em movimento e expansão.
 // =======================================================================================================================
 
-// =======================================================================================================================
-// CAMINHO 1_1_3_2
-// =======================================================================================================================
+void decisao1_1_3_2(void) {
+    const char *historia1 =
+    "\nA Ponte ergue-se do espelho como fio de luz suspenso no vazio. "
+    "Não é feita de pedra nem de madeira, mas de memória e risco. "
+    "Oscila como se respirasse, estendendo-se de um abismo a outro, "
+    "um caminho estreito sobre o nada.\n\n"
+
+    "Soraya olha para ti com firmeza: 'Toda travessia exige fé maior do que o próprio chão.'\n\n"
+    "Liora se aproxima e toca teu braço. 'Nenhum passo é seguro. "
+    "Mas também não há horizonte sem atravessamento.'\n\n";
+
+    const char *historia2 =
+    "Ao pôr o pé sobre a Ponte, o corpo estremece. "
+    "A estrutura não geme nem ruge: ela vibra como corda de instrumento, "
+    "respondendo ao peso de tua decisão. "
+    "Cada passo ecoa não no ar, mas dentro de ti, "
+    "como se a travessia fosse um exame íntimo de coragem.\n\n"
+
+    "O vento sopra forte, trazendo memórias que tentam te puxar de volta: "
+    "rostos que já perdeste, erros que preferias esquecer, "
+    "palavras que ainda doem. "
+    "Mas a Ponte só avança quando teu olhar se mantém à frente. "
+    "Olhar para trás é sentir o caminho desaparecer sob teus pés.\n\n";
+
+    const char *historia3 =
+    "A meio caminho, o vazio fala. Não em voz, mas em vertigem. "
+    "Ele te mostra que a queda não é ameaça distante, "
+    "ela está em cada osso teu, em cada fraqueza que carrega. "
+    "É tentador parar, congelar, desistir. "
+    "Mas então a Ponte começa a se desmanchar atrás de ti, "
+    "como se dissesse: 'O único chão é o que ainda não pisaste.'\n\n"
+
+    "Soraya surge adiante, firme, e declara: 'A coragem não é ausência de medo. "
+    "É a decisão de não deixá-lo ser teu dono.'\n\n"
+
+    "Liora aparece ao teu lado, sua voz suave contra o vento: "
+    "'Toda travessia é solidão. Mas lembra: até a solidão também atravessa.'\n\n";
+
+    const char *historia4 =
+    "O último trecho da Ponte não é feito de luz nem de pedra, "
+    "mas de silêncio. "
+    "Ao pisá-lo, percebes que não há mais apoio sob teus pés. "
+    "Caminhas no ar, suspenso apenas pela decisão de continuar. "
+    "O coração bate descompassado, mas cada batida é um passo. "
+    "E quando dás o derradeiro avanço, a Ponte inteira se dissolve, "
+    "e ainda assim, não cais.\n\n"
+
+    "Do outro lado, o abismo não existe mais. "
+    "Há apenas uma planície vasta, iluminada por um céu que nunca viste. "
+    "A Ponte cumpriu sua função: "
+    "não te trouxe a um lugar seguro, "
+    "mas te ensinou que a travessia em si é o verdadeiro chão.\n\n";
+
+    const char *historia5 =
+    "Soraya se curva levemente, como quem reconhece a bravura sem aplaudir. "
+    "Liora segura tua mão e sorri, não de alívio, mas de confirmação: "
+    "'Atravessar é sempre arriscar. "
+    "Mas quem arrisca descobre que o impossível também tem margens.'\n\n"
+
+    "Atrás de ti, a Ponte não existe mais. "
+    "À frente, o horizonte se abre, vasto, intocado. "
+    "E no peito, a certeza de que cada passo, mesmo vacilante, "
+    "foi escolha de vida.\n\n"
+
+    "A Torre ficou para trás. "
+    "O vazio se desfez. "
+    "E o que resta agora não é ruína nem prisão, "
+    "mas caminho aberto, feito do risco que aceitaste viver.\n\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
 
 // =======================================================================================================================
-// CAMINHO 1_1_3_3
+// CAMINHO 1_1_3_3 — O RELÓGIO
 // =======================================================================================================================
+// Justificativa de pontos:
+// O Relógio simboliza o tempo e sua inevitabilidade. Nem prisão absoluta,
+// nem libertação plena: apenas aceitação de que tudo possui ritmo e fim.
+// É um caminho de serenidade e resignação, onde a sabedoria surge do limite,
+// sem triunfo, mas sem queda na escuridão.
+// Conta como ponto NEUTRO, pois traz equilíbrio e entendimento do inevitável.
+// =======================================================================================================================
+
+void decisao1_1_3_3(void) {
+    const char *historia1 =
+    "\nO Relogio emerge do espelho como esfera suspensa, "
+    "feito de engrenagens que giram em silencio. "
+    "Nao ha ponteiros, apenas um pulso constante, "
+    "como coracao mecanico que rege tudo ao redor. "
+    "Cada batida reverbera no chao, nas paredes, "
+    "e no proprio sangue que corre em tuas veias.\n\n"
+
+    "Soraya fala em tom baixo, quase reverente: "
+    "'Nao ha fuga do compasso. O tempo nao se dobra. "
+    "Mas aprende-se a caminhar em sua musica.'\n\n"
+
+    "Liora, com olhos sombrios, acrescenta: "
+    "'Ele nao espera, nem perdoa. "
+    "O tempo e faca e e balsamo, e tu seras marcado por ambos.'\n\n";
+
+    const char *historia2 =
+    "Quando tocas a esfera, o Relogio se abre como flor de ferro. "
+    "As engrenagens se expandem pelo ar, rodando em torno de ti. "
+    "De repente, a Torre inteira se torna mecanismo: "
+    "cada pedra, cada fenda, cada suspiro e dente de roda "
+    "que gira dentro da mesma maquina universal.\n\n"
+
+    "E entao percebes: tu proprio es engrenagem. "
+    "Teu corpo gira, teus ossos se ajustam ao compasso, "
+    "tua memoria se move como ponteiro sobre cicatrizes.\n\n"
+
+    "Nao ha dor, mas ha vertigem. "
+    "Como se cada escolha ja tivesse sido feita, "
+    "e ainda assim precisasse ser vivida.\n\n";
+
+    const char *historia3 =
+    "O Relogio revela passados e futuros como tic e tac. "
+    "Num estalo, revives a crianca que foste, "
+    "e no seguinte, vislumbra o idoso que ainda seras. "
+    "Cada rosto, cada instante, desdobra-se diante de ti. "
+    "O tempo nao e linha — e mar.\n\n"
+
+    "Soraya sussurra: 'Entendes agora? "
+    "Nao ha vitoria contra o tempo. "
+    "Ha apenas o ato de viver dentro dele.'\n\n"
+
+    "Liora segura tua mao e murmura: "
+    "'O tempo nao e carcereiro. "
+    "Ele e trilha. E tu es tanto o que caminha quanto o que sera caminhao.'\n\n";
+
+    const char *historia4 =
+    "O Relogio acelera. As engrenagens giram mais rapido, "
+    "ate que o ar se torna correnteza. "
+    "Por um momento, acreditas que seras esmagado — "
+    "mas entao o compasso se estabiliza, "
+    "e percebes que nao foste destruido, "
+    "apenas sincronizado.\n\n"
+
+    "O mecanismo se recolhe, reduzindo-se novamente a esfera suspensa. "
+    "Ela pulsa uma ultima vez, "
+    "e depois se dissolve em poeira dourada que repousa sobre tua pele, "
+    "como se tivesses herdado seu ritmo.\n\n";
+
+    const char *historia5 =
+    "A Torre permanece, mas sua ruina ja nao pesa. "
+    "Agora vês nela apenas mais um ciclo, "
+    "parte da mesma dança em que tu tambem estas inserido. "
+    "Nem começo, nem fim — apenas passagem.\n\n"
+
+    "Soraya sorri com ternura rara: "
+    "'O tempo nao te pertence, mas tu pertences a ele.'\n\n"
+
+    "Liora fecha os olhos, como quem aceita uma verdade inevitavel: "
+    "'E dentro desse compasso, mesmo o menor dos gestos ecoa para sempre.'\n\n"
+
+    "O Relogio se foi, mas a batida permanece em teu peito. "
+    "Nao como peso, mas como compasso. "
+    "E compreendes, enfim, que nao ha vitoria sobre o tempo — "
+    "ha o dom de viver em sua cadencia.\n\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
 
 // =======================================================================================================================
 // CAMINHO 1_2_1_1
