@@ -12,25 +12,28 @@ void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
 
+//decisões 1
 void decisao1(void);
 void decisao1_1(void);
-void decisao1_1_2(void);
-
-void decisao1_2(void);
-void decisao1_3(void);
-
-
-void decisao1_1_2_1(void); 
-void decisao1_1_2_2(void); 
-void decisao1_1_2_3(void); 
 void decisao1_1_1(void);
-void decisao1_1_2(void);
-void decisao1_1_3(void);
 void decisao1_1_1_1(void);
 void decisao1_1_1_2(void);
 void decisao1_1_1_3(void);
 
+void decisao1_1_2(void);
+void decisao1_1_2_1(void); 
+void decisao1_1_2_2(void); 
+void decisao1_1_2_3(void); 
 
+void decisao1_1_3(void);
+void decisao1_1_3_1(void);
+void decisao1_1_3_2(void);
+void decisao1_1_3_3(void);
+
+void decisao1_2(void);
+void decisao1_3(void);
+
+//decisões 2
 
 void finalBom(void);
 void finalNeutro(void);
