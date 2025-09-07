@@ -1207,16 +1207,584 @@ void decisao1_1_3_3(void) {
 
 
 // =======================================================================================================================
-// CAMINHO 1_2_1_1
+// CAMINHO 1_2 — A ESTRELA
 // =======================================================================================================================
 
-// =======================================================================================================================
-// CAMINHO 1_2_1_2
-// =======================================================================================================================
+void decisao1_2(void) {
+    const char *historia =
+    "\nIrena sentiu uma calma incomum invadir seu peito. Ela ergueu a mão com determinação suave.\n"
+    "'Quero a Estrela', disse, e sua voz ecoou como um sino distante.\n\n"
 
-// =======================================================================================================================
-// CAMINHO 1_2_1_3
-// =======================================================================================================================
+    "As lamparinas do salão diminuíram, e um único feixe de luz prateada irrompeu do teto, "
+    "iluminando apenas a mesa onde as cartas repousavam. No centro, uma carta começou a brilhar "
+    "com intensidade crescente - era A Estrela, mostrando uma figura derramando água de dois jarros "
+    "enquanto uma estrela de oito pontas brilhava acima.\n";
+
+    const char *historia1 =
+    "\nSoraya suspirou, quase com alívio:\n"
+    "'A esperança que guia sem cegar! A Estrela não te arrastará, pequena coruja - ela apenas iluminará "
+    "os caminhos que já existem dentro de ti.'\n\n"
+
+    "Liora inclinou-se para frente, seus olhos refletindo a luz prateada:\n"
+    "'Mas cuidado: até a luz mais pura pode atrair sombras famintas. A Estrela mostrará o caminho, "
+    "mas não afastará os perigos que o cercam.'\n\n"
+
+    "De repente, a carta da Estrela projetou um feixe de luz que se dividiu em três caminhos luminosos "
+    "no ar, cada um mostrando visões diferentes:\n\n"
+    "De repente, a carta da Estrela projetou um feixe de luz que se dividiu em três caminhos luminosos "
+    "no ar, cada um mostrando visões diferentes:\n\n"
+    "1 - O Navio (a travessia, o desconhecido além do horizonte)\n"
+    "2 - A Serpente (a tentação, o veneno e o aprendizado pelo perigo)\n"
+    "3 - A Montanha (o desafio monumental, o obstáculo que revela força)\n";
+
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_2_1();
+            break;
+        case 2:
+            pontoNeutro++;
+            decisao1_2_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_2_3();
+            break;
+    }
+}
+// ======================================================================
+// CAMINHO 1_2_1 — O NAVIO
+// ======================================================================
+// Justificativa de pontos:
+// O Navio simboliza a travessia do inconsciente: o oceano é reflexo das emoções
+// mais profundas de Irena, e o leviatã representa seus medos ancestrais e
+// pessoais. A tempestade é tanto cenário quanto metáfora — exige coragem,
+// decisão e confronto com o que foi sempre evitado.
+
+void decisao1_2_1(void) {
+    const char *historia =
+    "\nDe repente, uma luz prateada tão intensa quanto um relâmpago cegou Irena. Quando sua visão se recuperou, "
+    "o salão havia desaparecido. Ela estava no convés de um navio fantasma, balançando violentamente em um mar furioso.\n\n"
+    
+    "O cheiro de sal e tempestade encheu suas narinas. O vento uivava como uma alma penada, arrancando-lhe o fôlego. "
+    "Irena agarrou-se à amurada de madeira gastra, sentindo cada tábua tremer sob seus pés. Mas percebeu que não era "
+    "apenas o mar que a testava, cada onda que quebrava contra o casco trazia visões de seu passado.\n\n"
+    
+    "Nas cristas espumantes, ela via rostos: colegas de infância rindo de sua magia, familiares com expressões de desaprovação, "
+    "e os momentos de solidão que tentavam afogá-la desde criança.";
+
+    const char *historia1 =
+    "As águas eram feitas de memórias líquidas, "
+    "e cada impacto contra o navio era um golpe em sua alma.\n\n"
+    
+    "Soraya apareceu no mastro principal, seu véu dançando no furacão:\n"
+    "'O mar é teu espelho vivo, coruja! Vês? Ele mostra a fúria que sempre carregaste escondida, "
+    "mas também revela a coragem inquebrável que te mantém de pé mesmo agora!'\n\n"
+    
+    "Liora materializou-se ao leme, lutando contra as ondas colossais:\n"
+    "'Não navegues apenas para fugir, Irena. Cada onda que enfrentas é uma escolha. "
+    "Decide o que levarás contigo na jornada e o que deixarás afundar nas profundezas!'";
+
+    const char *historia2 =
+    "\nDe repente, o navio foi atingido por um relâmpago.\n"
+    "As velas pegaram fogo azul, iluminando o céu escuro.\n"
+    "Do mar ergueu-se uma figura colossal: um leviatã feito de água e sombra, olhos como faróis de fúria.\n"
+    "Ele rugiu, e as ondas se ergueram como muralhas.\n\n"
+
+
+    "Irena sentiu o coração disparar. Não era apenas um monstro: era a materialização de seus medos.\n"
+    "O medo de fracassar, o medo de ser rejeitada, o medo de nunca pertencer a lugar algum.\n"
+    "O leviatã avançou, e o navio inteiro tremeu.\n";
+
+
+    const char *historia3 =
+    "\nSoraya apontou para a criatura e bradou:\n"
+    "'Ele não é teu inimigo. Ele é tua travessia! Escolhe: lutar contra, fugir, ou encarar!'\n\n"
+
+
+    "Liora, com olhos de ferro, ergueu a mão em direção a Irena:\n"
+    "'A resposta não está no mar, mas em ti. O que farás diante da fera que é feita da tua própria sombra?'\n\n";
+
+    const char *historia4 =
+    "\nO navio oscilava com violência, e a cada escolha adiada, o mar parecia mais próximo de engoli-la.\n"
+    "As cordas se partiam, os mastros tremiam, e a tripulação espectral gritava em línguas esquecidas.\n"
+    "Irena sentiu que não havia mais tempo: ou enfrentava, ou seria apenas mais um nome tragado pelas águas.\n\n"
+
+
+    "Soraya inclinou-se para a frente, olhos brilhando de expectativa:\n"
+    "'Toda coruja precisa decidir se é ave de noite... ou fênix que atravessa a tempestade.'\n\n"
+
+
+    "Liora, firme, declarou:\n"
+    "'Não há volta, Irena. A travessia já começou. O que escolheres aqui será tatuado em tua alma.'\n";
+
+
+    const char *historia5 =
+    "\nO leviatã ergueu-se uma última vez, bloqueando todo o horizonte.\n"
+    "Os trovões calaram, e só restava o som do coração dela batendo como tambor de guerra.\n"
+    "A decisão estava diante dela, brilhando nas cartas como destino vivo.\n"
+    "Era hora de escolher qual mar enfrentaria: o da fúria, o da espera, ou o da luz.\n"
+
+    "Três cartas surgiram diante de Irena, flutuando sobre a água incandescente:\n\n"
+    "1 - O Tridente (a arma, a luta direta contra o leviatã).\n"
+    "2 - A Âncora (ficar firme, suportar a tempestade sem fugir).\n"
+    "3 - O Farol (guiar-se pela luz, não pelo medo, e encontrar outra rota).\n";
+
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+
+
+    int escolha = receberResposta(3);
+
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_2_1_1();
+        break;
+        case 2:
+            pontoNeutro++;
+            decisao1_2_1_2();
+        break;
+        case 3:
+            pontoBom++;
+            decisao1_2_1_3();
+        break;
+    }   
+}
+
+// ======================================================================
+// CAMINHO 1_2_1_1 — O TRIDENTE
+// ======================================================================
+// Justificativa de pontos:
+// O Tridente representa o confronto direto com os próprios medos.
+// Irena ataca o leviatã com fúria, transformando dor em arma.
+// Porém, cada golpe a fere também, pois luta contra aquilo que faz parte dela.
+// Esse caminho é de ação intensa, mas também de autodesgaste.
+// Conta como ponto RUIM.
+// ======================================================================
+
+void decisao1_2_1_1(void) {
+    const char *historia1 =
+    "\nIrena agarrou o Tridente que surgiu em suas mãos.\n"
+    "A arma brilhava como se tivesse sido forjada do próprio trovão.\n"
+    "Ela ergueu-o contra o céu e saltou em direção ao leviatã,\n"
+    "gritando como quem libera séculos de dor sufocada.\n\n"
+
+    "As ondas se partiram, e o choque foi devastador: luz contra sombra,\n"
+    "coragem contra medo. O mar inteiro rugiu com o impacto.\n";
+
+    const char *historia2 =
+    "\nO Tridente perfurou as escamas da fera,\n"
+    "mas a cada golpe, Irena sentia a lâmina atravessar também suas feridas antigas.\n"
+    "O sangue do leviatã era o mesmo que escorria em sua alma.\n\n"
+
+    "Soraya riu alto, vibrando com a fúria:\n"
+    "'Lutar é viver, mesmo quando dói!'\n\n"
+
+    "Mas Liora murmurou sombria:\n"
+    "'Cuidado, coruja... há batalhas que vencem por fora e destroem por dentro.'\n";
+
+    const char *historia3 =
+    "\nO leviatã respondeu com violência.\n"
+    "Golpeou o navio com sua cauda colossal, abrindo fendas no casco.\n"
+    "A água invadiu o convés, e Irena quase foi arrastada para o fundo.\n\n"
+
+    "Ela se ergueu novamente, ofegante, o Tridente queimando em suas mãos.\n"
+    "Cada batida de seu coração parecia ecoar como um trovão.\n\n"
+
+    "Soraya gritou:\n"
+    "'Mostra a ele que não és presa, mas caçadora!'\n";
+
+    const char *historia4 =
+    "\nIrena lançou-se sobre a criatura mais uma vez.\n"
+    "O Tridente perfurou-lhe o olho, e o leviatã uivou de dor,\n"
+    "erguendo colunas de água como muralhas.\n"
+    "O céu inteiro se iluminou em clarões azuis.\n\n"
+
+    "Mas Irena já não sabia se ainda atacava a fera ou a si mesma.\n"
+    "Cada golpe a deixava mais fraca, como se drenasse a própria essência.\n";
+
+    const char *historia5 =
+    "\nQuando, enfim, o leviatã se dissolveu em espuma e silêncio,\n"
+    "Irena permaneceu de pé no convés partido.\n"
+    "O Tridente ainda brilhava, mas pesava como um fardo impossível de carregar.\n\n"
+
+    "Ela não havia conquistado vitória limpa, apenas sobrevivido.\n"
+    "E no fundo, sabia que o monstro morto continuaria vivo dentro dela.\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+// ======================================================================
+// CAMINHO 1_2_1_2 — A ÂNCORA
+// ======================================================================
+// Justificativa de pontos:
+// A Âncora representa a decisão de resistir, de se manter firme em meio à
+// tempestade e ao medo. Irena escolhe não atacar nem fugir, mas suportar.
+// Esse caminho revela resiliência e coragem silenciosa, mas também a limitação
+// de não transformar nem o mar, nem a fera. Conta como ponto NEUTRO.
+// ======================================================================
+
+void decisao1_2_1_2(void) {
+    const char *historia1 =
+    "\nIrena fechou os olhos e, ao abri-los, encontrou diante de si uma âncora etérea.\n"
+    "O objeto brilhava com a mesma luz prateada da Estrela, pesada e serena.\n"
+    "Sem hesitar, ela cravou a âncora no convés.\n\n"
+
+    "O navio inteiro estremeceu e, de repente, ficou firme como uma montanha no meio do mar furioso.\n";
+
+    const char *historia2 =
+    "\nO leviatã rugiu, enfurecido, golpeando o casco com sua cauda colossal.\n"
+    "A cada impacto, o navio tremia, mas não cedia.\n"
+    "As ondas batiam com violência, tentando arrancar a âncora, mas a corrente parecia infinita.\n\n"
+
+    "Soraya observava com um sorriso enviesado:\n"
+    "'Resistir também é caminho, coruja... mas lembra: não se vive só de suportar.'\n";
+
+    const char *historia3 =
+    "\nLiora, porém, sorriu com aprovação, seus olhos firmes como rocha:\n"
+    "'Às vezes, firmeza é mais poderosa que qualquer lâmina. Segurar-se é recusar-se a afundar.'\n\n"
+
+    "Irena respirava fundo a cada investida da criatura.\n"
+    "Seu corpo doía, seus braços tremiam, mas dentro dela nascia uma força nova:\n"
+    "a certeza de que poderia aguentar.\n";
+
+    const char *historia4 =
+    "\nO leviatã mergulhou e emergiu em explosões de espuma, tentando arrancá-la do convés.\n"
+    "Mas Irena permaneceu. Nem gritou, nem recuou.\n"
+    "Era como a própria âncora — silenciosa, imóvel, mas inquebrantável.\n\n"
+
+    "A tripulação espectral calou-se, observando a cena com reverência.\n";
+
+    const char *historia5 =
+    "\nQuando a tempestade começou a recuar, o leviatã afundou lentamente, até desaparecer nas profundezas.\n"
+    "O mar voltou a ser um espelho calmo, e a âncora se desfez em luz.\n\n"
+
+    "Irena caiu de joelhos, exausta, mas não derrotada.\n"
+    "Descobriu que, às vezes, resistir sem se quebrar é a maior forma de vitória.\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+// ======================================================================
+// CAMINHO 1_2_1_3 — O FAROL
+// ======================================================================
+// Justificativa de pontos:
+// O Farol simboliza a sabedoria e a coragem de guiar-se pela luz interior,
+// em vez de se deixar dominar pelo medo. Irena não destrói o leviatã e nem
+// se prende à tempestade: ela encontra outra rota. Esse caminho representa
+// clareza, autoconhecimento e transcendência. Conta como ponto BOM.
+// ======================================================================
+
+void decisao1_2_1_3(void) {
+    const char *historia1 =
+    "\nIrena estendeu a mão e, diante dela, surgiu o Farol.\n"
+    "Não era feito de pedra nem de fogo, mas de pura luz dourada que rasgava as trevas.\n"
+    "A torre ergueu-se sobre as ondas, irradiando claridade em todas as direções.\n\n"
+
+    "O leviatã rugiu, cegado pela luminosidade. Sua sombra vacilou, como se a própria escuridão\n"
+    "não tivesse onde se esconder.\n";
+
+    const char *historia2 =
+    "\nSoraya suspirou, surpresa e quase emocionada:\n"
+    "'Ah... escolheste a luz, não a lâmina. És mais sábia do que eu pensei, coruja.'\n\n"
+
+    "Liora inclinou a cabeça com respeito:\n"
+    "'Não venceste o mar. Aprendeste a navegar com ele. Isso é o que poucos conseguem.'\n";
+
+    const char *historia3 =
+    "\nAs águas se abriram em corredores de claridade, revelando uma rota secreta\n"
+    "entre muralhas de espuma e sombra. O navio seguiu suave, como se o mar o conduzisse\n"
+    "ao invés de tentar destruí-lo.\n\n"
+
+    "Irena percebeu que a luz não apagava o medo — ela apenas mostrava que ele podia ser atravessado.\n"
+    "E, pela primeira vez, ela não sentia necessidade de lutar ou resistir. Apenas seguir.\n";
+
+    const char *historia4 =
+    "\nO leviatã observava de longe, imóvel.\n"
+    "Não derrotado, mas também não mais hostil. Era como se, diante da luz do Farol,\n"
+    "ele tivesse reconhecido que não havia vitória em engolir o navio.\n\n"
+
+    "Irena entendeu: algumas batalhas não se vencem com armas, mas com clareza.\n"
+    "E, às vezes, basta acender uma luz para que a escuridão perca sua força.\n";
+
+    const char *historia5 =
+    "\nQuando a travessia terminou, o Farol dissolveu-se em milhares de estrelas,\n"
+    "que ficaram gravadas no céu noturno. O navio repousava em águas calmas,\n"
+    "e Irena sorriu pela primeira vez em muito tempo.\n\n"
+
+    "Não porque estava a salvo, mas porque agora sabia:\n"
+    "a verdadeira luz sempre esteve dentro dela.\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+// ======================================================================
+// CAMINHO 1_2_2 — A SERPENTE
+// ======================================================================
+// Justificativa de pontos:
+// A Serpente simboliza a tentação e o aprendizado doloroso. Ao escolher este
+// caminho, Irena é testada pelo desejo e pelo veneno — não pela força externa,
+// mas pela sedução de ceder ao que pode destruí-la. É uma jornada perigosa,
+// que não oferece vitória limpa, mas a chance de autoconhecimento através do erro.
+// Conta como ponto NEUTRO.
+// ======================================================================
+
+void decisao1_2_2(void) {
+    const char *historia =
+    "\nO feixe da Estrela se contorceu como uma chama ao vento.\n"
+    "Dele surgiu a imagem sinuosa de uma Serpente imensa, escamas brilhando como esmeraldas molhadas.\n"
+    "O salão desapareceu, e Irena se viu em uma clareira iluminada por luar, onde a criatura rastejava em círculos.\n\n"
+
+    "A língua bifurcada sibilava, e cada som parecia invadir a mente de Irena, oferecendo promessas que ela nunca ouvira em voz alta.\n";
+
+    const char *historia1 =
+    "\n'Sou o que desejas e o que temes', murmurou a Serpente, sua voz ecoando dentro da cabeça dela.\n"
+    "'Comigo, sentirás poder correr em tuas veias. Não mais fragilidade, não mais dúvida. Só força.'\n\n"
+
+    "Soraya apareceu à beira da clareira, rindo com ironia:\n"
+    "'Cuidado, coruja... nem toda força vem sem preço. E veneno também pode ser doce no início.'\n";
+
+    const char *historia2 =
+    "\nLiora, séria, cruzou os braços:\n"
+    "'A Serpente mostra os atalhos. Mas atalhos cobram caro. Pergunta-te: o que ganhas ao aceitar, e o que perdes ao recusar?'\n\n"
+
+    "Irena observou os olhos da criatura — hipnóticos, convidativos.\n"
+    "Dentro deles, via reflexos de si mesma triunfando, nunca mais sendo alvo de riso ou desprezo.\n"
+    "Mas também, nas sombras, vislumbres de solidão e isolamento eterno.\n";
+
+    const char *historia3 =
+    "\nA Serpente se ergueu, torcendo-se em torno de Irena sem tocá-la.\n"
+    "Seu corpo formava um círculo, como se a prendesse num ritual antigo.\n\n"
+
+    "Então, a criatura abriu lentamente as mandíbulas, revelando presas que brilhavam como marfim afiado.\n"
+    "Lá no fundo de sua garganta, três cartas brilhavam envoltas em uma luz âmbar, flutuando no veneno cintilante.\n\n"
+
+    "'Escolhe, pequena coruja', sibilou a Serpente, o hálito quente e adocicado.\n"
+    "'Cada carta que guardo em meu veneno traz um destino diferente. Qual delas ousas retirar?'\n\n"
+
+    "Soraya aproximou-se mais, com um brilho de desafio nos olhos:\n"
+    "'Cuidado com o que tiras da boca da serpente, coruja. Algumas cartas queimam, outras encantam.'\n\n"
+
+    "Liora ergueu a voz como uma lâmina:\n"
+    "'O veneno só é mortal se não souberes o que fazer com ele. Até o que destrói pode se tornar remédio.'\n";
+
+    const char *historia4 =
+    "\nAs cartas na boca da Serpente pulsavam com energia, cada uma oferecendo um pacto diferente:\n\n"
+    "1 - O CÁLICE NEGRO - Beber do veneno e aceitar o poder instantâneo\n"
+    "2 - A PELE DO DRAGÃO - Revestir-se com as escamas, ganhando proteção mas perdendo humanidade\n"
+    "3 - O ESPELHO ENVENENADO - Refletir o veneno de volta, transformando-o em sabedoria\n\n"
+
+    "A Serpente fixou seus olhos hipnóticos em Irena, aguardando.\n"
+    "O sibilo ecoou na noite, e a clareira inteira pareceu prender a respiração.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_2_2_1();
+            break;
+        case 2:
+            pontoNeutro++;
+            decisao1_2_2_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_2_2_3();
+            break;
+    }
+}
+
+// ======================================================================
+// CAMINHO 1_2_2_1 — O CÁLICE
+// ======================================================================
+// Justificativa de pontos:
+// Ao beber o veneno da Serpente, Irena escolhe o caminho mais arriscado:
+// o da tentação. O poder chega de forma brutal, mas corrói por dentro.
+// É um caminho de intensidade, de ação devastadora, mas que deixa marcas
+// profundas na alma. Conta como ponto RUIM.
+// ======================================================================
+
+void decisao1_2_2_1(void) {
+    const char *historia1 =
+    "\nO Cálice surgiu diante dela, feito de obsidiana e ouro, pulsando com o mesmo brilho verde das escamas da Serpente.\n"
+    "Irena hesitou apenas por um instante, depois levou o cálice aos lábios.\n\n"
+
+    "O líquido escorreu como fogo líquido, queimando sua garganta, espalhando-se pelas veias como relâmpagos.\n"
+    "Seu corpo arqueou, os olhos se iluminaram com um brilho venenoso.\n"
+    "A Serpente riu, um som grave e ancestral, ecoando pela clareira.\n";
+
+    const char *historia2 =
+    "\nDe repente, a clareira transformou-se em campo de batalha.\n"
+    "Das sombras ergueram-se inimigos de todos os seus medos: vultos de colegas zombando, vozes familiares acusando, espectros que a julgavam.\n\n"
+
+    "Irena ergueu as mãos e viu que suas veias agora brilhavam em verde.\n"
+    "Com um gesto, liberou jorros de energia venenosa, que atravessaram os fantasmas como lâminas.\n"
+    "A cada inimigo destruído, ela sentia uma euforia selvagem.\n\n"
+
+    "Soraya gargalhava, encantada:\n"
+    "'Sim! Mostra-lhes quem és, coruja! Mostra que ninguém pode te quebrar agora!'\n";
+
+    const char *historia3 =
+    "\nMas Liora, séria e firme, ergueu a voz sobre o caos:\n"
+    "'Olha bem, Irena! Não percebes? Quanto mais destróis, mais te consomes!'\n\n"
+
+    "Irena olhou para as próprias mãos e percebeu que a pele começava a escurecer, como se o veneno também queimasse por dentro.\n"
+    "O poder era viciante, mas também voraz.\n\n"
+
+    "A Serpente enrolou-se em torno da clareira, observando-a com satisfação:\n"
+    "'Assim é o veneno: ele dá tudo... e toma tudo.'\n";
+
+    const char *historia4 =
+    "\nOs espectros multiplicaram-se, avançando como enxames de sombras.\n"
+    "Irena rugiu e liberou uma onda de energia tão forte que o chão rachou, e árvores inteiras se despedaçaram.\n\n"
+
+    "O veneno transformava cada emoção em arma — raiva virava fogo, dor virava lâmina, solidão virava tempestade.\n"
+    "Ela lutava como uma deusa selvagem, mas seu coração batia cada vez mais rápido, como se fosse explodir.\n\n"
+
+    "Soraya parou de rir, olhando com espanto e quase medo.\n"
+    "Liora, por sua vez, apenas fechou os olhos, como quem já conhecia aquele destino.\n";
+
+    const char *historia5 =
+    "\nQuando a última sombra se dissolveu, Irena caiu de joelhos.\n"
+    "O Cálice desapareceu de suas mãos, e a Serpente a fitou com olhos ardentes.\n\n"
+
+    "'Agora sabes o gosto do poder e do veneno', disse a criatura.\n"
+    "'Carregarás isso em ti para sempre.'\n\n"
+
+    "Irena respirava com dificuldade, sentindo o peso da vitória.\n"
+    "Ela havia vencido os inimigos, mas dentro dela o veneno continuava a arder.\n"
+    "E a pergunta permanecia: sobreviver era triunfo... ou maldição?\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+// ======================================================================
+// CAMINHO 1_2_2_2 — A PELE DESPIDA
+// ======================================================================
+// Justificativa de pontos:
+// Ao recusar a Serpente, Irena escolhe permanecer intocada pelo veneno.
+// Este é um caminho de coragem silenciosa: não cede à tentação, mas também
+// não ganha o poder imediato que poderia ajudá-la. Ela segue vulnerável,
+// mas preserva sua essência. Conta como ponto NEUTRO.
+// ======================================================================
+
+void decisao1_2_2_2(void) {
+    const char *historia1 =
+    "\nO símbolo da Pele Despida brilhou sob os pés de Irena.\n"
+    "A Serpente ergueu-se diante dela, imensa, aguardando a resposta.\n\n"
+
+    "Irena respirou fundo, o coração batendo como tambor de guerra.\n"
+    "— Não preciso de ti, disse com firmeza.\n"
+    "— Não vou beber teu veneno, nem vestir tua promessa.\n";
+
+    const char *historia2 =
+    "\nA criatura estreitou os olhos, sua língua bifurcada silvando com irritação.\n"
+    "'Todos cedem, coruja... todos! O poder chama, e o veneno é doce.'\n\n"
+
+    "Soraya riu, mas dessa vez havia respeito em sua voz:\n"
+    "'Olha só, pequena... até eu já cedi ao veneno alguma vez. Mas tu? Tu escolheste o vazio. Isso exige uma força rara.'\n\n"
+
+    "Irena permanecia firme, os punhos cerrados, ainda que o corpo tremesse.\n";
+
+    const char *historia3 =
+    "\nLiora, com os olhos fixos em Irena, falou em tom grave:\n"
+    "'Despida de ilusões, despida de atalhos. Permaneces nua diante de ti mesma. E isso, mais do que o veneno, pode doer.'\n\n"
+
+    "A Serpente se contorceu, cercando Irena em círculos apertados, tentando esmagá-la com a pressão.\n"
+    "Mas Irena não se moveu. Sentia medo, sim — mas não recuaria.\n";
+
+    const char *historia4 =
+    "\nA cada volta, a Serpente silvava mais alto, cuspindo veneno que queimava o solo ao redor.\n"
+    "O cheiro ácido invadia os pulmões de Irena, que tossia, mas mantinha a postura ereta.\n\n"
+
+    "Soraya gritou:\n"
+    "'Ela não vai ceder!'\n\n"
+
+    "Liora completou:\n"
+    "'Não porque é imune... mas porque escolheu permanecer inteira.'\n";
+
+    const char *historia5 =
+    "\nPor fim, a Serpente ergueu-se e, com um sibilo prolongado, mergulhou na terra, desaparecendo em um turbilhão de sombras.\n\n"
+
+    "O silêncio caiu sobre a clareira. A lua brilhou mais forte, e o símbolo da Pele Despida se apagou aos pés de Irena.\n"
+    "Ela caiu de joelhos, exausta, mas sentindo uma estranha leveza.\n\n"
+
+    "Rejeitar o veneno não lhe dera poder... mas lhe dera algo talvez mais raro: a certeza de que podia resistir.\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+
 
 // =======================================================================================================================
 // CAMINHO 1_2_2_1
