@@ -42,13 +42,13 @@ void decisao1_2_1_3(void);
 void decisao1_2_2(void);
 void decisao1_2_2_1(void);
 void decisao1_2_2_2(void);
-/*
-void decisao1_2_2_3(void);Ì
+void decisao1_2_2_3(void);
 
+/* 
 void decisao1_2_3(void);
 void decisao1_2_3_1(void);
 void decisao1_2_3_2(void);
-void decisao1_2_3_3(void);Ì
+void decisao1_2_3_3(void);
 
 //decisões 1.3
 void decisao1_3(void);
@@ -1873,6 +1873,267 @@ void decisao1_2_2_2(void) {
     continuar();
     printf("%s\n", historia5);
 }
+
+// ======================================================================
+// CAMINHO 1_2_2_3 — O ESPELHO ENVENENADO
+// ======================================================================
+// Justificativa de pontos:
+// O Espelho simboliza o poder de refletir e transmutar. Irena não cede ao
+// veneno da Serpente, nem o recusa por medo: ela o encara e transforma.
+// Este é um caminho de sabedoria ativa — a dor vira aprendizado, o veneno
+// se torna remédio. Conta como ponto BOM.
+// ======================================================================
+
+void decisao1_2_2_3(void) {
+    const char *historia1 =
+    "\nO brilho âmbar intensificou-se dentro da boca da Serpente, e entre as presas afiadas "
+    "surgiu um objeto impossível: um Espelho de superfície líquida, moldado por vidro e veneno.\n\n"
+
+    "Irena estendeu a mão e, ao tocá-lo, o espelho não refletiu seu rosto — "
+    "mas suas próprias fraquezas, seus medos, as vezes em que quis desistir.\n\n"
+
+    "Soraya estreitou os olhos e sussurrou:\n"
+    "'Olha bem, coruja... o espelho não mostra o que és, mas o que te corrói por dentro.'\n";
+
+    const char *historia2 =
+    "\nLiora se aproximou, séria e firme:\n"
+    "'Mas é também o que pode ser curado. O veneno, quando encarado, pode virar cura. "
+    "Não há sabedoria sem atravessar o próprio reflexo.'\n\n"
+
+    "Irena viu as imagens se multiplicarem: cada ofensa, cada sombra, cada erro, "
+    "tudo refletido no líquido venenoso do espelho. E quanto mais olhava, mais o objeto tremia, "
+    "como se absorvesse suas dores.\n\n"
+
+    "A Serpente silvou, inquieta:\n"
+    "'Isso não é para ser visto! Ninguém encara o próprio veneno sem se quebrar!'\n";
+
+    const char *historia3 =
+    "\nO espelho começou a rachar. Mas não se despedaçava: as rachaduras se iluminavam "
+    "como rios de prata correndo pela superfície.\n\n"
+
+    "Irena percebeu que podia escolher: deixar o espelho explodir, ou segurá-lo firme, "
+    "permitindo que a dor a atravessasse. Respirou fundo e apertou o objeto contra o peito.\n\n"
+
+    "Um clarão explodiu pela clareira. O veneno que escorria virou luz, "
+    "envolvendo a Serpente e fazendo-a recuar pela primeira vez.\n\n"
+
+    "Soraya, boquiaberta, murmurou:\n"
+    "'Ela... transformou o veneno em estrela.'\n";
+
+    const char *historia4 =
+    "\nLiora, com um raro sorriso, completou:\n"
+    "'Não matou a Serpente. Não fugiu dela. Aprendeu a dançar com sua sombra. "
+    "Isso é mais do que vitória: é sabedoria.'\n\n"
+
+    "A Serpente, agora menor, enrolou-se sobre si mesma e mergulhou nas trevas, "
+    "mas seus olhos continuavam a arder — não de raiva, mas de respeito.\n\n"
+
+    "O espelho em mãos de Irena dissolveu-se em milhares de fragmentos de luz, "
+    "que se fixaram em sua pele como constelações.\n";
+
+    const char *historia5 =
+    "\nA clareira voltou ao silêncio. A lua brilhava mais forte, e o ar estava limpo, "
+    "sem vestígios de veneno.\n\n"
+
+    "Irena tocou o peito e percebeu que o veneno não havia sumido — "
+    "mas agora corria em suas veias como força domada, sem destruir.\n\n"
+
+    "Soraya sorriu, com orgulho e espanto:\n"
+    "'Talvez tu sejas mais perigosa que a própria Serpente, pequena coruja.'\n\n"
+
+    "E Liora, em voz baixa, concluiu:\n"
+    "'O veneno não se foi. Mas agora é teu. E tu és maior que ele.'\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+    continuar();
+}
+
+// ======================================================================
+// CAMINHO 1_2_3 — A MONTANHA
+// ======================================================================
+// Justificativa de pontos:
+// A Montanha simboliza os grandes desafios. Ela não se vence com atalhos:
+// cada escolha exige enfrentar o peso da vida. As cartas revelam como
+// Irena decidirá lidar com o obstáculo. 
+// ======================================================================
+
+void decisao1_2_3(void) {
+    const char *historia1 =
+    "\nO feixe da Estrela se condensou em uma muralha escura que subia até desaparecer no céu.\n"
+    "Era a Montanha: imensa, intocável, tão antiga que parecia respirar junto com a terra.\n\n"
+
+    "Ao redor, o salão desapareceu. Irena estava aos pés do gigante de pedra.\n"
+    "O vento frio cortava como lâminas, e as nuvens se arrastavam nas encostas.\n\n"
+
+    "Soraya ergueu o queixo e murmurou:\n"
+    "'A Montanha não promete nada, coruja. Nem glória, nem perdão. Só silêncio e peso.'\n\n"
+
+    "Liora, em tom solene, completou:\n"
+    "'Escalar é encarar-se. Não há como mentir para a pedra. Ela só reconhece a verdade.'\n";
+
+    const char *historia2 =
+    "\nIrena começou a subida. Cada pedra parecia pulsar sob seus dedos, "
+    "como se a Montanha a testasse a cada passo.\n\n"
+
+    "As sombras se moviam nas encostas: vultos de todos os fracassos passados dela, "
+    "escorregando, caindo, rindo. Cada um sussurrava: 'Volta. Não conseguirás.'\n\n"
+
+    "Soraya gargalhou, mas havia dureza em sua voz:\n"
+    "'Escuta bem, pequena... a Montanha nunca mata. Quem morre é quem desiste.'\n";
+
+    const char *historia3 =
+    "\nNo meio da escalada, uma fenda se abriu na rocha.\n"
+    "De dentro, olhos de pedra a observavam: era o Guardião da Montanha, "
+    "um colosso feito de granito vivo. Ele bloqueava a passagem com um gesto lento, "
+    "como se fosse parte da própria montanha.\n\n"
+
+    "Liora falou, firme:\n"
+    "'Ele não é inimigo. É o teste. Pergunta-te: vens para conquistar a Montanha... ou para aprender com ela?'\n\n"
+
+    "O Guardião abriu a mão, revelando três cartas do Baralho Cigano, "
+    "cada uma pulsando com energia própria.\n";
+
+    const char *historia4 =
+    "\nAs cartas brilhavam suspensas no ar, oferecendo caminhos distintos:\n\n"
+    "1 - A FORÇA - Confrontar a Montanha pela brutalidade, rompendo limites do corpo\n"
+    "2 - A CRUZ - Carregar o peso com paciência, suportando o fardo até o fim\n"
+    "3 - O SOL - Iluminar o caminho oculto, enxergando além das pedras\n\n"
+
+    "Soraya sorriu com sarcasmo:\n"
+    "'Qualquer escolha vai doer, coruja. A diferença é o que aprendes com a dor.'\n\n"
+
+    "E Liora, suave mas firme:\n"
+    "'A Montanha só se abre para quem entende que o obstáculo é parte da jornada.'\n";
+
+    const char *historia5 =
+    "\nO Guardião ergueu as cartas diante dela. "
+    "O vento rugia, a neve começava a cair, e a Montanha inteira parecia "
+    "aguardar sua decisão.\n\n"
+
+    "Qual carta Irena escolherá?\n"
+    "1 - A Força\n"
+    "2 - A Cruz\n"
+    "3 - O Sol\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_2_3_1();
+            break;
+        case 2:
+            pontoNeutro++;
+            decisao1_2_3_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_2_3_3();
+            break;
+    }
+}
+
+
+// ======================================================================
+// CAMINHO 1_2_3_1 — A CARTA DA FORÇA
+// ======================================================================
+// Justificativa de pontos:
+// Ao escolher a Força, Irena decide escalar com brutalidade, confiando
+// apenas no corpo. Ela chega ao topo, mas o preço é alto: exaustão e feridas.
+// Conta como ponto RUIM.
+// ======================================================================
+
+void decisao1_2_3_1(void) {
+    const char *historia1 =
+    "\nIrena estendeu a mão e escolheu a carta da Força.\n"
+    "A imagem brilhou, e uma energia abrasadora tomou seus músculos, "
+    "fazendo suas veias vibrarem como cordas tensionadas.\n\n"
+
+    "Soraya sorriu, quase satisfeita:\n"
+    "'Ah... finalmente vejo a chama da ousadia! Mas cuidado, coruja: "
+    "o fogo que aquece também consome.'\n\n"
+
+    "Liora, em tom grave, respondeu:\n"
+    "'A Força pode abrir o caminho... mas o corpo não é infinito. "
+    "Cada pedra vencida pode te arrancar algo de dentro.'\n";
+
+    const char *historia2 =
+    "\nCom um grito, Irena cravou os dedos na rocha e começou a subir sem cordas nem pausas.\n"
+    "Cada avanço era um rasgo de carne, cada pedra arrancava sangue de suas mãos.\n\n"
+
+    "O vento rugia contra o rosto dela, tentando derrubá-la. "
+    "As sombras zombavam, multiplicando-se à sua volta.\n"
+    "Mas Irena respondia com mais esforço, mais brutalidade, até que seus braços ardiam em fogo.\n\n"
+
+    "Soraya gritou, quase excitada:\n"
+    "'Isso! Mostra à Montanha que não tens medo de quebrar-te!'\n";
+
+    const char *historia3 =
+    "\nO Guardião de pedra ressurgiu acima dela, golpeando com uma mão colossal.\n"
+    "Irena não recuou: segurou a mão de granito e, com um rugido, partiu os dedos do gigante.\n\n"
+
+    "O impacto ressoou por toda a Montanha, que tremeu como se chorasse.\n"
+    "Mas o preço veio rápido: o braço de Irena latejava, trincado de dor, "
+    "como se tivesse absorvido a própria rachadura da pedra.\n\n"
+
+    "Liora ergueu a voz sobre o estrondo:\n"
+    "'Não vences a Montanha, Irena. Vences apenas a ti mesma — e a derrota é interna.'\n";
+
+    const char *historia4 =
+    "\nExausta, ela continuou subindo, cada passo arrancando lágrimas e sangue. "
+    "O vento agora trazia visões de vitórias ilusórias: multidões aplaudindo, coroas de glória, "
+    "como se a Montanha zombasse de sua obstinação.\n\n"
+
+    "Soraya murmurou, séria pela primeira vez:\n"
+    "'Quando a vitória brilha demais, pode ser apenas miragem.'\n";
+
+    const char *historia5 =
+    "\nPor fim, Irena alcançou o cume. O céu abriu-se, revelando estrelas em silêncio.\n\n"
+    "Ela ergueu os braços, vitoriosa, mas caiu de joelhos logo em seguida.\n"
+    "Seus músculos estavam dilacerados, o corpo trêmulo, e a Montanha permanecia imponente, "
+    "como se não tivesse cedido nada.\n\n"
+
+    "Liora disse em tom baixo, quase compassivo:\n"
+    "'Chegaste ao topo... mas não conquistaste a Montanha. Apenas a violentaste, "
+    "e ela devolveu as cicatrizes.'\n\n"
+
+    "Irena permaneceu ali, respirando com dificuldade. "
+    "A vitória tinha gosto de ferro e dor — e a pergunta ecoava em seu peito: "
+    "valera a pena?\n";
+
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+    continuar();
+}
+
+
+
 
 
 
