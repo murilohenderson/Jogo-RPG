@@ -14,6 +14,8 @@ void decisaoBaralho(void);
 
 //decisões 1
 void decisao1(void);
+
+//decisões 1.1
 void decisao1_1(void);
 void decisao1_1_1(void);
 void decisao1_1_1_1(void);
@@ -30,14 +32,102 @@ void decisao1_1_3_1(void);
 void decisao1_1_3_2(void);
 void decisao1_1_3_3(void);
 
+//decisões 1.2
 void decisao1_2(void);
+void decisao1_2_1(void);
+void decisao1_2_1_1(void);
+void decisao1_2_1_2(void);
+void decisao1_2_1_3(void);
+
+void decisao1_2_2(void);
+void decisao1_2_2_1(void);
+void decisao1_2_2_2(void);
+/*
+void decisao1_2_2_3(void);Ì
+
+void decisao1_2_3(void);
+void decisao1_2_3_1(void);
+void decisao1_2_3_2(void);
+void decisao1_2_3_3(void);Ì
+
+//decisões 1.3
 void decisao1_3(void);
+void decisao1_3_1(void);
+void decisao1_3_1_1(void);
+void decisao1_3_1_2(void);
+void decisao1_3_1_3(void);
+
+void decisao1_3_2(void);
+void decisao1_3_2_1(void);
+void decisao1_3_2_2(void);
+void decisao1_3_2_3(void);Ì
+
+void decisao1_3_3(void);
+void decisao1_3_3_1(void);
+void decisao1_3_3_2(void);
+void decisao1_3_3_3(void);
 
 //decisões 2
+void decisao2(void);
 
+//decisões 2.1
+void decisao2_1(void);
+void decisao2_1_1(void);
+void decisao2_1_1_1(void);
+void decisao2_1_1_2(void);
+void decisao2_1_1_3(void);
+
+void decisao2_1_2(void);
+void decisao2_1_2_1(void); 
+void decisao2_1_2_2(void); 
+void decisao2_1_2_3(void); 
+
+void decisao2_1_3(void);
+void decisao2_1_3_1(void);
+void decisao2_1_3_2(void);
+void decisao2_1_3_3(void);
+
+//decisões 2.2
+void decisao2_2(void);
+void decisao2_2_1(void);
+void decisao2_2_1_1(void);
+void decisao2_2_1_2(void);
+void decisao2_2_1_3(void);
+
+void decisao2_2_2(void);
+void decisao2_2_2_1(void);
+void decisao2_2_2_2(void);
+void decisao2_2_2_3(void);Ì
+
+void decisao2_2_3(void);
+void decisao2_2_3_1(void);
+void decisao2_2_3_2(void);
+void decisao2_2_3_3(void);Ì
+
+//decisões 2.3
+void decisao2_3(void);
+void decisao2_3_1(void);
+void decisao2_3_1_1(void);
+void decisao2_3_1_2(void);
+void decisao2_3_1_3(void);
+
+void decisao2_3_2(void);
+void decisao2_3_2_1(void);
+void decisao2_3_2_2(void);
+void decisao2_3_2_3(void);
+
+void decisao2_3_3(void);
+void decisao2_3_3_1(void);
+void decisao2_3_3_2(void);
+void decisao2_3_3_3(void);
+*/
+
+//finais
 void finalBom(void);
 void finalNeutro(void);
 void finalRuim(void);
+
+//usuário
 void continuar(void);
 void continuacaoTresCaminhos();
 
