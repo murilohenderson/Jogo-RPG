@@ -44,12 +44,12 @@ void decisao1_2_2_1(void);
 void decisao1_2_2_2(void);
 void decisao1_2_2_3(void);
 
-/* 
 void decisao1_2_3(void);
 void decisao1_2_3_1(void);
 void decisao1_2_3_2(void);
 void decisao1_2_3_3(void);
 
+/*
 //decisões 1.3
 void decisao1_3(void);
 void decisao1_3_1(void);
@@ -2131,6 +2131,160 @@ void decisao1_2_3_1(void) {
     printf("%s\n", historia5);
     continuar();
 }
+
+// ======================================================================
+// CAMINHO 1_2_3_2 — A CARTA DA CRUZ
+// ======================================================================
+// Justificativa de pontos:
+// Ao escolher a Cruz, Irena aceita o peso da Montanha, suportando o fardo
+// sem pressa. É um caminho de paciência e resignação: ela não vence a pedra,
+// mas convive com ela. Não há triunfo glorioso, mas há resistência silenciosa.
+// Conta como ponto NEUTRO.
+// ======================================================================
+
+void decisao1_2_3_2(void) {
+    const char *historia1 =
+    "\nIrena estendeu a mão e escolheu a carta da Cruz.\n"
+    "Um frio profundo percorreu seu corpo, como se o peso de séculos tivesse se deitado sobre seus ombros.\n\n"
+
+    "Soraya ergueu as sobrancelhas, quase desapontada:\n"
+    "'Então é isso? Carregarás o fardo sem lutar? Que escolha melancólica, coruja...'\n\n"
+
+    "Mas Liora sorriu levemente:\n"
+    "'Nem toda vitória precisa de batalha. Às vezes, resistir é o bastante.'\n";
+
+    const char *historia2 =
+    "\nIrena continuou a subir devagar, cada passo arrastado, "
+    "mas firme como o pulsar de um coração paciente.\n\n"
+
+    "O vento tentava derrubá-la, as sombras zombavam, "
+    "mas ela não corria, não se enfurecia — apenas suportava.\n\n"
+
+    "Soraya riu com ironia:\n"
+    "'Isso é coragem ou covardia? Não sei dizer... talvez as duas coisas.'\n";
+
+    const char *historia3 =
+    "\nO Guardião da Montanha reapareceu, bloqueando o caminho com sua mão de pedra.\n"
+    "Diferente de antes, Irena não tentou lutar nem fugir.\n"
+    "Apenas ajoelhou-se diante dele, curvando a cabeça.\n\n"
+
+    "O colosso não atacou. Apenas recuou lentamente, como se reconhecesse a aceitação.\n\n"
+
+    "Liora murmurou:\n"
+    "'Quem suporta aprende algo que a força nunca ensina: a humildade.'\n";
+
+    const char *historia4 =
+    "\nA subida prosseguiu, interminável. Irena estava exausta, mas continuava.\n"
+    "As mãos sangravam, os pés queimavam, o frio mordia sua pele — mas ela não parava.\n\n"
+
+    "Soraya, dessa vez mais séria, comentou:\n"
+    "'Ela não se quebra. Mas também não vence. Apenas carrega.'\n\n"
+
+    "E Liora respondeu:\n"
+    "'E, às vezes, isso é o suficiente.'\n";
+
+    const char *historia5 =
+    "\nDepois de uma eternidade, Irena alcançou um platô alto, "
+    "onde a vista se abria para vales cobertos de neblina.\n\n"
+
+    "Não havia triunfo nem aplausos, apenas silêncio.\n"
+    "A Cruz em sua mão brilhou suavemente e desapareceu, "
+    "deixando em seu peito uma cicatriz luminosa.\n\n"
+
+    "Ela não havia conquistado a Montanha. Mas também não fora derrotada.\n"
+    "Apenas seguira em frente, carregando consigo a lição silenciosa da resistência.\n";
+
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+    continuar();
+}
+
+// ======================================================================
+// CAMINHO 1_2_3_3 — A CARTA DO SOL
+// ======================================================================
+// Justificativa de pontos:
+// Ao escolher o Sol, Irena ilumina a Montanha e enxerga passagens secretas.
+// Não é a força nem a resignação que a guia, mas a clareza e a sabedoria.
+// Esse é um caminho de iluminação e visão profunda, que transforma o obstáculo
+// em parte do aprendizado. Conta como ponto BOM.
+// ======================================================================
+
+void decisao1_2_3_3(void) {
+    const char *historia1 =
+    "\nIrena estendeu a mão e escolheu a carta do Sol.\n"
+    "Um calor suave percorreu seu corpo, dissipando o frio da Montanha.\n"
+    "A luz dourada expandiu-se em sua pele, como se cada célula respirasse claridade.\n\n"
+
+    "Soraya estreitou os olhos, quase incomodada:\n"
+    "'Tsc... essa luz irrita até as sombras. Vais confiar na visão em vez da luta, coruja?'\n\n"
+
+    "Liora sorriu, serena:\n"
+    "'A luz não vence a Montanha... mas mostra que ela nunca foi intransponível.'\n";
+
+    const char *historia2 =
+    "\nO caminho diante de Irena, antes escuro e áspero, começou a se revelar.\n"
+    "Entre as pedras, trilhas escondidas surgiram como fios dourados, "
+    "serpenteando pelas encostas.\n\n"
+
+    "As sombras zombavam, mas cada gargalhada se dissolvia na claridade.\n\n"
+
+    "Soraya murmurou, intrigada:\n"
+    "'Não vejo monstros, não vejo fardos... só clareza. É isso o que escolheste?'\n";
+
+    const char *historia3 =
+    "\nO Guardião de pedra reapareceu, mas agora seus olhos refletiam a luz dourada do Sol.\n"
+    "Em vez de bloquear o caminho, ele se ajoelhou, como se reconhecesse "
+    "a visão de Irena.\n\n"
+
+    "Liora declarou:\n"
+    "'Quem traz o Sol não precisa lutar contra a pedra. A própria Montanha se abre.'\n\n"
+
+    "Soraya, ainda desconfiada, comentou:\n"
+    "'Mas cuidado, coruja... até a luz pode cegar quem não souber usá-la.'\n";
+
+    const char *historia4 =
+    "\nIrena seguiu as trilhas iluminadas, cada passo leve, quase dançando entre as rochas.\n"
+    "O vento frio aquietou-se, transformando-se em brisa suave.\n\n"
+
+    "Ela viu além da Montanha: não apenas um topo, mas vales inteiros, "
+    "rios cintilantes e cidades adormecidas no horizonte.\n\n"
+
+    "Era como se, por um instante, tivesse enxergado o mundo como ele realmente era: "
+    "cheio de obstáculos, mas também de infinitos caminhos escondidos.\n";
+
+    const char *historia5 =
+    "\nNo cume, o Sol brilhou com força, dissolvendo as últimas sombras.\n\n"
+    "Irena ergueu a carta diante do peito, e ela se desfez em luz, "
+    "gravando-se em sua pele como um símbolo eterno.\n\n"
+
+    "Soraya suspirou, resignada, mas com um leve sorriso:\n"
+    "'Talvez a claridade seja mais perigosa que o veneno ou a fúria... "
+    "porque não deixa lugar para enganos.'\n\n"
+
+    "E Liora concluiu, em voz calma:\n"
+    "'Não conquistaste a Montanha, Irena. Conquistaste a ti mesma... "
+    "e isso é maior que qualquer cume.'\n";
+    
+    printf("%s\n", historia1);
+    continuar();    
+    printf("%s\n", historia2);
+    continuar();    
+    printf("%s\n", historia3);
+    continuar();    
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+    continuar();
+}
+
+
 
 
 
