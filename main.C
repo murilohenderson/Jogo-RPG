@@ -2543,12 +2543,6 @@ void decisao1_3_1_2(void) {
     "Liora completou, em tom baixo, quase como uma bênção e um aviso:\n"
     "'A Estrela te chama, coruja. Mas só tu podes escolher se seguirás sua luz será dádiva... ou condenação.'\n";
 
-    "\nDiante da Estrela, três novas cartas cintilam, como fragmentos do céu caindo sobre a mesa:\n\n"
-    "1. O Cavaleiro — a chegada de notícias, movimento, mudanças inevitáveis.\n"
-    "2. A Árvore — enraizamento, crescimento interior, heranças que moldam quem somos.\n"
-    "3. A Aliança — compromissos, uniões que podem fortalecer ou aprisionar.\n\n"
-    "Qual carta Irena escolherá?\n";
-
     printf("%s\n", historia);
     continuar();
     printf("%s\n", historia1);
@@ -2556,7 +2550,6 @@ void decisao1_3_1_2(void) {
     printf("%s\n", historia2);
     continuar();
     printf("%s\n", historia3);
-
 }
 // =======================================================================================================================
 // CAMINHO 1_3_1_3 — OS PÁSSAROS
@@ -3024,20 +3017,6 @@ void decisao1_3_3_3(void) {
     continuar();
     printf("%s\n", historia5);
 }
-
-
-
-// =======================================================================================================================
-// CAMINHO 1_3_3_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 1_3_3_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 1_3_3_3
-// =======================================================================================================================
 
 // =======================================================================================================================
 // CAMINHO 2_1_1_1
