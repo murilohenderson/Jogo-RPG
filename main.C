@@ -236,6 +236,7 @@ void primeiraConversa(void) {
 
     printf("%s\n", historia);
 }
+
 // Decisão do baralho
 void decisaoBaralho(void) {
     const char *historia =
@@ -2284,60 +2285,747 @@ void decisao1_2_3_3(void) {
     continuar();
 }
 
-
-
-
-
-
-
-
 // =======================================================================================================================
-// CAMINHO 1_2_2_1
+// CAMINHO 1_3 — O CAIXÃO
 // =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 1_2_2_2
+// Justificativa de pontos:
+// O Caixão simboliza o fim inevitável, mas também a chance de renascimento.
+// É uma escolha dolorosa, que exige que Irena aceite deixar morrer partes de si,
+// incluindo ilusões, medos e até afetos que a prendem.
+// Esse desapego abre caminho para transformação, por isso conta como PONTO BOM.
 // =======================================================================================================================
 
-// =======================================================================================================================
-// CAMINHO 1_2_2_3
-// =======================================================================================================================
+void decisao1_3(void) {
+    const char *historia =
+    "\nIrena fechou os olhos. O coração pesava, como se cada batida fosse um adeus.\n"
+    "Quando abriu a boca, sua voz não tremeu: — Quero o Caixão.\n\n"
+
+    "Um silêncio denso caiu sobre o salão. Até os gatos pararam de se mover, como se temessem respirar.\n"
+    "As lamparinas tremularam, e a escuridão engoliu as paredes até que só restasse a mesa e o baralho.\n"
+    "Soraya parou de sorrir, e Liora inclinou levemente a cabeça, como quem reconhece coragem.\n\n"
+
+    "A carta virou-se sozinha. No centro, um caixão negro se erguia emoldurado por flores brancas, "
+    "ao mesmo tempo sepulcro e promessa. O ar ficou mais frio, e Irena sentiu o chão sumir sob os pés.\n";
+
+    const char *historia1 =
+    "\nSoraya falou, mas sua voz não era mais brincalhona:\n"
+    "'Morte... mas não de carne. Morte daquilo que te prende. "
+    "Cada fim é uma libertação, ainda que doa como punhal na alma.'\n\n"
+
+    "Enquanto ela falava, os espelhos ao redor começaram a escurecer, refletindo apenas vultos de sombras.\n"
+    "Era como se todos os rostos que Irena conhecera estivessem ali, olhando-a com despedida.\n\n"
+
+    "Liora completou, firme:\n"
+    "'O Caixão não perdoa ilusões. Ele exige entrega. "
+    "A pergunta é: o que você está disposta a enterrar, Irena?'\n\n"
+
+    "As chamas das lamparinas baixaram até quase apagar, revelando três novas cartas sobre a mesa, "
+    "cintilando como brasas no escuro:\n\n"
+    "1 - A Foice (o corte necessário, fim abrupto e doloroso, mas libertador).\n"
+    "2 - A Cruz (o peso do sofrimento, o destino que não pode ser evitado, mas pode ser carregado com fé).\n"
+    "3 - Os Lírios (a paz que nasce após a dor, reconciliação e serenidade).\n\n"
+
+    "Cada carta brilhava como se respirasse, pedindo para ser escolhida. "
+    "E Irena sabia: fosse qual fosse a decisão, nada nela permaneceria igual.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoRuim++;
+            decisao1_3_1();
+            break;
+        case 2:
+            pontoNeutro++;
+            decisao1_3_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_3_3();
+            break;
+    }
+}
+
+void decisao1_3_1(void) {
+    const char *historia =
+    "\nIrena tocou a carta do **Sol**. Assim que a retirou do monte, o salão pareceu mudar. "
+    "A penumbra que dominava as paredes se rasgou em fachos dourados que atravessaram as frestas, "
+    "como se o próprio teto fosse transparente por um instante.\n\n"
+
+    "Soraya ergueu os olhos, seus brincos tilintando ao som de um vento quente que não vinha de lugar algum:\n"
+    "'O Sol ilumina, coruja... mas a luz revela não só os caminhos, também as sombras que preferias manter ocultas. "
+    "Tudo o que escondeste de ti mesma será exposto diante desse clarão.'\n\n"
+
+    "Liora passou os dedos pelo pano da mesa, observando os raios que se espalhavam entre as cartas:\n"
+    "'A claridade pode ser esperança, mas também pode cegar. Tens coragem para suportar tanto brilho sem fugir de tua própria imagem?'\n";
+
+    const char *historia1 =
+    "\nO calor invadiu o corpo de Irena. Ela fechou os olhos, mas ainda via tudo — lembranças, "
+    "sorrisos perdidos, momentos em que acreditara ser feliz. "
+    "Era como se as memórias que guardara em escuridões internas agora gritassem por reconhecimento.\n\n"
+
+    "Soraya inclinou-se sobre a mesa, a voz grave:\n"
+    "'No teu passado, houve riso, sim, mas também a ingenuidade de quem acreditava que a luz bastava. "
+    "Quantas vezes não te queimaste por te aproximar demais de promessas que não passavam de fogo-fátuo?'\n";
+
+    const char *historia2 =
+    "\nIrena sentiu o peso dessas palavras. Recordou as vezes em que confiou em pessoas que a traíram, "
+    "em caminhos que pareciam dourados mas terminavam em deserto. "
+    "O Sol a aquecia, mas também a obrigava a rever essas feridas.\n\n"
+
+    "Liora então completou, como um eco inevitável:\n"
+    "'A luz do Sol não poupa, Irena. Expõe. "
+    "E agora não há véus entre ti e a verdade do que foste, do que fizeste, e do que ainda temes repetir.'\n";
+
+    const char *historia3 =
+    "\nUm clarão final preencheu o salão, fazendo as paredes pulsarem como se fossem feitas de vidro. "
+    "Irena abriu os olhos. Sentiu tanto dor quanto alívio: a sensação de ser atravessada por algo que, "
+    "ao mesmo tempo, queimava e purificava.\n\n"
+
+    "Soraya sorriu, mas sem doçura:\n"
+    "'O Sol te deu a verdade. Cabe a ti decidir se usarás essa luz para florescer ou para incendiar a si mesma.'\n\n"
+
+    "Liora murmurou, quase como um lamento:\n"
+    "'Nem toda claridade é redenção, mas toda claridade é caminho.'\n";
+
+    
+    "\nDiante do brilho ofuscante, Irena percebe três novas cartas à sua frente, reveladas pelo Sol:\n\n"
+    "1. A Lua — o véu do mistério, da ilusão e das verdades não ditas.\n"
+    "2. O Caminho — escolhas inevitáveis, a bifurcação que exige decisão.\n"
+    "3. A Âncora — estabilidade, esperança, mas também o peso de permanecer.\n\n"
+    "Qual carta Irena escolherá?\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+}
 
 // =======================================================================================================================
-// CAMINHO 1_2_3_1
+// CAMINHO 1_3_1_1 — A LUA
 // =======================================================================================================================
+// Justificativa de pontos:
+// A Lua simboliza mistério, introspecção e revelação das ilusões que carregamos.
+// Ao escolhê-la, Irena mergulha em seus próprios reflexos e máscaras, confrontando sentimentos e memórias ocultas.
+// É uma escolha desafiadora e dolorosa, que expõe vulnerabilidades, mas também permite autoconhecimento profundo.
+// Por isso, conta como PONTO NEUTRO: não é necessariamente boa ou má, mas é necessária para o crescimento interior.
+// =======================================================================================================================
+void decisao1_3_1_1(void) {
+    const char *historia =
+    "\nIrena estendeu a mão e puxou a carta da **Lua**. Assim que a colocou sobre a mesa, "
+    "o salão antes banhado de claridade se cobriu de um véu prateado. "
+    "As sombras se alongaram e pareciam ganhar vida, dançando ao redor dela.\n\n"
+
+    "Soraya ergueu uma sobrancelha, o olhar penetrante:\n"
+    "'Do Sol à Lua... escolheste trocar a clareza pelo reflexo, coruja. "
+    "Aqui, nada é o que parece. O brilho não revela: engana. O que vês pode ser só eco do que temes.'\n\n"
+
+    "Liora fechou os olhos, como se ouvisse uma música distante:\n"
+    "'A Lua fala em sonhos e ilusões, em vozes que nunca cessam dentro da mente. "
+    "Será que estás pronta para encarar não a verdade nua, mas as máscaras que ela veste?'\n";
+
+    const char *historia1 =
+    "\nUm frio percorreu os ossos de Irena. O chão parecia coberto de água, refletindo seu rosto, "
+    "mas o reflexo sorria quando ela não sorria. "
+    "Cada passo ecoava como se fosse de outra pessoa, um duplo invisível caminhando ao lado dela.\n\n"
+
+    "Soraya inclinou-se sobre a mesa, os dedos batendo devagar sobre o pano:\n"
+    "'Teu passado tem fendas, e delas brotam imagens distorcidas. "
+    "Quantas vezes fingiste ser algo que não eras para ser aceita? "
+    "Quantas palavras não ditas se tornaram correntes que arrastas sem perceber?'\n";
+
+    const char *historia2 =
+    "\nAs palavras atingiram Irena como lâminas finas. "
+    "Ela se lembrou das noites em que escondia lágrimas para não preocupar ninguém, "
+    "dos sorrisos que usava como máscara em vez de consolo verdadeiro. "
+    "A Lua lhe mostrava que sua própria imagem era um labirinto de espelhos.\n\n"
+
+    "Liora abriu os olhos, fitando-a com intensidade:\n"
+    "'Na Lua, cada verdade vem coberta de véus. "
+    "E tu, Irena, te acostumaste a andar entre véus, sem coragem de rasgá-los. "
+    "Não é a escuridão que te ameaça, mas a ilusão que inventaste para sobreviver.'\n";
+
+    const char *historia3 =
+    "\nO salão estremeceu. As paredes agora eram feitas de vidro escuro, "
+    "e atrás dele vultos se moviam, como memórias presas em sombras. "
+    "Irena quis gritar, mas sua voz soou como se viesse de outra boca.\n\n"
+
+    "Soraya suspirou, quase com compaixão:\n"
+    "'A Lua é armadilha e guia. Podes te perder nas mentiras que criaste... "
+    "ou finalmente admitir que tua própria escuridão também te pertence.'\n\n"
+
+    "Liora completou, num sussurro baixo, como se viesse de dentro da mente de Irena:\n"
+    "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n";
+
+    "\nDiante da Lua, três novas cartas se formam, brilhando em reflexos prateados:\n\n"
+    "1. A Cruz — dor, destino e aprendizado através do sofrimento.\n"
+    "2. O Livro — segredos guardados, o conhecimento oculto que pode salvar ou condenar.\n"
+    "3. O Rato — perdas silenciosas, desgaste, aquilo que corrói sem que se perceba.\n\n"
+    "Qual carta Irena escolherá?\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+}
 
 // =======================================================================================================================
-// CAMINHO 1_2_3_2
+// CAMINHO 1_3_1_2 — A ESTRELA
+// =======================================================================================================================
+// Justificativa de pontos:
+// A Estrela simboliza esperança, orientação e inspiração em meio às dificuldades.
+// Ao escolhê-la, Irena opta por seguir uma luz que guia, mesmo que distante, lembrando-a de seu valor e resiliência.
+// Essa escolha encoraja autoconhecimento e perseverança, destacando a força interior que a mantém firme diante dos desafios.
+// Por isso, é uma escolha de PONTO BOM, pois promove crescimento, clareza e determinação para seu caminho futuro.
 // =======================================================================================================================
 
-// =======================================================================================================================
-// CAMINHO 1_2_3_3
-// =======================================================================================================================
+void decisao1_3_1_2(void) {
+    const char *historia =
+    "\nIrena deixou os dedos correrem pela mesa até pousarem sobre a Estrela. "
+    "Assim que a carta foi revelada, um brilho suave inundou o salão. "
+    "Não era a claridade incandescente do Sol, mas uma luz calma, distante, "
+    "como a promessa de algo maior do que ela mesma.\n\n"
 
-// =======================================================================================================================
-// CAMINHO 1_3_1_1
-// =======================================================================================================================
+    "Soraya sorriu, um sorriso sereno, quase maternal:\n"
+    "'A Estrela... guia de viajantes e desesperados, sinal de esperança quando a noite parece eterna. "
+    "Escolheste não o fogo que cega, mas a centelha que orienta.'\n\n"
 
-// =======================================================================================================================
-// CAMINHO 1_3_1_2
-// =======================================================================================================================
+    "Liora ergueu o olhar para o teto, como se contemplasse céus invisíveis:\n"
+    "'Mas cuidado, coruja. A Estrela também lembra aquilo que nunca se alcança. "
+    "Luz distante pode inspirar... ou torturar quem a persegue sem descanso.'\n";
 
-// =======================================================================================================================
-// CAMINHO 1_3_1_3
-// =======================================================================================================================
+    const char *historia1 =
+    "\nO ambiente se transformou. O teto do salão desapareceu, e acima dela estendia-se "
+    "um céu imenso e profundo, pontilhado de constelações. "
+    "Cada estrela parecia pulsar, como se guardasse memórias e destinos dentro de si.\n\n"
 
-// =======================================================================================================================
-// CAMINHO 1_3_2_1
-// =======================================================================================================================
+    "Soraya apontou para uma delas:\n"
+    "'Vês aquela estrela? Brilha sozinha, isolada, mas nunca deixa de iluminar. "
+    "Assim foste tu, Irena, entre colegas que te viravam o rosto. "
+    "Mesmo rejeitada por tua cor, por tua feitiçaria, tua luz nunca se apagou.'\n\n"
 
-// =======================================================================================================================
-// CAMINHO 1_3_2_2
-// =======================================================================================================================
+    "A voz de Soraya ecoava como se viesse de um lugar além do tempo:\n"
+    "'E ainda assim, sofrestes em silêncio, perguntando-te se havia algum valor em resistir.'\n";
 
+    const char *historia2 =
+    "\nIrena sentiu os olhos marejarem. As memórias retornaram com força: "
+    "as tardes na escola em que tentava se aproximar e era afastada; "
+    "os olhares desconfiados de vizinhos que a chamavam de bruxa; "
+    "as noites em que discutia com os pais, clamando para ser aceita como era.\n\n"
+
+    "Liora falou, sua voz grave e certeira:\n"
+    "'A Estrela não é só esperança. É também isolamento. "
+    "Quem a segue, muitas vezes, anda só. "
+    "Teus pais não entenderam tua luz, e, com medo do que não podiam controlar, "
+    "tentaram apagá-la com gritos e proibições.'\n";
+
+    const char *historia3 =
+    "\nO céu estrelado brilhou mais intensamente, como se respondesse às palavras da cartomante. "
+    "As constelações começaram a se mover, formando imagens do caminho de Irena: "
+    "a menina solitária, a jovem discutindo com a família, a feiticeira escondendo seu poder "
+    "para não ser perseguida.\n\n"
+
+    "Soraya suspirou, com ternura:\n"
+    "'Mesmo na escuridão mais cruel, tua estrela seguiu acesa. "
+    "E agora, tens de decidir: usá-la como guia para teu próprio destino... "
+    "ou deixá-la apenas brilhar distante, inalcançável.'\n\n"
+
+    "Liora completou, em tom baixo, quase como uma bênção e um aviso:\n"
+    "'A Estrela te chama, coruja. Mas só tu podes escolher se seguirás sua luz será dádiva... ou condenação.'\n";
+
+    "\nDiante da Estrela, três novas cartas cintilam, como fragmentos do céu caindo sobre a mesa:\n\n"
+    "1. O Cavaleiro — a chegada de notícias, movimento, mudanças inevitáveis.\n"
+    "2. A Árvore — enraizamento, crescimento interior, heranças que moldam quem somos.\n"
+    "3. A Aliança — compromissos, uniões que podem fortalecer ou aprisionar.\n\n"
+    "Qual carta Irena escolherá?\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+
+}
 // =======================================================================================================================
-// CAMINHO 1_3_2_3
+// CAMINHO 1_3_1_3 — OS PÁSSAROS
 // =======================================================================================================================
+// Justificativa de pontos:
+// Os Pássaros representam as vozes do passado e do presente que moldaram Irena — algumas ferem, outras ensinam.
+// Essa escolha a força a encarar dores antigas, memórias de traumas e críticas, mas também mostra os pequenos apoios e inspirações que a fortaleceram.
+// É uma experiência intensa, que mistura sofrimento e aprendizado, e permite que Irena reconheça sua própria voz e poder.
+// Por essa razão, é uma escolha de PONTO NEUTRO, pois revela tanto a dor quanto o potencial de crescimento, sem ser inteiramente boa ou ruim.
+
+void decisao1_3_1_3(void) {
+    const char *historia =
+    "\nIrena fechou os olhos, ouvindo o silêncio denso da sala. Quando os abriu, sua mão pousou sobre a terceira carta.\n"
+    "— Os Pássaros.\n\n"
+
+    "O ar pareceu vibrar. Ao redor, ouviu-se um bater de asas invisíveis, como se centenas de aves preenchessem o teto escuro.\n"
+    "Sons se multiplicavam, ecos de vozes sussurradas e gritadas, como memórias presas em vento.\n\n"
+
+    "Soraya ergueu um dedo, sorrindo:\n"
+    "'Ah... escolheste as vozes, coruja. As vozes que nunca te deixaram em paz, mas que também podem te ensinar a falar.'\n\n"
+
+    "Liora, séria, apenas murmurou:\n"
+    "'Nem todo canto é canção. Alguns são gritos de faca. Prepara teu coração, porque os pássaros trazem tanto ferida quanto libertação.'\n";
+
+    const char *historia1 =
+    "\nAs vozes começaram a tomar forma. Primeiro, os colegas da escola: risadas afiadas, palavras cuspidas como pedras.\n"
+    "'Negra amaldiçoada!' — 'Feiticeira!' — 'Não toque nela, vai trazer azar!' \n\n"
+    "Cada palavra era um bico bicando sua pele, arrancando pedaços de sua infância.\n"
+
+    "Soraya suspirou, quase com pesar:\n"
+    "'Foram pássaros enjaulados em ignorância, mas usaram suas asas para te ferir. "
+    "Eles nunca perceberam que te davam, junto da dor, o dom da escuta — e da resposta.'\n";
+
+    const char *historia2 =
+    "\nOutras vozes surgiram: a de seu pai, fria como aço, repetindo que ela traria vergonha à família. "
+    "A da mãe, quebrada, pedindo que fosse 'normal', como se existir fosse um erro.\n\n"
+    "Esses pássaros não voavam: batiam asas presas, tentando calá-la antes que pudesse se tornar maior do que a própria casa.\n"
+
+    "Liora falou, firme como sentença:\n"
+    "'As vozes da família são as que mais pesam, porque ecoam dentro da alma. "
+    "Mas até o ninho mais cruel pode ensinar a ave a voar — justamente porque não lhe resta abrigo.'\n";
+
+    const char *historia3 =
+    "\nDe repente, os murmúrios mudaram. Entre os gritos e insultos, surgiram vozes suaves: "
+    "uma professora que um dia lhe disse em segredo que ela tinha olhos fortes demais para não enxergar longe, "
+    "um vizinho que lhe ofereceu chá quando a viu chorando, "
+    "a amiga que a convidou para sua primeira simulação, plantando em silêncio a chama que nunca mais apagaria.\n\n"
+
+    "Soraya abriu os braços, como quem acolhe as asas invisíveis:\n"
+    "'Nem todo canto é cruel. Alguns pássaros sempre souberam que tua voz merecia ecoar. "
+    "E cada palavra deles, mesmo pequena, foi um sopro de ar para teus pulmões cansados.'\n";
+
+    const char *historia4 =
+    "\nAs aves, antes caóticas, começaram a formar um redemoinho acima de sua cabeça. "
+    "As asas batiam em uníssono, um coro de memórias e futuros possíveis.\n\n"
+
+    "Liora ergueu os olhos, e sua voz soou como um trovão contido:\n"
+    "'Agora sabes, Irena: as vozes podem aprisionar, mas também libertar. "
+    "Tu és feita de todos os cantos — os que tentaram te calar e os que te ensinaram a falar. "
+    "A pergunta é: vais repetir o coro dos gritos ou criar teu próprio canto?'\n\n"
+
+    "E então o redemoinho desfez-se em poeira dourada, que pousou leve sobre seus ombros. "
+    "Irena respirou fundo, sentindo que, pela primeira vez, não carregava apenas ruídos, mas asas.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+}
+
+// ======================================================================
+// CAMINHO 1_3_2_1 — O ESPELHO QUEBRADO
+// ======================================================================
+// Justificativa de pontos:
+// O Espelho Quebrado simboliza a fragmentação da identidade de Irena.
+// Ao encarar seus reflexos distorcidos, ela se vê em versões diferentes:
+// algumas frágeis, outras furiosas, todas pedindo reconhecimento.
+// É um caminho de confronto duro, onde a verdade surge aos estilhaços.
+// Conta como ponto RUIM, pois expõe a dor de forma intensa e sem alívio.
+// ======================================================================
+
+void decisao1_3_2_1(void) {
+    const char *historia = 
+    "\nIrena tocou a carta e, de repente, o salão se encheu de estalos agudos.\n"
+    "Espelhos surgiram das paredes, rachados, multiplicando seu rosto em mil pedaços.\n\n"
+    "Cada reflexo piscava diferente: uma criança chorosa, uma jovem furiosa, uma mulher exausta.\n"
+    "E nenhuma delas parecia inteira.\n";
+
+    const char *historia1 =
+    "\nSoraya riu baixo, quase divertida:\n"
+    "'Olha só... um mosaico de ti mesma! Quantas Irenas cabem nesse corpo, coruja?\n"
+    "Algumas pedem socorro, outras gritam vingança... e nenhuma sabe qual delas é a verdadeira.'\n\n"
+    "Liora, com voz firme, respondeu:\n"
+    "'O espelho não mente, apenas devolve o que já existe. Não temas as rachaduras — "
+    "são as linhas daquilo que foi negado.'\n";
+
+    const char *historia2 =
+    "\nOs estilhaços começaram a se soltar das molduras e flutuar ao redor.\n"
+    "Um deles mostrou Irena gritando contra a mãe. Outro, fugindo sozinha pelas ruas.\n"
+    "Em outro, estava calada, como se nunca tivesse ousado existir.\n\n"
+    "Cada pedaço tentava puxá-la para dentro de si, exigindo que aceitasse aquela versão.\n";
+
+    const char *historia3 =
+    "\nSoraya ergueu um caco e o virou contra a luz:\n"
+    "'Afasta um, e outro se quebra. É um jogo sem fim. O que vais fazer, coruja?\n"
+    "Ser todas elas... ou nenhuma?'\n\n"
+    "Liora, mais próxima, concluiu:\n"
+    "'Não é escolha de conforto. Quem encara o Espelho Quebrado sangra — mas aprende que "
+    "a dor também pode ser voz.'\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+}
+
+// ======================================================================
+// CAMINHO 1_3_2_2 — A CHAMA OCULTA
+// ======================================================================
+// Justificativa de pontos:
+// A Chama Oculta simboliza a energia reprimida de Irena.
+// Ao escolhê-la, ela acessa forças internas intensas, mas instáveis.
+// É poder e impulso, mas também risco: o fogo pode iluminar ou consumir.
+// Conta como ponto NEUTRO, pois é ambivalente — não destrói, mas não garante salvação.
+// ======================================================================
+
+void decisao1_3_2_2(void) {
+    const char *historia = 
+    "\nQuando Irena tocou a carta, o ar se aqueceu como se o salão respirasse fogo.\n"
+    "De fissuras invisíveis, pequenas brasas surgiram, espalhando faíscas pelo chão.\n"
+    "E no centro da mesa, ergueu-se uma chama azul, pulsante, viva, mas sem consumir nada.\n";
+
+    const char *historia1 =
+    "\nSoraya estalou os dedos, encantada:\n"
+    "'Ah, a Chama Oculta! O fogo que se escondeu dentro de ti todos esses anos...\n"
+    "Silencioso, esperando a chance de arder. Mas cuidado, coruja:\n"
+    "o mesmo calor que aquece pode te reduzir a cinzas.'\n\n"
+    "Liora cruzou os braços, séria:\n"
+    "'Esse fogo não é inimigo nem aliado. É reflexo daquilo que nunca disseste.\n"
+    "Se o domares, ele será luz. Se o negas, ele te devora.'\n";
+
+    const char *historia2 =
+    "\nAs chamas começaram a dançar, formando silhuetas ao redor de Irena.\n"
+    "Eram lembranças feitas de fogo: colegas que riam dela, o pai furioso,\n"
+    "as noites solitárias em que se sentia invisível.\n"
+    "Mas cada lembrança ardia de forma diferente — algumas queimavam, outras aqueciam.\n";
+
+    const char *historia3 =
+    "\nSoraya sussurrou, hipnotizada pelas figuras incandescentes:\n"
+    "'Eis teu dilema: usas o fogo para incendiar o mundo que te feriu?\n"
+    "Ou o guardas como chama de sobrevivência?'\n\n"
+    "Liora, firme, completou:\n"
+    "'Não há vitória sem custo. O fogo ilumina, mas também deixa marcas.\n"
+    "Aceitá-lo é aceitar viver com cicatrizes em chamas.'\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+}
+
+
+// ======================================================================
+// CAMINHO 1_3_2_3 — O SUSSURRO DO ABISMO
+// ======================================================================
+// Justificativa de pontos:
+// O Sussurro do Abismo simboliza a tentação do vazio: o chamado a desistir,
+// a ceder ao silêncio e à escuridão interior. É um mergulho perigoso,
+// que oferece falsa paz, mas ameaça engolir tudo que Irena construiu.
+// Conta como ponto RUIM, pois há perda de si mesma na entrega ao vazio.
+// ======================================================================
+
+void decisao1_3_2_3(void) {
+    const char *historia = 
+    "\nAo tocar a carta, Irena sentiu o chão se abrir sob seus pés.\n"
+    "Não havia queda, apenas um vazio negro que sussurrava seu nome em ecos distantes.\n"
+    "O ar ficou rarefeito, como se até respirar fosse uma escolha.\n";
+
+    const char *historia1 =
+    "\nSoraya inclinou-se sobre a mesa, olhos brilhando com crueldade doce:\n"
+    "'Ah, pequena coruja... o Abismo não grita, ele convida.\n"
+    "Promete descanso, promete silêncio... e tudo o que pede em troca é você mesma.'\n\n"
+    "Liora, pálida, respondeu em tom seco:\n"
+    "'Esse chamado não é promessa, é armadilha. Quem se entrega ao Abismo\n"
+    "não encontra paz — apenas ausência de si.'\n";
+
+    const char *historia2 =
+    "\nDo vazio, vozes começaram a se formar: eram suas próprias dúvidas,\n"
+    "palavras que ela já dissera a si mesma em noites solitárias:\n"
+    "'Talvez eu não seja suficiente... Talvez seja melhor desaparecer...'\n\n"
+    "Cada frase ecoava como corda puxando-a para dentro da escuridão.\n";
+
+    const char *historia3 =
+    "\nSoraya riu, suave, como quem embala uma criança:\n"
+    "'Não dói, sabes? O Abismo não julga, não cobra. Ele simplesmente... engole.'\n\n"
+    "Liora, firme, ergueu a voz:\n"
+    "'Mas se cederes, o que restará? O mundo já tentou te apagar tantas vezes.\n"
+    "Não entregues às sombras aquilo que é teu por direito: existir.'\n";
+
+    const char *historia4 =
+    "\nO vazio avançou, cercando os pés de Irena como mar profundo.\n"
+    "Ela fechou os olhos e sentiu a vertigem: um chamado doce, quase irresistível.\n"
+    "Não havia promessas, apenas a tentação de não precisar lutar nunca mais.\n\n"
+    "Mas quando abriu os olhos, percebeu as duas diante dela:\n"
+    "Soraya sorrindo como quem celebra uma queda inevitável,\n"
+    "e Liora segurando sua mão com força, como âncora.\n\n"
+    "O Abismo recuou um pouco, mas o sussurro permaneceu —\n"
+    "um lembrete eterno de que a tentação de desistir nunca desaparece por completo.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+}
+
+// ======================================================================
+// CAMINHO 1_3_3
+// ======================================================================
+// Justificativa geral:
+// O caminho 1_3_3 representa o mergulho de Irena em símbolos do limite:
+// não apenas escolhas externas, mas reflexos profundos sobre continuidade,
+// ruptura e entrega. Aqui, ela encara cartas que testam sua noção de fim
+// e de pertencimento.
+// ======================================================================
+
+void decisao1_3_3(void) {
+    const char *historia = 
+    "\nO salão silenciou de forma abrupta. As cartas diante de Irena tremeram\n"
+    "como se resistissem a serem reveladas. Então, uma força invisível ergueu\n"
+    "três lâminas de papel, cada uma cercada de sombra e luz ao mesmo tempo.\n\n"
+    "Soraya ergueu as mãos, teatral:\n"
+    "'Última dança, coruja... cada carta é um fim disfarçado de começo.'\n\n"
+    "Liora inclinou-se, séria como sempre:\n"
+    "'Escolha com cuidado. O que surgir agora não será apenas visão —\n"
+    "será destino gravado em tua pele.'\n";
+
+    const char *historia1 =
+    "\nAs três cartas flutuaram diante dela, pulsando como corações:\n\n"
+    "1 - O CÍRCULO   — eterno retorno, repetir até aprender.\n"
+    "2 - O ABISMO    — dissolver-se para recomeçar vazio.\n"
+    "3 - A FÊNIX     — morrer em chamas para nascer em fogo novo.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoNeutro++;
+            decisao1_3_3_1();
+            break;
+        case 2:
+            pontoRuim++;
+            decisao1_3_3_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_3_3_3();
+            break;
+    }
+}
+// ======================================================================
+// CAMINHO 1_3_3_1 — O CÍRCULO
+// ======================================================================
+// Justificativa de pontos:
+// O Círculo simboliza o eterno retorno: viver, errar, aprender — e repetir.
+// Não é condenação absoluta, mas também não é libertação plena.
+// É um estado de aceitação, onde Irena percebe que nem tudo se rompe,
+// mas também nem tudo se perde: alguns ciclos só podem ser vividos outra vez.
+// Conta como ponto NEUTRO, pois equilibra limite e continuidade.
+// ======================================================================
+
+void decisao1_3_3_1(void) {
+    const char *historia = 
+    "\nIrena tocou a carta marcada pelo símbolo circular.\n"
+    "No mesmo instante, o salão girou sobre si mesmo.\n"
+    "As paredes, os espelhos, até as próprias feiticeiras se duplicaram\n"
+    "em voltas contínuas, como se o mundo fosse uma roda sem eixo.\n";
+
+    const char *historia1 =
+    "\nSoraya riu, dando uma volta sobre os próprios pés:\n"
+    "'Eis o destino mais tedioso e mais cruel: repetir-se!\n"
+    "As mesmas dores, os mesmos amores, os mesmos erros...\n"
+    "Até aprender a rir deles, ou a chorar melhor.'\n\n"
+    "Liora ergueu os olhos para Irena, a voz firme como pedra:\n"
+    "'O círculo não perdoa. Ele retorna até que reconheças o que negaste.\n"
+    "Não é punição, é lembrança. E a lembrança nunca dorme.'\n";
+
+    const char *historia2 =
+    "\nO chão se abriu em padrões de areia, desenhando círculos concêntricos.\n"
+    "Cada volta mostrava uma versão de si mesma: criança, jovem, velha,\n"
+    "todas andando em círculos, repetindo passos conhecidos.\n"
+    "Quando uma tropeçava, a outra caía também. Quando uma sorria,\n"
+    "todas ecoavam aquele riso frágil.\n";
+
+    const char *historia3 =
+    "\nSoraya inclinou-se, observando as figuras rodopiarem:\n"
+    "'Vês? Não há novidade, apenas variação do mesmo tema.\n"
+    "Mas às vezes, coruja... a repetição é o único modo de suportar o caos.'\n\n"
+    "Liora avançou um passo e tocou a mão de Irena, ancorando-a:\n"
+    "'Aceita o Círculo não como prisão, mas como espelho.\n"
+    "Cada volta é chance de enxergar um detalhe que antes ignoraste.\n"
+    "Se aprenderes, o giro não será em vão.'\n";
+
+    const char *historia4 =
+    "\nA roda diminuiu, e o salão voltou a se firmar.\n"
+    "Mas no peito de Irena, algo permanecia: a sensação de andar e retornar,\n"
+    "sempre voltando ao ponto inicial, mas nunca do mesmo jeito.\n"
+    "Não havia vitória, nem derrota — apenas continuidade.\n\n"
+    "E pela primeira vez, ela entendeu que até o círculo pode ensinar\n"
+    "quando se olha com novos olhos.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+}
+
+// ======================================================================
+// CAMINHO 1_3_3_2 — O ABISMO
+// ======================================================================
+// Justificativa de pontos:
+// O Abismo simboliza a tentação da dissolução: desistir de si mesma,
+// entregar-se ao nada como forma de descanso. É um falso consolo,
+// pois o vazio não acolhe, apenas engole. 
+// É um caminho RUIM, já que leva Irena a perder parte de sua essência,
+// tornando-se sombra do que poderia ser.
+// ======================================================================
+
+void decisao1_3_3_2(void) {
+    const char *historia = 
+    "\nA carta foi virada, e o salão inteiro pareceu ser tragado.\n"
+    "Não havia paredes, nem teto, nem chão — apenas um vazio sem fim,\n"
+    "negro como noite sem estrelas.\n"
+    "O coração de Irena afundou, e o silêncio ao redor sussurrava seu nome.\n";
+
+    const char *historia1 =
+    "\nSoraya abriu os braços, sorrindo como anfitriã de um banquete:\n"
+    "'Bem-vinda ao Abismo, pequena coruja! Aqui não há dor, nem esperança.\n"
+    "Apenas descanso eterno, sem exigências, sem fardos...'\n\n"
+    "Liora, rígida, deu um passo à frente, sua voz ecoando grave:\n"
+    "'Não te deixes enganar. O Abismo não é lar, é esquecimento.\n"
+    "Ele promete paz, mas toma de ti até o direito de existir.'\n";
+
+    const char *historia2 =
+    "\nFormas começaram a surgir no vazio: eram sombras de si mesma,\n"
+    "cada uma sem rosto, caminhando em círculos lentos.\n"
+    "Elas não sofriam, não choravam, não lutavam — apenas vagavam,\n"
+    "sem nunca olhar para nada, nem para si.\n";
+
+    const char *historia3 =
+    "\nSoraya sussurrou no ouvido dela, doce como veneno:\n"
+    "'Imagina, coruja... nunca mais sentir dor, nunca mais temer.\n"
+    "É só deixar-se cair, e o Abismo fará o resto.'\n\n"
+    "Mas Liora estendeu a mão, o olhar duro como lâmina:\n"
+    "'Escuta-me, Irena: cair é fácil, mas é também perder o que te torna viva.\n"
+    "És feita de luta, de fogo e de memória. O Abismo apagará tudo isso.'\n";
+
+    const char *historia4 =
+    "\nIrena sentiu o corpo pender para frente, como se o vazio a chamasse.\n"
+    "Por um instante, quase desejou ceder, deixar-se dissolver.\n"
+    "Mas o toque firme da mão de Liora a puxou de volta.\n\n"
+    "O Abismo rugiu, frustrado, e se recolheu, mas não desapareceu.\n"
+    "Seu sussurro permaneceu como cicatriz em sua mente:\n"
+    "um convite eterno a desistir, sempre à espreita, sempre tentador.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+}
+
+// ======================================================================
+// CAMINHO 1_3_3_3 — A FÊNIX
+// ======================================================================
+// Justificativa de pontos:
+// A Fênix representa o renascimento através do fogo. 
+// É a aceitação da dor como combustível para a transformação, 
+// e a coragem de queimar o velho para abrir espaço ao novo. 
+// Conta como ponto BOM, pois traz libertação, clareza e esperança.
+// ======================================================================
+
+void decisao1_3_3_3(void) {
+    const char *historia = 
+    "\nAssim que Irena escolheu a carta, uma labareda dourada tomou o salão.\n"
+    "Não era destruição, mas purificação: cada chama dançava como pena em voo.\n"
+    "No centro do fogo, formava-se a silhueta de uma ave imensa — a Fênix,\n"
+    "com asas feitas de luz incandescente e olhos que ardiam como sóis.\n";
+
+    const char *historia1 =
+    "\nSoraya levou a mão ao peito, fascinada:\n"
+    "'Ah... que espetáculo! Aquele que queima, mas também canta.\n"
+    "Coruja, escolheste o fogo que não consome — o fogo que recria.'\n\n"
+    "Liora curvou a cabeça, respeitosa:\n"
+    "'A Fênix não concede nada de graça. Para renascer, precisas aceitar a morte\n"
+    "do que já não te serve. É dor e milagre, no mesmo sopro.'\n";
+
+    const char *historia2 =
+    "\nO fogo cercou Irena, mas não a feriu. Em vez disso, cada labareda\n"
+    "se prendia a lembranças antigas: as ofensas, os medos, as noites de solidão.\n"
+    "Tudo ardia em silêncio, reduzido a cinzas que o vento levava.\n\n"
+    "E no lugar da dor, brotava espaço: vasto, leve, aberto como horizonte.\n";
+
+    const char *historia3 =
+    "\nSoraya sussurrou, com um brilho de orgulho nos olhos:\n"
+    "'Vês? Não restam correntes, apenas asas. És tua própria fogueira,\n"
+    "e dela nasces inteira.'\n\n"
+    "Liora completou, firme:\n"
+    "'Não te esqueças: o renascimento não apaga as cicatrizes,\n"
+    "ele as grava em ouro. És mais forte porque queimaste o que te prendia.'\n";
+
+    const char *historia4 =
+    "\nDas cinzas ergueu-se a Irena renovada. Sua pele ardia em símbolos dourados,\n"
+    "como tatuagens de fogo, e atrás dela cintilavam asas breves —\n"
+    "não de carne, mas de pura energia.\n\n"
+    "A Fênix soltou um grito que encheu o salão, depois dissolveu-se em luz,\n"
+    "fundindo-se ao peito dela. O fogo apagou-se, mas a chama permaneceu dentro dela,\n"
+    "pulsando como segundo coração.\n";
+
+    const char *historia5 =
+    "\nSoraya aplaudiu, em êxtase contido:\n"
+    "'Agora não és apenas coruja, pequena... és Fênix.\n"
+    "E nenhum abismo, nenhum espelho, poderá apagar isso.'\n\n"
+    "Liora sorriu pela primeira vez, breve mas real:\n"
+    "'És prova de que até a ruína pode florescer em luz. Vai, Irena.\n"
+    "O mundo não te verá mais como eras — e tu também não.'\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+    printf("%s\n", historia3);
+    continuar();
+    printf("%s\n", historia4);
+    continuar();
+    printf("%s\n", historia5);
+}
+
+
 
 // =======================================================================================================================
 // CAMINHO 1_3_3_1
