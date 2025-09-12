@@ -198,20 +198,112 @@ void finalRuim(void) {
 
 
 // Texto introdutório
-void textoIntroducao(void) {
+// void textoIntroducao(void) {
+//     const char *historia =
+//     "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
+//     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
+//     "Ao longe, um letreiro: 'Tessituras de Kali'.\n"
+//     "Diante do portão de ébano, ela o empurrou e entrou. Lá dentro, o sol se apagou e a noite estrelada surgiu.\n"
+//     "Espelhos refletiam mais que sua imagem; refletiam algo oculto.\n"
+//     "De repente, uma voz sussurrou:\n\n"
+//     "'Irena! Quanto tempo, minha pequena coruja...'\n\n"
+//     "Logo outra, fria como gelo, completou:\n\n"
+//     "'Ou talvez o tempo nunca tenha passado...'\n";
+
+//     printf("%s\n", historia);
+// }
+
+// Texto introdutório
+void introducao(void) {
     const char *historia =
     "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
-    "Ao longe, um letreiro: 'Tessituras de Kali'.\n"
-    "Diante do portão de ébano, ela o empurrou e entrou. Lá dentro, o sol se apagou e a noite estrelada surgiu.\n"
-    "Espelhos refletiam mais que sua imagem; refletiam algo oculto.\n"
-    "De repente, uma voz sussurrou:\n\n"
-    "'Irena! Quanto tempo, minha pequena coruja...'\n\n"
-    "Logo outra, fria como gelo, completou:\n\n"
-    "'Ou talvez o tempo nunca tenha passado...'\n";
+    "O caminho parecia cada vez mais estreito, e seus olhos buscavam uma saída.\n"
+    "As ruas estavam tomadas. Corpos, animais, barracas, tudo misturado como um emaranhado vivo.\n"
+    "Ela sabia que precisava decidir: seguir entre a multidão ou tentar alcançar os telhados das casas para chegar mais depressa.\n"
+    "\nO que Irena fará?\n"
+    "1 - Forçar caminho pela rua lotada.\n"
+    "2 - Escalar e avançar pelos telhados.\n";
+    printf("%s", historia);
 
-    printf("%s\n", historia);
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA1();
+    } else if (escolha == 2) {
+        decisaoA2();
+    }
 }
+
+void decisaoA1(void) {
+    const char *historia =
+    "\nIrena apertou o passo, enfiando-se por entre corpos, tecidos coloridos e gritos de vendedores.\n"
+    "Um burro de carga passou disparado ao seu lado, e o choque quase a derrubou.\n"
+    "Ela precisava reagir rápido.\n"
+    "\n1 - Se lançar para a direita, em direção a uma barraca de frutas.\n"
+    "2 - Saltar para a esquerda, onde um viajante distraído carregava caixas.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA1_1();
+    } else if (escolha == 2) {
+        decisaoA1_2();
+    }
+}
+
+void decisaoA1_1(void) {
+    const char *historia =
+    "\nEla se jogou para a direita, derrubando uma pilha de romãs que rolaram pelo chão como esferas rubras.\n"
+    "O vendedor gritou, amaldiçoando seu nome, mas ela já desaparecia entre a multidão.\n";
+    printf("%s", historia);
+}
+
+void decisaoA1_2(void) {
+    const char *historia =
+    "\nIrena saltou para a esquerda, chocando-se contra um viajante que carregava caixas.\n"
+    "As madeiras estalaram, e um líquido viscoso escorreu, manchando o chão.\n"
+    "O homem a xingou em um dialeto áspero, mas ela se recompôs e seguiu adiante.\n";
+    printf("%s", historia);
+}
+
+void decisaoA2(void) {
+    const char *historia =
+    "\nCom agilidade, Irena escalou uma janela estreita e alcançou os telhados.\n"
+    "Lá de cima, o mundo parecia respirar diferente: um mar de telhas vermelhas e fumaça.\n"
+    "Mas cada passo podia ser sua queda.\n"
+    "\n1 - Correr velozmente, saltando de telhado em telhado.\n"
+    "2 - Avançar devagar, quase sem ruído.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA2_1();
+    } else if (escolha == 2) {
+        decisaoA2_2();
+    }
+}
+
+void decisaoA2_1(void) {
+    const char *historia =
+    "\nIrena correu como vento. Telhas quebraram sob seus pés, caindo e estilhaçando-se no chão.\n"
+    "Guardas olharam para cima, desconfiados, mas a jovem já havia desaparecido na sombra de uma chaminé.\n";
+    printf("%s", historia);
+}
+
+void decisaoA2_2(void) {
+    const char *historia =
+    "\nPasso a passo, ela avançou em silêncio.\n"
+    "Os gatos que habitavam os telhados a seguiram com olhos brilhantes, mas nenhum som escapou.\n"
+    "Assim, chegou a uma rua lateral, invisível aos olhos dos guardas.\n";
+    printf("%s", historia);
+}
+
 
 // Primeira conversa
 void primeiraConversa(void) {
