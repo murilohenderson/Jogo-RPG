@@ -12,6 +12,14 @@ void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
 
+//decisões iniciais
+void decisaoA1(void);
+void decisaoA1_1(void);
+void decisaoA1_2(void);
+void decisaoA2(void);
+void decisaoA2_1(void);
+void decisaoA2_2(void);
+
 //decisões 1
 void decisao1(void);
 
@@ -49,7 +57,7 @@ void decisao1_2_3_1(void);
 void decisao1_2_3_2(void);
 void decisao1_2_3_3(void);
 
-/*
+
 //decisões 1.3
 void decisao1_3(void);
 void decisao1_3_1(void);
@@ -60,13 +68,13 @@ void decisao1_3_1_3(void);
 void decisao1_3_2(void);
 void decisao1_3_2_1(void);
 void decisao1_3_2_2(void);
-void decisao1_3_2_3(void);Ì
+void decisao1_3_2_3(void);
 
 void decisao1_3_3(void);
 void decisao1_3_3_1(void);
 void decisao1_3_3_2(void);
 void decisao1_3_3_3(void);
-
+/*
 //decisões 2
 void decisao2(void);
 
@@ -2482,9 +2490,8 @@ void decisao1_3_1(void) {
     "'O Sol te deu a verdade. Cabe a ti decidir se usarás essa luz para florescer ou para incendiar a si mesma.'\n\n"
 
     "Liora murmurou, quase como um lamento:\n"
-    "'Nem toda claridade é redenção, mas toda claridade é caminho.'\n";
+    "'Nem toda claridade é redenção, mas toda claridade é caminho.'\n"
 
-    
     "\nDiante do brilho ofuscante, Irena percebe três novas cartas à sua frente, reveladas pelo Sol:\n\n"
     "1. A Lua — o véu do mistério, da ilusão e das verdades não ditas.\n"
     "2. O Caminho — escolhas inevitáveis, a bifurcação que exige decisão.\n"
@@ -2554,7 +2561,7 @@ void decisao1_3_1_1(void) {
     "ou finalmente admitir que tua própria escuridão também te pertence.'\n\n"
 
     "Liora completou, num sussurro baixo, como se viesse de dentro da mente de Irena:\n"
-    "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n";
+    "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n"
 
     "\nDiante da Lua, três novas cartas se formam, brilhando em reflexos prateados:\n\n"
     "1. A Cruz — dor, destino e aprendizado através do sofrimento.\n"
