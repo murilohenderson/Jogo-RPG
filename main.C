@@ -8,11 +8,14 @@ int pontoRuim = 0;
 // Funções
 int receberResposta(int numOpcoes);
 void resultado(void);
-void textoIntroducao(void);
+// void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
 
 //decisões iniciais
+void decisaoA1_1_1(void);
+void decisaoA1_2_1(void);
+void decisaoA1_2_2(void);
 void decisaoA1(void);
 void decisaoA1_1(void);
 void decisaoA1_2(void);
@@ -57,7 +60,6 @@ void decisao1_2_3_1(void);
 void decisao1_2_3_2(void);
 void decisao1_2_3_3(void);
 
-
 //decisões 1.3
 void decisao1_3(void);
 void decisao1_3_1(void);
@@ -74,61 +76,6 @@ void decisao1_3_3(void);
 void decisao1_3_3_1(void);
 void decisao1_3_3_2(void);
 void decisao1_3_3_3(void);
-/*
-//decisões 2
-void decisao2(void);
-
-//decisões 2.1
-void decisao2_1(void);
-void decisao2_1_1(void);
-void decisao2_1_1_1(void);
-void decisao2_1_1_2(void);
-void decisao2_1_1_3(void);
-
-void decisao2_1_2(void);
-void decisao2_1_2_1(void); 
-void decisao2_1_2_2(void); 
-void decisao2_1_2_3(void); 
-
-void decisao2_1_3(void);
-void decisao2_1_3_1(void);
-void decisao2_1_3_2(void);
-void decisao2_1_3_3(void);
-
-//decisões 2.2
-void decisao2_2(void);
-void decisao2_2_1(void);
-void decisao2_2_1_1(void);
-void decisao2_2_1_2(void);
-void decisao2_2_1_3(void);
-
-void decisao2_2_2(void);
-void decisao2_2_2_1(void);
-void decisao2_2_2_2(void);
-void decisao2_2_2_3(void);Ì
-
-void decisao2_2_3(void);
-void decisao2_2_3_1(void);
-void decisao2_2_3_2(void);
-void decisao2_2_3_3(void);Ì
-
-//decisões 2.3
-void decisao2_3(void);
-void decisao2_3_1(void);
-void decisao2_3_1_1(void);
-void decisao2_3_1_2(void);
-void decisao2_3_1_3(void);
-
-void decisao2_3_2(void);
-void decisao2_3_2_1(void);
-void decisao2_3_2_2(void);
-void decisao2_3_2_3(void);
-
-void decisao2_3_3(void);
-void decisao2_3_3_1(void);
-void decisao2_3_3_2(void);
-void decisao2_3_3_3(void);
-*/
 
 //finais
 void finalBom(void);
@@ -137,11 +84,19 @@ void finalRuim(void);
 
 //usuário
 void continuar(void);
-void continuacaoTresCaminhos();
+void continuacaoTresCaminhos(void);
+
+// introdução alternativa
+void introducao(void);
+
+// game overs
+void gameOverMultidao(void);
+void gameOverQueda(void);
+
 
 int main () {
     
-    textoIntroducao();
+    introducao();
     primeiraConversa();
     decisaoBaralho();
 
@@ -244,13 +199,24 @@ void introducao(void) {
     }
 }
 
+// =======================================================================================================================
+// CAMINHO A1 (RUAS)
+// =======================================================================================================================
+
+void gameOverMultidao(void) {
+    printf("\nA pressão da multidão esmagou Irena contra as barracas. Seus pulmões imploravam por ar.\n");
+    printf("A última visão foi um céu cinzento se fechando sobre si, até que tudo desapareceu.\n");
+    printf("\nGAME OVER\n");
+}
+
 void decisaoA1(void) {
     const char *historia =
     "\nIrena apertou o passo, enfiando-se por entre corpos, tecidos coloridos e gritos de vendedores.\n"
     "Um burro de carga passou disparado ao seu lado, e o choque quase a derrubou.\n"
     "Ela precisava reagir rápido.\n"
     "\n1 - Se lançar para a direita, em direção a uma barraca de frutas.\n"
-    "2 - Saltar para a esquerda, onde um viajante distraído carregava caixas.\n";
+    "2 - Saltar para a esquerda, onde um viajante distraído carregava caixas.\n"
+    "3 - Forçar ainda mais contra a multidão.\n";
     printf("%s", historia);
 
     int escolha;
@@ -260,22 +226,94 @@ void decisaoA1(void) {
         decisaoA1_1();
     } else if (escolha == 2) {
         decisaoA1_2();
+    } else if (escolha == 3) {
+        gameOverMultidao();
     }
 }
 
 void decisaoA1_1(void) {
     const char *historia =
     "\nEla se jogou para a direita, derrubando uma pilha de romãs que rolaram pelo chão como esferas rubras.\n"
-    "O vendedor gritou, amaldiçoando seu nome, mas ela já desaparecia entre a multidão.\n";
+    "O vendedor gritou, amaldiçoando seu nome, mas ela já desaparecia entre a multidão.\n"
+    "Um beco estreito surgia à frente.\n"
+    "\n1 - Entrar no beco.\n"
+    "2 - Voltar para a rua principal.\n";
     printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA1_1_1();
+    } else if (escolha == 2) {
+        decisaoA1();
+    }
+}
+
+void decisaoA1_1_1(void) {
+    const char *historia =
+    "\nO beco cheirava a mofo e a ferrugem. Ratos corriam entre sombras.\n"
+    "No fim, havia uma porta de madeira marcada por runas apagadas.\n"
+    "\n1 - Abrir a porta.\n"
+    "2 - Ignorar a porta e escalar para o telhado.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        primeiraConversa();
+    } else if (escolha == 2) {
+        decisaoA2();
+    }
 }
 
 void decisaoA1_2(void) {
     const char *historia =
     "\nIrena saltou para a esquerda, chocando-se contra um viajante que carregava caixas.\n"
     "As madeiras estalaram, e um líquido viscoso escorreu, manchando o chão.\n"
-    "O homem a xingou em um dialeto áspero, mas ela se recompôs e seguiu adiante.\n";
+    "O homem a xingou em um dialeto áspero, mas ela se recompôs e seguiu adiante.\n"
+    "\n1 - Pedir desculpas ao viajante.\n"
+    "2 - Ignorá-lo e continuar correndo.\n";
     printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA1_2_1();
+    } else if (escolha == 2) {
+        decisaoA1_2_2();
+    }
+}
+
+void decisaoA1_2_1(void) {
+    const char *historia =
+    "\nO viajante olhou surpreso pela gentileza em meio ao caos.\n"
+    "Ele entregou a Irena uma pequena pena negra que havia caído da caixa.\n"
+    "'Pode lhe servir', murmurou.\n"
+    "Ela seguiu adiante com a pena nos bolsos.\n"
+    "\nMais à frente, uma viela escura se abria.\n";
+    printf("%s", historia);
+    primeiraConversa();
+}
+
+void decisaoA1_2_2(void) {
+    printf("\nIrena virou as costas e correu. Mas o homem gritou: 'LADRÃO!' \n");
+    printf("Guardas surgiram, agarrando-a pelos braços.\n");
+    printf("Uma algema mágica selou sua energia. A escuridão da cela foi seu fim.\n");
+    printf("\nGAME OVER\n");
+}
+
+// =======================================================================================================================
+// CAMINHO A2 (TELHADOS)
+// =======================================================================================================================
+
+void gameOverQueda(void) {
+    printf("\nO pé de Irena escorregou em uma telha molhada.\n");
+    printf("O mundo girou antes que seu corpo se chocasse contra o chão.\n");
+    printf("Sua perna quebrou em um ângulo impossível. O céu escureceu enquanto criaturas surgiam nas sombras.\n");
+    printf("\nGAME OVER\n");
 }
 
 void decisaoA2(void) {
@@ -300,40 +338,60 @@ void decisaoA2(void) {
 void decisaoA2_1(void) {
     const char *historia =
     "\nIrena correu como vento. Telhas quebraram sob seus pés, caindo e estilhaçando-se no chão.\n"
-    "Guardas olharam para cima, desconfiados, mas a jovem já havia desaparecido na sombra de uma chaminé.\n";
+    "Guardas olharam para cima, desconfiados, mas a jovem já havia desaparecido na sombra de uma chaminé.\n"
+    "\n1 - Continuar correndo.\n"
+    "2 - Esconder-se atrás da chaminé.\n";
     printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        gameOverQueda();
+    } else if (escolha == 2) {
+        primeiraConversa();
+    }
 }
 
 void decisaoA2_2(void) {
     const char *historia =
     "\nPasso a passo, ela avançou em silêncio.\n"
     "Os gatos que habitavam os telhados a seguiram com olhos brilhantes, mas nenhum som escapou.\n"
-    "Assim, chegou a uma rua lateral, invisível aos olhos dos guardas.\n";
+    "Assim, chegou a uma rua lateral, invisível aos olhos dos guardas.\n"
+    "\n1 - Descer para a rua.\n"
+    "2 - Continuar pelos telhados.\n";
     printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA1();
+    } else if (escolha == 2) {
+        primeiraConversa();
+    }
 }
 
-
-// Primeira conversa
+// =======================================================================================================================
+// PRIMEIRA CONVERSA
+// =======================================================================================================================
 void primeiraConversa(void) {
-    continuar();
-
     const char *historia =
-    "\nAs portas se fecharam atrás de Irena.\n" 
+    "\nAs portas se fecharam atrás de Irena.\n"
     "O silêncio caiu, quebrado apenas pela chuva e pelo miado distante de um gato.\n"
-    "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n" 
+    "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n"
     "'E não é que a coruja voltou ao ninho?', disse, sua voz ecoando na penumbra.\n\n"
-    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n\n" 
+    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n\n"
     "'Ah, a menina voltou! Ainda com segredos nos bolsos.'\n\n"
-    "As duas a cercaram, lembranças e provocações no ar.\n" 
+    "As duas a cercaram, lembranças e provocações no ar.\n"
     "Então Liora estendeu a mão para uma mesa com cartas presas por fita vermelha.\n\n"
     "'Diga, minha coruja... como deseja abrir a mesa desta vez?'\n\n"
-    "Soraya riu e insistiu:\n" 
-    "'Passado, presente e futuro em linha?'\n" 
-    "'Duas chaves para uma porta?'\n" 
+    "Soraya riu e insistiu:\n"
+    "'Passado, presente e futuro em linha?'\n"
+    "'Duas chaves para uma porta?'\n"
     "'Ou o espelho dos desejos e medos?'\n\n"
     "Irena sentiu o peso do olhar das duas, uma chama viva e uma sombra eterna.\n\n"
     "'Agora, a escolha é sua...'\n";
-
     printf("%s\n", historia);
 }
 
@@ -2452,7 +2510,7 @@ void decisao1_3(void) {
 
 void decisao1_3_1(void) {
     const char *historia =
-    "\nIrena tocou a carta do **Sol**. Assim que a retirou do monte, o salão pareceu mudar. "
+    "\nIrena tocou a carta do Sol. Assim que a retirou do monte, o salão pareceu mudar. "
     "A penumbra que dominava as paredes se rasgou em fachos dourados que atravessaram as frestas, "
     "como se o próprio teto fosse transparente por um instante.\n\n"
 
@@ -2506,6 +2564,174 @@ void decisao1_3_1(void) {
     continuar();
     printf("%s\n", historia3);
 }
+// ======================================================================
+// CAMINHO 1_3_2 — A CRUZ
+// ======================================================================
+// Justificativa de pontos:
+// A Cruz simboliza o fardo escolhido: aceitar peso e destino, carregar feridas
+// com dignidade. Não é libertação nem aniquilamento — é resistência.
+// Conta como ponto NEUTRO: há coragem, mas também custo; o equilíbrio é incerto.
+// ======================================================================
+
+void decisao1_3_2(void) {
+    const char *historia =
+    "\nIrena pousou as mãos sobre a mesa. A carta da Cruz brilhou com um tom fosco,\n"
+    "como metal lavado pela chuva. O desenho era simples, mas emanava uma força\n"
+    "que não podia ser negada: não cortar, não apagar, mas suportar. Era um convite\n"
+    "a carregar, e não a se libertar.\n\n"
+
+    "O peso caiu sobre seus ombros como um manto invisível. Não era apenas dor:\n"
+    "havia ali a memória de quem já carregara antes dela, de vozes silenciadas que\n"
+    "gritavam através dos ossos, pedindo continuidade. A Cruz não era só dela —\n"
+    "era herança, era vínculo, era destino.\n\n"
+
+    "As lamparinas crepitaram em uníssono, como se respirassem numa só garganta.\n"
+    "As sombras nas paredes se alongaram, formando figuras que pareciam marchar\n"
+    "com fardos próprios, cada uma inclinada sob um peso que ninguém via.\n\n"
+
+    "Soraya observava com um sorriso enviesado, que não chegava aos olhos:\n"
+    "‘Escolheste o caminho de quem suporta. Nem todo peso é punição; alguns são\n"
+    "a tessitura do que serás daqui em diante. Cuidado, coruja: há quem se torne\n"
+    "ainda mais forte sob o fardo, mas há também os que se partem em silêncio.’\n\n"
+
+    "Liora, por sua vez, colocou a mão sobre o braço de Irena. O gesto era simples,\n"
+    "mas sua firmeza trazia mais verdade que qualquer palavra:\n"
+    "‘Carregar a Cruz é aceitar viver com marcas. Não há fuga do sofrimento,\n"
+    "apenas diferentes maneiras de caminhar com ele. Alguns encontram sentido —\n"
+    "outros, apenas ruína. O fardo molda, mas também testa os ossos.’\n\n"
+
+    "Irena sentiu um calafrio percorrer-lhe a espinha. Era como se o peso escolhido\n"
+    "vibrasse debaixo de sua pele, desenhando cicatrizes invisíveis que já começavam\n"
+    "a contar histórias. Cicatrizes que não pediam desculpas por existir.\n\n";
+
+    const char *historia1 =
+    "\nA Cruz ergueu-se lentamente entre as cartas, e sua sombra cobriu a mesa inteira.\n"
+    "O ar ficou mais denso, e Irena ouviu passos — ecos vindos do passado, como se\n"
+    "outras vidas caminhando com ela estivessem presentes. No som grave e distante,\n"
+    "havia consolo, mas também cobrança.\n\n"
+
+    "‘Quem carrega aprende a ouvir os sussurros do peso’, murmurou Soraya.\n"
+    "‘Ele fala contigo, mostra segredos, cobra coragem. O fardo é voz e prisão,\n"
+    "mas também pode ser guia. O que decidirás fazer com ele, pequena coruja?’\n\n"
+
+    "Liora endireitou a postura e, num tom que misturava desafio e esperança, disse:\n"
+    "‘O peso nunca é neutro. Ele se entranha, ele molda. Pergunta não é se consegues\n"
+    "carregar, Irena, mas quem serás depois de caminhar com ele.’\n\n"
+
+    "Diante de Irena, três novas cartas surgiram devagar, como se despertassem\n"
+    "de um sono longo. Cada uma brilhava de modo singular, projetando luz e sombra\n"
+    "sobre seu rosto cansado:\n\n"
+
+    "1 - A Chama Oculta (o fogo interior que pode transformar ou consumir).\n"
+    "2 - O Sussurro do Abismo (a promessa de silêncio e não-existir).\n"
+    "3 - O Espelho Quebrado (fragmentos que mostram verdades dolorosas,\n"
+    "    possibilitando remendos — ou novas formas).\n\n"
+
+    "Cada carta parecia pulsar como um coração vivo, convidando-a a estender os dedos.\n"
+    "A Cruz ainda vibrava sob suas mãos, pedindo resposta, lembrando-a de que até\n"
+    "o fardo escolhido podia abrir novos caminhos. Mas não sem dor, nunca sem dor.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoNeutro++;
+            decisao1_3_2_2();
+            break;
+        case 2:
+            pontoRuim++;
+            decisao1_3_2_3();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_3_2_1();
+            break;
+    }
+}
+// ======================================================================
+// CAMINHO 1_3_3 — OS LÍRIOS
+// ======================================================================
+// Justificativa de pontos:
+// Os Lírios simbolizam a serenidade que nasce após a dor. 
+// Representam reconciliação, cura e o florescer de uma paz inesperada.
+// É o caminho do descanso e da aceitação, não pela fuga, mas pela travessia.
+// Conta como PONTO BOM, pois marca um renascimento suave e esperançoso.
+// ======================================================================
+
+void decisao1_3_3(void) {
+    const char *historia =
+    "\nAo escolher os Lírios, o salão foi tomado por um perfume delicado.\n"
+    "O frio e a sombra recuaram, substituídos por um brilho leitoso,\n"
+    "como o de luar refletido sobre águas calmas.\n\n"
+
+    "Sobre a mesa, a carta desdobrou-se sozinha, e de dentro dela brotaram flores.\n"
+    "Lírios brancos e puros, que não pertenciam a nenhum jardim da terra,\n"
+    "se abriram como se respirassem. As pétalas exalavam calma, e cada batida\n"
+    "do coração de Irena parecia se harmonizar com a leveza do ar.\n\n"
+
+    "Soraya suspirou, os olhos semicerrados:\n"
+    "'Ah... o bálsamo dos feridos. O fim que não corta, mas cicatriza.\n"
+    "Coruja, escolheste o silêncio que consola, o repouso que floresce.\n"
+    "É belo... mas exige que aceites a lentidão da cura.'\n\n"
+
+    "Liora, de pé como guardiã, acrescentou:\n"
+    "'Os Lírios não anulam o passado, mas o transformam em adubo.\n"
+    "Tua dor alimenta tua paz, assim como a noite alimenta a aurora.\n"
+    "Aceitar este caminho é aprender que viver não é lutar sempre —\n"
+    "às vezes é saber repousar, sem culpas.'\n\n";
+
+    const char *historia1 =
+    "\nDo chão brotaram mais flores, cobrindo as tábuas do salão.\n"
+    "A madeira gasta desapareceu sob um campo de lírios, brancos como neve.\n"
+    "Irena caminhava entre eles e, a cada passo, sentia que algo se desfazia\n"
+    "dentro de si: os ecos de gritos antigos, a solidão, a memória das feridas.\n"
+    "Nada desaparecia por completo — mas tudo se tornava leve, suportável.\n\n"
+
+    "Os espelhos nas paredes refletiam versões dela mesma sorrindo em paz,\n"
+    "sem peso nos ombros, sem a eterna tensão no olhar.\n"
+    "E pela primeira vez, ela acreditou que talvez fosse possível existir\n"
+    "sem estar em guerra contra si mesma.\n\n"
+
+    "Soraya dançou entre as flores, rindo com suavidade:\n"
+    "'Olha ao teu redor, coruja... até as cicatrizes podem ser belas\n"
+    "quando se tornam jardim.'\n\n"
+    "Liora a acompanhou em silêncio, mas seu sorriso discreto confirmava:\n"
+    "havia algo verdadeiro ali, algo sólido.\n\n"
+
+    "Diante de Irena, três novas cartas surgiram, repousando entre as pétalas:\n\n"
+    "1 - O Círculo (aceitar a repetição como lição, não como prisão).\n"
+    "2 - O Abismo (a tentação de desistir, escondida sob o manto da paz).\n"
+    "3 - A Fênix (renascer através do fogo, queimando o velho para abrir espaço ao novo).\n\n"
+
+    "Os lírios curvaram-se levemente, como se reconhecessem a gravidade da escolha.\n"
+    "A paz estava ali, mas Irena sabia: toda serenidade traz consigo novas encruzilhadas.\n";
+
+    printf("%s\n", historia);
+    continuar();
+    printf("%s\n", historia1);
+
+    int escolha = receberResposta(3);
+
+    switch (escolha) {
+        case 1:
+            pontoNeutro++;
+            decisao1_3_3_1();
+            break;
+        case 2:
+            pontoRuim++;
+            decisao1_3_3_2();
+            break;
+        case 3:
+            pontoBom++;
+            decisao1_3_3_3();
+            break;
+    }
+}
+
 
 // =======================================================================================================================
 // CAMINHO 1_3_1_1 — A LUA
@@ -2563,12 +2789,6 @@ void decisao1_3_1_1(void) {
     "Liora completou, num sussurro baixo, como se viesse de dentro da mente de Irena:\n"
     "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n"
 
-    "\nDiante da Lua, três novas cartas se formam, brilhando em reflexos prateados:\n\n"
-    "1. A Cruz — dor, destino e aprendizado através do sofrimento.\n"
-    "2. O Livro — segredos guardados, o conhecimento oculto que pode salvar ou condenar.\n"
-    "3. O Rato — perdas silenciosas, desgaste, aquilo que corrói sem que se perceba.\n\n"
-    "Qual carta Irena escolherá?\n";
-
     printf("%s\n", historia);
     continuar();
     printf("%s\n", historia1);
@@ -2617,30 +2837,39 @@ void decisao1_3_1_2(void) {
     "'E ainda assim, sofrestes em silêncio, perguntando-te se havia algum valor em resistir.'\n";
 
     const char *historia2 =
-    "\nIrena sentiu os olhos marejarem. As memórias retornaram com força: "
+    "Irena sentiu os olhos marejarem. As memórias voltaram com força: "
     "as tardes na escola em que tentava se aproximar e era afastada; "
     "os olhares desconfiados de vizinhos que a chamavam de bruxa; "
-    "as noites em que discutia com os pais, clamando para ser aceita como era.\n\n"
+    "as noites em que discutia com os pais, implorando para ser aceita como era.\n\n"
 
     "Liora falou, sua voz grave e certeira:\n"
-    "'A Estrela não é só esperança. É também isolamento. "
-    "Quem a segue, muitas vezes, anda só. "
-    "Teus pais não entenderam tua luz, e, com medo do que não podiam controlar, "
-    "tentaram apagá-la com gritos e proibições.'\n";
+    "'A Estrela não é apenas esperança. É também solidão. "
+    "Quem a segue, muitas vezes, caminha só. "
+    "Teus pais não entenderam tua luz e, com medo do que não podiam controlar, "
+    "tentaram apagá-la com gritos e proibições.'\n\n"
+
+    "O céu estrelado brilhou mais intensamente, como se respondesse às palavras da cartomante. "
+    "As constelações se moveram, revelando imagens do caminho de Irena: "
+    "a menina solitária, a jovem discutindo com a família, a feiticeira escondendo seu poder "
+    "para não ser perseguida.\n\n";
 
     const char *historia3 =
-    "\nO céu estrelado brilhou mais intensamente, como se respondesse às palavras da cartomante. "
-    "As constelações começaram a se mover, formando imagens do caminho de Irena: "
-    "a menina solitária, a jovem discutindo com a família, a feiticeira escondendo seu poder "
-    "para não ser perseguida.\n\n"
 
     "Soraya suspirou, com ternura:\n"
-    "'Mesmo na escuridão mais cruel, tua estrela seguiu acesa. "
-    "E agora, tens de decidir: usá-la como guia para teu próprio destino... "
-    "ou deixá-la apenas brilhar distante, inalcançável.'\n\n"
+    "'Mesmo na escuridão mais cruel, tua estrela permaneceu acesa. "
+    "E agora, tens de decidir: deixá-la brilhar distante e inalcançável... "
+    "ou usá-la como guia para construir teu próprio destino.'\n\n"
 
-    "Liora completou, em tom baixo, quase como uma bênção e um aviso:\n"
-    "'A Estrela te chama, coruja. Mas só tu podes escolher se seguirás sua luz será dádiva... ou condenação.'\n";
+    "Liora completou, em tom baixo, como uma bênção e um aviso:\n"
+    "'A Estrela te chama, coruja. "
+    "Segui-la poderá ser dádiva ou condenação. "
+    "A escolha é tua — e, ao escolhê-la, escolherás também quem realmente és.'\n\n"
+
+    "O silêncio da noite envolveu Irena. "
+    "Acima, a Estrela ardia em fogo sereno, esperando sua decisão. "
+    "E dentro dela, pela primeira vez, não havia apenas dor... "
+    "mas a possibilidade real de um recomeço.\n";
+
 
     printf("%s\n", historia);
     continuar();
@@ -2649,6 +2878,7 @@ void decisao1_3_1_2(void) {
     printf("%s\n", historia2);
     continuar();
     printf("%s\n", historia3);
+    continuar();
 }
 // =======================================================================================================================
 // CAMINHO 1_3_1_3 — OS PÁSSAROS
@@ -3116,111 +3346,3 @@ void decisao1_3_3_3(void) {
     continuar();
     printf("%s\n", historia5);
 }
-
-// =======================================================================================================================
-// CAMINHO 2_1_1_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_1_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_1_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_2_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_2_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_2_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_3_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_3_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_1_3_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_1_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_1_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_1_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_2_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_2_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_2_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_3_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_3_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_2_3_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_1_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_1_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_1_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_2_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_2_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_2_3
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_3_1
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_3_2
-// =======================================================================================================================
-
-// =======================================================================================================================
-// CAMINHO 2_3_3_3
-// =======================================================================================================================
