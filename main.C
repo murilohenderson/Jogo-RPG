@@ -21,6 +21,8 @@ void decisaoA1_2(void);
 void decisaoA2(void);
 void decisaoA2_1(void);
 void decisaoA2_2(void);
+void decisaoA3(void);
+void decisaoA3_1(void);
 
 //decisões 1
 void decisao1(void);
@@ -166,23 +168,34 @@ void finalRuim(void) {
 // Apresentar o jogo
 void apresentacaoJogo() {
     const char *historia = 
-    "Seja bem-vindo ao jogo 'Tessituras de Kali', onde você acompanhará Irena na sua jornada mágica de autodescoberta./n"
-    "Durante o jogo, reflita sobre cada decisão, pois o destino de Irena está em suas mãos. Bom jogo!";
+    "Bem-vindo a 'Tessituras de Kali'!\n"
+    "Aqui, você seguirá Irena em sua jornada mágica de autodescoberta, enfrentando desafios que testarão coragem e sensibilidade.\n"
+    "Cada decisão pode abrir portas para novas experiências ou fechar caminhos antigos. O destino de Irena está em suas mãos.\n"
+    "Preste atenção aos sinais, ouça as vozes do passado e explore os segredos que se escondem em cada escolha.\n"
+    "Prepare-se para uma aventura intensa, repleta de mistério, emoção e descobertas surpreendentes.\n"
+    "Boa sorte!";
 
     printf("%s", historia);
 }
 
-// Texto introdutório
+
+#include <stdio.h>
+
+// =======================================================================================================================
+// INTRODUÇÃO
+// =======================================================================================================================
+
 void introducao(void) {
     const char *historia =
     "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
     "O caminho parecia cada vez mais estreito, e seus olhos buscavam uma saída.\n"
     "As ruas estavam tomadas. Corpos, animais, barracas, tudo misturado como um emaranhado vivo.\n"
-    "Ela sabia que precisava decidir: seguir entre a multidão ou tentar alcançar os telhados das casas para chegar mais depressa.\n"
+    "Ela sabia que precisava decidir: seguir entre a multidão, tentar alcançar os telhados das casas para chegar mais depressa ou ir pelo esgoto da ciadde para não ser vista.\n"
     "\nO que Irena fará?\n"
     "1 - Forçar caminho pela rua lotada.\n"
-    "2 - Escalar e avançar pelos telhados.\n";
+    "2 - Escalar e avançar pelos telhados.\n"
+    "3 - Buscar um desvio pelos esgotos da cidade.\n";
     printf("%s", historia);
 
     int escolha;
@@ -192,11 +205,16 @@ void introducao(void) {
         decisaoA1();
     } else if (escolha == 2) {
         decisaoA2();
+    } else if (escolha == 3) {
+        decisaoA3();
+    } else {
+        printf("Opção inválida");
+        introducao();
     }
 }
 
 // =======================================================================================================================
-// CAMINHO A1 (RUAS)
+// GAME OVERS
 // =======================================================================================================================
 
 void gameOverMultidao(void) {
@@ -204,6 +222,24 @@ void gameOverMultidao(void) {
     printf("A última visão foi um céu cinzento se fechando sobre si, até que tudo desapareceu.\n");
     printf("\nGAME OVER\n");
 }
+
+void gameOverQueda(void) {
+    printf("\nO pé de Irena escorregou em uma telha molhada.\n");
+    printf("O mundo girou antes que seu corpo se chocasse contra o chão.\n");
+    printf("Sua perna quebrou em um ângulo impossível. O céu escureceu enquanto criaturas surgiam nas sombras.\n");
+    printf("\nGAME OVER\n");
+}
+
+void gameOverEsgoto(void) {
+    printf("\nIrena desceu pelos esgotos da cidade, mas a escuridão escondia algo além do fedor.\n");
+    printf("Um par de olhos amarelados a fitou antes que garras a puxassem para a água turva.\n");
+    printf("Nada além do silêncio restou.\n");
+    printf("\nGAME OVER\n");
+}
+
+// =======================================================================================================================
+// CAMINHO A1 (RUAS)
+// =======================================================================================================================
 
 void decisaoA1(void) {
     const char *historia =
@@ -224,6 +260,9 @@ void decisaoA1(void) {
         decisaoA1_2();
     } else if (escolha == 3) {
         gameOverMultidao();
+    } else {
+        printf("Opção inválida");
+        decisaoA1();
     }
 }
 
@@ -243,6 +282,9 @@ void decisaoA1_1(void) {
         decisaoA1_1_1();
     } else if (escolha == 2) {
         decisaoA1();
+    } else {
+        printf("Opção inválida");
+        decisaoA1_1();
     }
 }
 
@@ -261,6 +303,9 @@ void decisaoA1_1_1(void) {
         primeiraConversa();
     } else if (escolha == 2) {
         decisaoA2();
+    } else {
+        printf("Opção inválida");
+        decisaoA1_1_1();
     }
 }
 
@@ -280,6 +325,9 @@ void decisaoA1_2(void) {
         decisaoA1_2_1();
     } else if (escolha == 2) {
         decisaoA1_2_2();
+    } else {
+        printf("Opção inválida");
+        decisaoA1_2();
     }
 }
 
@@ -305,13 +353,6 @@ void decisaoA1_2_2(void) {
 // CAMINHO A2 (TELHADOS)
 // =======================================================================================================================
 
-void gameOverQueda(void) {
-    printf("\nO pé de Irena escorregou em uma telha molhada.\n");
-    printf("O mundo girou antes que seu corpo se chocasse contra o chão.\n");
-    printf("Sua perna quebrou em um ângulo impossível. O céu escureceu enquanto criaturas surgiam nas sombras.\n");
-    printf("\nGAME OVER\n");
-}
-
 void decisaoA2(void) {
     const char *historia =
     "\nCom agilidade, Irena escalou uma janela estreita e alcançou os telhados.\n"
@@ -328,6 +369,9 @@ void decisaoA2(void) {
         decisaoA2_1();
     } else if (escolha == 2) {
         decisaoA2_2();
+    } else {
+        printf("Opção inválida");
+        decisaoA2();
     }
 }
 
@@ -346,6 +390,9 @@ void decisaoA2_1(void) {
         gameOverQueda();
     } else if (escolha == 2) {
         primeiraConversa();
+    } else {
+        printf("Opção inválida");
+        decisaoA2_1();
     }
 }
 
@@ -365,12 +412,65 @@ void decisaoA2_2(void) {
         decisaoA1();
     } else if (escolha == 2) {
         primeiraConversa();
+    } else {
+        printf("Opção inválida");
+        decisaoA2_2();
+    }
+}
+
+// =======================================================================================================================
+// CAMINHO A3 (ESGOTOS)
+// =======================================================================================================================
+
+void decisaoA3(void) {
+    const char *historia =
+    "\nIrena empurrou uma grade enferrujada e desceu para os esgotos da cidade.\n"
+    "A umidade escorria pelas paredes, e o cheiro era insuportável.\n"
+    "Ratos observavam das sombras, mas havia também algo maior ali.\n"
+    "\n1 - Seguir pelo túnel iluminado por tochas.\n"
+    "2 - Seguir pelo túnel completamente escuro.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_1();
+    } else if (escolha == 2) {
+        gameOverEsgoto();
+    } else {
+        printf("Opção inválida");
+        decisaoA3();
+    }
+}
+
+void decisaoA3_1(void) {
+    const char *historia =
+    "\nO túnel iluminado a levou até uma escada de ferro que subia.\n"
+    "No topo, havia uma abertura circular com uma tampa pesada.\n"
+    "Ao forçá-la, Irena saiu em um pátio abandonado, cheio de estátuas quebradas.\n"
+    "No centro, uma porta com símbolos idênticos aos das runas antigas do beco.\n"
+    "\n1 - Abrir a porta.\n"
+    "2 - Tentar escalar os muros do pátio.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        primeiraConversa();
+    } else if (escolha == 2) {
+        decisaoA2();
+    } else {
+        printf("Opção inválida");
+        decisaoA3_1();
     }
 }
 
 // =======================================================================================================================
 // PRIMEIRA CONVERSA
 // =======================================================================================================================
+
 void primeiraConversa(void) {
     const char *historia =
     "\nAs portas se fecharam atrás de Irena.\n"
@@ -390,6 +490,7 @@ void primeiraConversa(void) {
     "'Agora, a escolha é sua...'\n";
     printf("%s\n", historia);
 }
+
 
 // Decisão do baralho
 void decisaoBaralho(void) {
@@ -419,6 +520,8 @@ void gameOverDesistir(void) {
     "Irena é tomada pelo medo de descobrir um futuro o qual não quer que seja o seu.\n"
     "Ela desiste e vai embora.\n"
     "GAME OVER";
+
+    printf("%s", historia);
 }
 
 // =======================================================================================================================
