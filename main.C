@@ -8,7 +8,6 @@ int pontoRuim = 0;
 // Funções
 int receberResposta(int numOpcoes);
 void resultado(void);
-// void textoIntroducao(void);
 void primeiraConversa(void);
 void decisaoBaralho(void);
 
@@ -84,18 +83,23 @@ void finalRuim(void);
 
 //usuário
 void continuar(void);
-void continuacaoTresCaminhos(void);
 
 // introdução alternativa
 void introducao(void);
 
+// apresentação do jogo
+void apresentacaoJogo();
+
 // game overs
 void gameOverMultidao(void);
 void gameOverQueda(void);
+void gameOverDesistir(void);
 
 
 int main () {
     
+    apresentacaoJogo();
+    continuar();
     introducao();
     primeiraConversa();
     decisaoBaralho();
@@ -159,22 +163,14 @@ void finalRuim(void) {
     printf("O destino de Irena se revelou sombrio e cheio de desafios.\n");
 }
 
+// Apresentar o jogo
+void apresentacaoJogo() {
+    const char *historia = 
+    "Seja bem-vindo ao jogo 'Tessituras de Kali', onde você acompanhará Irena na sua jornada mágica de autodescoberta./n"
+    "Durante o jogo, reflita sobre cada decisão, pois o destino de Irena está em suas mãos. Bom jogo!";
 
-// Texto introdutório
-// void textoIntroducao(void) {
-//     const char *historia =
-//     "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
-//     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
-//     "Ao longe, um letreiro: 'Tessituras de Kali'.\n"
-//     "Diante do portão de ébano, ela o empurrou e entrou. Lá dentro, o sol se apagou e a noite estrelada surgiu.\n"
-//     "Espelhos refletiam mais que sua imagem; refletiam algo oculto.\n"
-//     "De repente, uma voz sussurrou:\n\n"
-//     "'Irena! Quanto tempo, minha pequena coruja...'\n\n"
-//     "Logo outra, fria como gelo, completou:\n\n"
-//     "'Ou talvez o tempo nunca tenha passado...'\n";
-
-//     printf("%s\n", historia);
-// }
+    printf("%s", historia);
+}
 
 // Texto introdutório
 void introducao(void) {
@@ -402,7 +398,7 @@ void decisaoBaralho(void) {
     "Liora sussurra: 'A forma como abrir as cartas é também a forma como abrirá o seu destino.'\n\n"
     "Soraya ri e bate palmas: 'Então, pequena, escolha o caminho!'\n\n"
     "1 - Três Caminhos: passado, presente e futuro.\n"
-    "2 - A Porta de Três Chaves: bloqueio, impulso e algo inesperado.\n";
+    "2 - Desistir (sair do jogo).\n";
     
     printf("%s\n", historia);
 
@@ -413,9 +409,16 @@ void decisaoBaralho(void) {
             decisao1();
             break;
         case 2:
-            //decisao2();
-            break;
+            gameOverDesistir();
+        break;
     }
+}
+
+void gameOverDesistir(void) {
+    const char *historia =
+    "Irena é tomada pelo medo de descobrir um futuro o qual não quer que seja o seu.\n"
+    "Ela desiste e vai embora.\n"
+    "GAME OVER";
 }
 
 // =======================================================================================================================
@@ -488,11 +491,11 @@ void decisao1(void) {
             break;
         case 2:
             pontoNeutro++;
-            //decisao1_2();
+            decisao1_2();
             break;
         case 3:
             pontoBom++;
-            //decisao1_3();
+            decisao1_3();
             break;
     }
 }
@@ -540,7 +543,7 @@ void decisao1_1(void) {
             break;
         case 3:
             pontoBom++;
-            //decisao1_1_3();
+            decisao1_1_3();
             break;
     }
 }
@@ -837,10 +840,6 @@ void decisao1_1_1_3(void) {
     printf("%s\n", historia4);
 }
 
-
-// =======================================================================================================================
-// CAMINHO 1_1_2_1
-// =======================================================================================================================
 
 // =======================================================================================================================
 // CAMINHO 1_1_2 — 
@@ -2552,8 +2551,8 @@ void decisao1_3_1(void) {
 
     "\nDiante do brilho ofuscante, Irena percebe três novas cartas à sua frente, reveladas pelo Sol:\n\n"
     "1. A Lua — o véu do mistério, da ilusão e das verdades não ditas.\n"
-    "2. O Caminho — escolhas inevitáveis, a bifurcação que exige decisão.\n"
-    "3. A Âncora — estabilidade, esperança, mas também o peso de permanecer.\n\n"
+    "2. A Estrela — escolhas inevitáveis, a bifurcação que exige decisão.\n"
+    "3. O Pássaro — estabilidade, esperança, mas também o peso de permanecer.\n\n"
     "Qual carta Irena escolherá?\n";
 
     printf("%s\n", historia);
@@ -2563,7 +2562,25 @@ void decisao1_3_1(void) {
     printf("%s\n", historia2);
     continuar();
     printf("%s\n", historia3);
+
+    int escolha = receberResposta(3);
+ 
+    switch (escolha) {
+        case 1:
+            pontoNeutro++; 
+            decisao1_3_1_1(); 
+            break;
+        case 2:
+            pontoBom++;
+            decisao1_3_1_2();
+            break;
+        case 3:
+            pontoRuim++;
+            decisao1_3_1_3();
+            break;
+    }
 }
+
 // ======================================================================
 // CAMINHO 1_3_2 — A CRUZ
 // ======================================================================
@@ -2787,7 +2804,7 @@ void decisao1_3_1_1(void) {
     "ou finalmente admitir que tua própria escuridão também te pertence.'\n\n"
 
     "Liora completou, num sussurro baixo, como se viesse de dentro da mente de Irena:\n"
-    "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n"
+    "'Não temas o reflexo, coruja. Teme apenas o dia em que não reconhecerás quem nele habita.'\n";
 
     printf("%s\n", historia);
     continuar();
@@ -2886,8 +2903,8 @@ void decisao1_3_1_2(void) {
 // Justificativa de pontos:
 // Os Pássaros representam as vozes do passado e do presente que moldaram Irena — algumas ferem, outras ensinam.
 // Essa escolha a força a encarar dores antigas, memórias de traumas e críticas, mas também mostra os pequenos apoios e inspirações que a fortaleceram.
-// É uma experiência intensa, que mistura sofrimento e aprendizado, e permite que Irena reconheça sua própria voz e poder.
-// Por essa razão, é uma escolha de PONTO NEUTRO, pois revela tanto a dor quanto o potencial de crescimento, sem ser inteiramente boa ou ruim.
+// É uma experiência intensa, que mistura sofrimento e aprendizado, mas o peso da dor prevalece.
+// Por essa razão, agora será uma escolha de PONTO NEGATIVO, pois a experiência fere mais do que fortalece.
 
 void decisao1_3_1_3(void) {
     const char *historia =
@@ -2953,6 +2970,7 @@ void decisao1_3_1_3(void) {
     continuar();
     printf("%s\n", historia4);
 }
+
 
 // ======================================================================
 // CAMINHO 1_3_2_1 — O ESPELHO QUEBRADO
@@ -3110,54 +3128,6 @@ void decisao1_3_2_3(void) {
     printf("%s\n", historia4);
 }
 
-// ======================================================================
-// CAMINHO 1_3_3
-// ======================================================================
-// Justificativa geral:
-// O caminho 1_3_3 representa o mergulho de Irena em símbolos do limite:
-// não apenas escolhas externas, mas reflexos profundos sobre continuidade,
-// ruptura e entrega. Aqui, ela encara cartas que testam sua noção de fim
-// e de pertencimento.
-// ======================================================================
-
-void decisao1_3_3(void) {
-    const char *historia = 
-    "\nO salão silenciou de forma abrupta. As cartas diante de Irena tremeram\n"
-    "como se resistissem a serem reveladas. Então, uma força invisível ergueu\n"
-    "três lâminas de papel, cada uma cercada de sombra e luz ao mesmo tempo.\n\n"
-    "Soraya ergueu as mãos, teatral:\n"
-    "'Última dança, coruja... cada carta é um fim disfarçado de começo.'\n\n"
-    "Liora inclinou-se, séria como sempre:\n"
-    "'Escolha com cuidado. O que surgir agora não será apenas visão —\n"
-    "será destino gravado em tua pele.'\n";
-
-    const char *historia1 =
-    "\nAs três cartas flutuaram diante dela, pulsando como corações:\n\n"
-    "1 - O CÍRCULO   — eterno retorno, repetir até aprender.\n"
-    "2 - O ABISMO    — dissolver-se para recomeçar vazio.\n"
-    "3 - A FÊNIX     — morrer em chamas para nascer em fogo novo.\n";
-
-    printf("%s\n", historia);
-    continuar();
-    printf("%s\n", historia1);
-
-    int escolha = receberResposta(3);
-
-    switch (escolha) {
-        case 1:
-            pontoNeutro++;
-            decisao1_3_3_1();
-            break;
-        case 2:
-            pontoRuim++;
-            decisao1_3_3_2();
-            break;
-        case 3:
-            pontoBom++;
-            decisao1_3_3_3();
-            break;
-    }
-}
 // ======================================================================
 // CAMINHO 1_3_3_1 — O CÍRCULO
 // ======================================================================
