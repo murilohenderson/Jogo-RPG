@@ -9,9 +9,11 @@
 
 
 # Autores
-[<img src="https://avatars.githubusercontent.com/u/200527859?v=4" width="115">](https://github.com/murilohenderson)
-<br><sub>Murilo Henderson</sub>
-
-[<img src="https://avatars.githubusercontent.com/200527859" width="115">](https://github.com/kenzofrias)
-<br><sub>Kenzo Frias</sub>
-
+<a href="https://github.com/murilohenderson">
+  <img src="https://github.com/murilohenderson.png" width="115" alt="Murilo Henderson">
+</a>
+<a href="https://github.com/kenzofrias">
+  <img src="https://github.com/kenzofrias.png" width="115" alt="Kenzo Frias">
+</a>
+<br>
+<sub>Murilo Henderson</sub> &nbsp;&nbsp;&nbsp; <sub>Kenzo Frias</sub>
