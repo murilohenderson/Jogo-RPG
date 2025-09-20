@@ -16,4 +16,5 @@
   <img src="https://github.com/kenzofrias.png" width="115" alt="Kenzo Frias">
 </a>
 <br>
-<sub>Murilo Henderson</sub> &nbsp;&nbsp;&nbsp; <sub>Kenzo Frias</sub>
+<sub style="margin-right: 50px;">Murilo Henderson</sub>
+<sub>Kenzo Frias</sub>
