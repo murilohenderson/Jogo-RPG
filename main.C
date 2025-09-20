@@ -24,6 +24,12 @@ void decisaoA2_1(void);
 void decisaoA2_2(void);
 void decisaoA3(void);
 void decisaoA3_1(void);
+void decisaoA3_2(void);
+void decisaoA3_3(void);
+void decisaoA3_3_fogo(void);
+void decisaoA3_3_pena(void);
+void decisaoA3_3_ambiente(void);
+void decisaoA3_final(void);
 
 //decisões 1
 void decisao1(void);
@@ -421,7 +427,7 @@ void decisaoA2_2(void) {
 }
 
 // =======================================================================================================================
-// CAMINHO A3 (ESGOTOS)
+// CAMINHO A3 (ESGOTOS) – EXPANDIDO
 // =======================================================================================================================
 
 void decisaoA3(void) {
@@ -439,12 +445,138 @@ void decisaoA3(void) {
     if (escolha == 1) {
         decisaoA3_1();
     } else if (escolha == 2) {
-        gameOverEsgoto();
+        decisaoA3_2();
     } else {
-        printf("Opção inválida");
+        printf("Opção inválida\n");
         decisaoA3();
     }
 }
+
+void decisaoA3_2(void) {
+    const char *historia =
+    "\nO túnel iluminado parecia mais seguro, mas sons estranhos ecoavam adiante.\n"
+    "Um rosnado baixo reverberava nas paredes, misturado ao som da água corrente.\n"
+    "\n1 - Avançar cautelosamente para investigar.\n"
+    "2 - Correr em direção oposta, tentando escapar.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_3();
+    } else if (escolha == 2) {
+        printf("\nIrena correu em desespero, mas a escuridão era traiçoeira.\n");
+        printf("Algo emergiu da água e a puxou sem que pudesse reagir.\n");
+        gameOverEsgoto();
+    } else {
+        printf("Opção inválida\n");
+        decisaoA3_1();
+    }
+}
+
+void decisaoA3_3(void) {
+    const char *historia =
+    "\nIrena se aproximou e viu uma criatura colossal, metade réptil, metade sombra.\n"
+    "Os olhos amarelados a fixavam com fome antiga. A água borbulhava em volta.\n"
+    "Ela sabia que não havia como fugir sem lutar.\n"
+    "\n1 - Preparar um feitiço de fogo.\n"
+    "2 - Usar a pena negra que recebeu do viajante.\n"
+    "3 - Procurar algo no ambiente para se defender.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_3_fogo();
+    } else if (escolha == 2) {
+        decisaoA3_3_pena();
+    } else if (escolha == 3) {
+        decisaoA3_3_ambiente();
+    } else {
+        printf("Opção inválida\n");
+        decisaoA3_2();
+    }
+}
+
+void decisaoA3_3_fogo(void) {
+    const char *historia =
+    "\nIrena ergueu as mãos, e chamas dançaram na escuridão.\n"
+    "Ela lançou o feitiço contra o monstro, iluminando o túnel em clarões alaranjados.\n"
+    "O fogo atingiu a criatura, mas só pareceu irritá-la ainda mais.\n"
+    "A água fervia em sua volta.\n"
+    "\n1 - Atacar novamente com magia.\n"
+    "2 - Tentar correr enquanto a criatura se debate.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_final();
+    } else if (escolha == 2) {
+        decisaoA3_final();
+    } else {
+        printf("Opção inválida\n");
+        decisaoA3_3_fogo();
+    }
+}
+
+void decisaoA3_3_pena(void) {
+    const char *historia =
+    "\nIrena segurou a pena negra com força. Ela vibrou, e uma rajada de vento cortou o túnel.\n"
+    "A criatura recuou por um instante, como se reconhecesse o artefato.\n"
+    "Mas então avançou com ainda mais ferocidade.\n"
+    "\n1 - Usar a pena novamente.\n"
+    "2 - Jogar a pena na água e preparar-se para o combate direto.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_final();
+    } else if (escolha == 2) {
+        decisaoA3_final();
+    } else {
+        printf("Opção inválida\n");
+        decisaoA3_3_pena();
+    }
+}
+
+void decisaoA3_3_ambiente(void) {
+    const char *historia =
+    "\nIrena olhou ao redor e viu correntes enferrujadas presas às paredes.\n"
+    "Com um esforço, puxou uma delas e a brandiu como chicote.\n"
+    "A corrente estalou contra a criatura, mas foi como atingir pedra.\n"
+    "\n1 - Continuar lutando com a corrente.\n"
+    "2 - Largar a corrente e tentar conjurar magia.\n";
+    printf("%s", historia);
+
+    int escolha;
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        decisaoA3_final();
+    } else if (escolha == 2) {
+        decisaoA3_final();
+    } else {
+        printf("Opção inválida\n");
+        decisaoA3_3_ambiente();
+    }
+}
+
+void decisaoA3_final(void) {
+    const char *historia =
+    "\nA criatura avançou com força descomunal, esmagando a defesa de Irena.\n"
+    "Ela tentou resistir — chamas, vento, correntes — nada parecia deter aquele ser ancestral.\n"
+    "Um golpe poderoso a lançou contra a parede, e a água turva a envolveu.\n"
+    "A última visão foram os olhos amarelados brilhando na escuridão, antes de ser arrastada para o fundo.\n";
+    printf("%s", historia);
+    gameOverEsgoto();
+}
+
 
 void decisaoA3_1(void) {
     const char *historia =
