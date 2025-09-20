@@ -154,20 +154,69 @@ void continuar(void) {
 }
 
 
-//Funções para diferentes finais
+// FINAIS
+
 void finalBom(void) {
-    printf("================ ✧･ﾟ: *✧･ﾟ:*  ✨ F I N A L    B O M  ✨  *:･ﾟ✧*:･ﾟ✧ ===============\n");
-    printf("O destino de Irena se revelou cheio de esperança e luz.\n");
+    const char *historia =
+    "================ ✧･ﾟ: *✧･ﾟ:*  ✨ F I N A L    B O M  ✨  *:･ﾟ✧*:･ﾟ✧ ===============\n"
+    "O destino de Irena se revelou cheio de esperança e luz.\n"
+    "\n"
+    "Ela não fugiu da dor, nem negou suas sombras, mas aprendeu a caminhar com elas.\n"
+    "Cada escolha feita com coragem, mesmo quando custosa, a conduziu à integridade.\n"
+    "Irena descobriu que a verdadeira força não está em vencer os monstros externos,\n"
+    "mas em transformar sua própria ferida em fonte de luz. Ela não se rendeu ao medo,\n"
+    "nem se escondeu atrás de ilusões. Ao invés disso, enfrentou o que era mais difícil:\n"
+    "aceitar-se inteira, com cicatrizes, poder, dúvidas e coragem. E nessa aceitação,\n"
+    "encontrou não apenas sobrevivência, mas renascimento. Seu caminho não foi fácil,\n"
+    "mas foi autêntico. E por isso, floresceu.\n"
+    "\n"
+    "A coruja tornou-se fênix. Não por milagre, mas por decisão.\n"
+    "==================================== FIM ====================================\n";
+    printf("%s", historia);
 }
 
 void finalNeutro(void) {
-    printf("=･ﾟ☾ ☾ﾟ･｡✦･──･✦･｡☼ﾟ･☾ ☾ﾟ･ ◑  F I N A L   N E U T R O  ◑ ･ﾟ☾ ☾ﾟ･｡✦･──･✦･｡☼ﾟ･☾ ☾ﾟ･=\n");
-    printf("O destino de Irena permaneceu equilibrado, sem grandes vitórias nem grandes perdas.\n");
+    const char *historia =
+    "=･ﾟ☾ ☾ﾟ･｡✦･──･✦･｡☼ﾟ･☾ ☾ﾟ･ ◑  F I N A L   N E U T R O  ◑ ･ﾟ☾ ☾ﾟ･｡✦･──･✦･｡☼ﾟ･☾ ☾ﾟ･=\n"
+    "O destino de Irena permaneceu equilibrado, sem grandes vitórias nem grandes perdas.\n"
+    "\n"
+    "Ela não recusou a dor, mas também não a abraçou plenamente. \n"
+    "Escolheu o caminho do meio, evitar o extremo, manter a calma, não se entregar, \n"
+    "nem se arriscar totalmente. Suas decisões foram prudentes, muitas vezes evitando\n"
+    "confrontos profundos, preferindo a segurança do silêncio à temeridade da mudança.\n"
+    "Assim, ela sobreviveu. Mas não transcendeu. As sombras ainda habitam seus cantos,\n"
+    "e as luzes ainda brilham distantes, como estrelas que nunca alcançará.\n"
+    "Não há culpa nisso, apenas um peso silencioso: o de ter podido ser mais,\n"
+    "mas ter escolhido não ser. Irena é intacta... mas também inacabada.\n"
+    "Seu mundo não caiu, mas tampouco voou. Ela permaneceu — observando, \n"
+    "esperando, talvez, que um dia alguém lhe diga que tudo o que fez foi suficiente.\n"
+    "E talvez, um dia, ela acredite.\n"
+    "\n"
+    "A coruja ainda voa, mas sempre dentro dos limites do ninho.\n"
+    "==================================== FIM ====================================\n";
+    printf("%s", historia);
 }
 
 void finalRuim(void) {
-    printf("===== ･ﾟ☁️ﾟ･｡★･__･★･｡ﾟ･☁️･ﾟ･⚠️  F I N A L    R U I M  ⚠️･ﾟ☁️ﾟ･｡★･───･★･｡ﾟ･☁️･ﾟ =====\n");
-    printf("O destino de Irena se revelou sombrio e cheio de desafios.\n");
+    const char *historia =
+    "===== ･ﾟ☁️ﾟ･｡★･__･★･｡ﾟ･☁️･ﾟ･⚠️  F I N A L    R U I M  ⚠️･ﾟ☁️ﾟ･｡★･───･★･｡ﾟ･☁️･ﾟ =====\n"
+    "O destino de Irena se revelou sombrio e cheio de desafios.\n"
+    "\n"
+    "Ela escolheu o caminho da fúria, da negação, da fuga, e cada passo a afastou\n"
+    "da verdade que precisava encarar. Em vez de curar, ela cortou. Em vez de aceitar,\n"
+    "ela atacou. Em vez de buscar luz, ela alimentou a escuridão que carregava.\n"
+    "As escolhas que pareciam fortes, o poder, a vingança, o isolamento, \n"
+    "transformaram-se em correntes invisíveis, prendendo-a a cicatrizes que nunca\n"
+    "sangraram, mas sempre doeram. Irena não foi derrotada por um inimigo externo.\n"
+    "Foi derrotada por si mesma: pela recusa em ver que o maior monstro que enfrentou\n"
+    "era o que vivia dentro dela. E agora, ela anda sozinha, cercada pelo eco de suas\n"
+    "próprias escolhas. O mundo continua, mas ela já não pertence a ele. \n"
+    "A coruja não morreu. Mas deixou de ser coruja. \n"
+    "Tornou-se sombra que se esqueceu de que já teve asas.\n"
+    "\n"
+    "E o silêncio, agora, é o único companheiro que não a traía.\n"
+    "==================================== FIM ====================================\n";
+    printf("%s", historia);
 }
 
 // Apresentar o jogo
@@ -330,6 +379,7 @@ void decisaoA1_2(void) {
         decisaoA1_2_1();
     } else if (escolha == 2) {
         decisaoA1_2_2();
+        exit(0);
     } else {
         printf("Opção inválida");
         decisaoA1_2();
