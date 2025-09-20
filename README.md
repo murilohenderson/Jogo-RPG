@@ -11,3 +11,8 @@
 # Autores
 [<img src="https://avatars.githubusercontent.com/u/200527859?v=4" width="115">](https://github.com/murilohenderson)
 <br><sub>Murilo Henderson</sub>
+
+[<img src="https://avatars.githubusercontent.com/u/200527859?v=4" width="115">](https://github.com/kenzofrias)
+<br><sub>Kenzo Frias</sub>
+![Kenzo Frias](https://github.com/kenzofrias.png)
+
