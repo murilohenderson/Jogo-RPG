@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // Variáveis globais
 int pontoBom = 0;
@@ -103,8 +104,6 @@ int main () {
     apresentacaoJogo();
     continuar();
     introducao();
-    primeiraConversa();
-    decisaoBaralho();
 
     resultado();
 
@@ -221,6 +220,7 @@ void gameOverMultidao(void) {
     printf("\nA pressão da multidão esmagou Irena contra as barracas. Seus pulmões imploravam por ar.\n");
     printf("A última visão foi um céu cinzento se fechando sobre si, até que tudo desapareceu.\n");
     printf("\nGAME OVER\n");
+    exit(0);
 }
 
 void gameOverQueda(void) {
@@ -228,6 +228,7 @@ void gameOverQueda(void) {
     printf("O mundo girou antes que seu corpo se chocasse contra o chão.\n");
     printf("Sua perna quebrou em um ângulo impossível. O céu escureceu enquanto criaturas surgiam nas sombras.\n");
     printf("\nGAME OVER\n");
+    exit(0);
 }
 
 void gameOverEsgoto(void) {
@@ -235,6 +236,7 @@ void gameOverEsgoto(void) {
     printf("Um par de olhos amarelados a fitou antes que garras a puxassem para a água turva.\n");
     printf("Nada além do silêncio restou.\n");
     printf("\nGAME OVER\n");
+    exit(0);
 }
 
 // =======================================================================================================================
@@ -337,7 +339,7 @@ void decisaoA1_2_1(void) {
     "Ele entregou a Irena uma pequena pena negra que havia caído da caixa.\n"
     "'Pode lhe servir', murmurou.\n"
     "Ela seguiu adiante com a pena nos bolsos.\n"
-    "\nMais à frente, uma viela escura se abria.\n";
+    "\nMais à frente, uma viela escura com uma porta ao final se abria.\n";
     printf("%s", historia);
     primeiraConversa();
 }
@@ -477,18 +479,27 @@ void primeiraConversa(void) {
     "O silêncio caiu, quebrado apenas pela chuva e pelo miado distante de um gato.\n"
     "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n"
     "'E não é que a coruja voltou ao ninho?', disse, sua voz ecoando na penumbra.\n\n"
-    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n\n"
+    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n\n";
+
+    const char *historia1 =
     "'Ah, a menina voltou! Ainda com segredos nos bolsos.'\n\n"
     "As duas a cercaram, lembranças e provocações no ar.\n"
     "Então Liora estendeu a mão para uma mesa com cartas presas por fita vermelha.\n\n"
     "'Diga, minha coruja... como deseja abrir a mesa desta vez?'\n\n"
-    "Soraya riu e insistiu:\n"
+    "Soraya riu e insistiu:\n";
+
+    const char *historia2 =
     "'Passado, presente e futuro em linha?'\n"
-    "'Duas chaves para uma porta?'\n"
-    "'Ou o espelho dos desejos e medos?'\n\n"
     "Irena sentiu o peso do olhar das duas, uma chama viva e uma sombra eterna.\n\n"
     "'Agora, a escolha é sua...'\n";
     printf("%s\n", historia);
+    continuar(); 
+    printf("%s\n", historia1);
+    continuar();
+    printf("%s\n", historia2);
+    continuar();
+
+    decisaoBaralho();
 }
 
 
