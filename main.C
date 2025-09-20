@@ -394,7 +394,7 @@ void decisaoA2_1(void) {
     if (escolha == 1) {
         gameOverQueda();
     } else if (escolha == 2) {
-        primeiraConversa();
+        decisaoA2_2();
     } else {
         printf("Opção inválida");
         decisaoA2_1();
@@ -416,7 +416,7 @@ void decisaoA2_2(void) {
     if (escolha == 1) {
         decisaoA1();
     } else if (escolha == 2) {
-        primeiraConversa();
+        gameOverQueda();
     } else {
         printf("Opção inválida");
         decisaoA2_2();
@@ -604,7 +604,8 @@ void decisaoA3_1(void) {
 
 void primeiraConversa(void) {
     const char *historia =
-    "\nAs portas se fecharam atrás de Irena.\n"
+    "\n Ao abrir a porta, Irena atravessou-a e seguiu a frente.\n"
+    "As portas se fecharam atrás de Irena.\n"
     "O silêncio caiu, quebrado apenas pela chuva e pelo miado distante de um gato.\n"
     "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n"
     "'E não é que a coruja voltou ao ninho?', disse, sua voz ecoando na penumbra.\n\n"
