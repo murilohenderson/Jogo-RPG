@@ -183,9 +183,6 @@ void apresentacaoJogo() {
     printf("%s", historia);
 }
 
-
-#include <stdio.h>
-
 // =======================================================================================================================
 // INTRODUÇÃO
 // =======================================================================================================================
@@ -196,7 +193,7 @@ void introducao(void) {
     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
     "O caminho parecia cada vez mais estreito, e seus olhos buscavam uma saída.\n"
     "As ruas estavam tomadas. Corpos, animais, barracas, tudo misturado como um emaranhado vivo.\n"
-    "Ela sabia que precisava decidir: seguir entre a multidão, tentar alcançar os telhados das casas para chegar mais depressa ou ir pelo esgoto da ciadde para não ser vista.\n"
+    "Ela sabia que precisava decidir: seguir entre a multidão, tentar alcançar os telhados das casas para chegar mais depressa ou ir pelo esgoto da cidade para não ser vista.\n"
     "\nO que Irena fará?\n"
     "1 - Forçar caminho pela rua lotada.\n"
     "2 - Escalar e avançar pelos telhados.\n"
