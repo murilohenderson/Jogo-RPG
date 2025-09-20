@@ -227,7 +227,7 @@ void apresentacaoJogo() {
     "Cada decisão pode abrir portas para novas experiências ou fechar caminhos antigos. O destino de Irena está em suas mãos.\n"
     "Preste atenção aos sinais, ouça as vozes do passado e explore os segredos que se escondem em cada escolha.\n"
     "Prepare-se para uma aventura intensa, repleta de mistério, emoção e descobertas surpreendentes.\n"
-    "Boa sorte!";
+    "Boa sorte!\n\n";
 
     printf("%s", historia);
 }
@@ -238,7 +238,7 @@ void apresentacaoJogo() {
 
 void introducao(void) {
     const char *historia =
-    "Entre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
+    "\nEntre becos estreitos da feira de Fhaolann, Irena seguia um caminho secreto.\n"
     "Seus passos eram precisos, como se o labirinto já estivesse gravado em sua pele.\n"
     "O caminho parecia cada vez mais estreito, e seus olhos buscavam uma saída.\n"
     "As ruas estavam tomadas. Corpos, animais, barracas, tudo misturado como um emaranhado vivo.\n"
@@ -250,6 +250,7 @@ void introducao(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -306,6 +307,7 @@ void decisaoA1(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -330,6 +332,7 @@ void decisaoA1_1(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -351,6 +354,7 @@ void decisaoA1_1_1(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -373,6 +377,7 @@ void decisaoA1_2(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -418,6 +423,7 @@ void decisaoA2(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -439,6 +445,7 @@ void decisaoA2_1(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -461,6 +468,7 @@ void decisaoA2_2(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -487,6 +495,7 @@ void decisaoA3(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -508,6 +517,7 @@ void decisaoA3_2(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -533,6 +543,7 @@ void decisaoA3_3(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -558,6 +569,7 @@ void decisaoA3_3_fogo(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -580,6 +592,7 @@ void decisaoA3_3_pena(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -602,6 +615,7 @@ void decisaoA3_3_ambiente(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -636,6 +650,7 @@ void decisaoA3_1(void) {
     printf("%s", historia);
 
     int escolha;
+    printf("\nDigite sua escolha: ");
     scanf("%d", &escolha);
 
     if (escolha == 1) {
@@ -654,12 +669,12 @@ void decisaoA3_1(void) {
 
 void primeiraConversa(void) {
     const char *historia =
-    "\n Ao abrir a porta, Irena atravessou-a e seguiu a frente.\n"
+    "\nAo abrir a porta, Irena atravessou-a e seguiu a frente.\n"
     "As portas se fecharam atrás de Irena.\n"
     "O silêncio caiu, quebrado apenas pela chuva e pelo miado distante de um gato.\n"
     "Das sombras surgiu Liora: alta, envolta em véus, olhos como brasas ocultas.\n\n"
     "'E não é que a coruja voltou ao ninho?', disse, sua voz ecoando na penumbra.\n\n"
-    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n\n";
+    "Logo Soraya apareceu, risonha, cheia de cores e anéis tilintando.\n";
 
     const char *historia1 =
     "'Ah, a menina voltou! Ainda com segredos nos bolsos.'\n\n"
