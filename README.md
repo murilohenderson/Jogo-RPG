@@ -3,8 +3,7 @@
 
 # ✔️ Técnicas e tecnologias usadas
 - ``Visual Studio Code``
-- ``HTML5``
-- ``CSS3``
+- ``Linguagem C``
 
 
 
